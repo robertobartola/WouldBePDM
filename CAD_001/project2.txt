@@ -1,0 +1,10 @@
+project2.CATProduct
+project2.CATDrawing
+part003.CATPart
+part004.CATPart
+part005.CATPart
+part006.CATPart
+part003.CATDrawing
+part004.CATDrawing
+part005.CATDrawing
+part006.CATDrawing
