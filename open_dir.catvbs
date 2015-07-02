@@ -1,9 +1,0 @@
-Language="VBSCRIPT"
-
-Set Document = CATIA.ActiveDocument
-DocPath = Document.Path
-cmd="C:\Windows\explorer.exe "&DocPath
-
-Sub CATMain()
-  call CATIA.SystemService.ExecuteBackgroundProcessus (cmd)
-End Sub
