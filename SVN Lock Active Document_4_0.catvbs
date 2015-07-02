@@ -1,4 +1,5 @@
 Language="VBSCRIPT"
+' Macro created by Diego Sammarco on 2013/2014
 
 Set Document = CATIA.ActiveDocument
 DocFullName = Document.FullName
