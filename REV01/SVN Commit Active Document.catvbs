@@ -1,0 +1,13 @@
+Language="VBSCRIPT"
+' Macro created by Diego Sammarco on 2013/2014
+
+Set Document = CATIA.ActiveDocument
+DocFullName = Document.FullName
+Argument = Chr(34)&DocFullName&Chr(34)
+
+Sub CATMain()
+
+		Set wshShell = CreateObject("WScript.Shell")
+		wshShell.run "%comspec% /c TortoiseProc.exe /command:commit /path:"&Argument,0,true
+
+End Sub

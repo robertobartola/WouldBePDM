@@ -1,0 +1,10 @@
+Language="VBSCRIPT"
+' Macro created by Roberto Bartola on 2013/2014
+
+Set Document = CATIA.ActiveDocument
+DocPath = Document.Path
+cmd="C:\Windows\explorer.exe "&DocPath
+
+Sub CATMain()
+  call CATIA.SystemService.ExecuteBackgroundProcessus (cmd)
+End Sub
