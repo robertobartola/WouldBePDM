@@ -6,5 +6,9 @@ DocPath = Document.Path
 cmd="C:\Windows\explorer.exe "&DocPath
 
 Sub CATMain()
+If CATIA.Documents.Count >1 Then
   call CATIA.SystemService.ExecuteBackgroundProcessus (cmd)
+Else
+MsgBox "This tool needs a CATIA file"
+End If
 End Sub

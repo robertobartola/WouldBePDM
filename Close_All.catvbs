@@ -1,4 +1,6 @@
 Sub CATMain()
+If CATIA.Documents.Count >1 Then
+
 ' Macro created by Diego Sammarco on 2013/2014
 
 Exe = MsgBox("Close all files in the session without saving them?", vbOKCancel, "CLOSE ALL DOCUMENTS")
@@ -8,4 +10,9 @@ Exe = MsgBox("Close all files in the session without saving them?", vbOKCancel, 
               CATIA_Document.Close
         Next
 	End if
+
+Else
+MsgBox "This tool needs a CATIA file"
+End If
+
 End Sub

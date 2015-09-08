@@ -11,6 +11,7 @@ DocFullName = Document.FullName
 Argument = Chr(34)&DocFullName&Chr(34)
 
 Sub CATMain()
+If CATIA.Documents.Count >1 Then
 
 					Dim strNomeFile
 					FileString = "zztmppdt.txt"
@@ -72,5 +73,9 @@ Exe = MsgBox("This CATScript will close all files in the session without saving 
 
 		Set wshShell1 = CreateObject("WScript.Shell")
 		wshShell1.run "%comspec% /c del /F /Q "&strNomeFile,2,true
+
+Else
+MsgBox "This tool needs a CATIA file"
+End If
 
 End Sub
