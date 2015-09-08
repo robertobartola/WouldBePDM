@@ -37,16 +37,15 @@ To open the dir of the current document
 The tree should be the following:
 -CAD_001\
 
--CAD_001\PRJ_List.txt
-The file where the projects are listed
-
--CAD_001\project1.txt, project2.txt, anyname.txt
-The file where all the documents of a project are listed
+-CAD_001\PRJList.xml
+The data base
 
 -CAD_001\File_CAD\
 the directory where the CAD files are
 
-I assume that CAD_001 is a svn directory (it means that you have a svn repository of the CAD_001 dir.
+I assume that CAD_001 is a svn directory (it means that you have a svn repository of the CAD_001 dir).
+
+Enjoy Roberto
 
 
 
