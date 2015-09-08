@@ -1,0 +1,23 @@
+Wold-be PDM - todo list
+
+Low hard (LH)
+- full debug
+- delete old tools (PRJ modify)
+
+Medium hard (MH)
+- improve the documentation
+- create tools for switch 2D <-> 3D
+
+Very hard (VH)
+- porting to NX
+- porting to FreeCAD
+- porting to ...
+
+Ultra High hard (UHH)
+- interface Would-be PDM for As400
+
+
+
+08/09/2015
+Hey ho, let's go
+Roberto
