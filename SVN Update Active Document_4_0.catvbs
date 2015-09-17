@@ -11,7 +11,7 @@ DocFullName = Document.FullName
 Argument = Chr(34)&DocFullName&Chr(34)
 
 Sub CATMain()
-If CATIA.Documents.Count >1 Then
+If CATIA.Documents.Count >0 Then
 
 					Dim strNomeFile
 					FileString = "zztmppdt.txt"
