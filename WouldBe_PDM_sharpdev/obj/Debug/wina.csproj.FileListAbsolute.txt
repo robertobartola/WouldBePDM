@@ -1,0 +1,8 @@
+C:\Users\rbartola\Documents\SharpDevelop Projects\wina\wina\bin\Debug\wina.exe.config
+C:\Users\rbartola\Documents\SharpDevelop Projects\wina\wina\bin\Debug\wina.exe
+C:\Users\rbartola\Documents\SharpDevelop Projects\wina\wina\bin\Debug\wina.pdb
+C:\Users\rbartola\Documents\SharpDevelop Projects\wina\wina\obj\Debug\wina.csprojResolveAssemblyReference.cache
+C:\Users\rbartola\Documents\SharpDevelop Projects\wina\wina\obj\Debug\wina.MainForm.resources
+C:\Users\rbartola\Documents\SharpDevelop Projects\wina\wina\obj\Debug\wina.csproj.GenerateResource.Cache
+C:\Users\rbartola\Documents\SharpDevelop Projects\wina\wina\obj\Debug\wina.exe
+C:\Users\rbartola\Documents\SharpDevelop Projects\wina\wina\obj\Debug\wina.pdb

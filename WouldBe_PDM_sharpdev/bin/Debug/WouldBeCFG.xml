@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<WouldBePDM>
+  <Config>
+    <Directories>
+      <CADdatadir>WouldBePDMData</CADdatadir>
+      <PDFdatadir>OUT</PDFdatadir>
+      <STEPdatadir>OUT</STEPdatadir>
+      <JPGdatadir>JPG</JPGdatadir>
+    </Directories>
+  </Config>
+</WouldBePDM>

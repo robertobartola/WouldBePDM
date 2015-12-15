@@ -1,0 +1,1261 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PartList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Component>
+		<Code>A0845.00</Code>
+		<Name>NASTRO-S355MC-1.5X128</Name>
+		<Status>Active</Status>
+		<Rev>C</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>A0845.00_C-NASTRO-S355MC-1.5X128.CATDrawing</TWO_D>
+		<Pdf>A0845.00_C-NASTRO-S355MC-1.5X128.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>A0846.00</Code>
+		<Name>RESINA LOCTITE UV 3081</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>A0846.00_A-RESINA LOCTITE UV 3081.CATDrawing</TWO_D>
+		<Pdf>A0846.00_A-RESINA LOCTITE UV 3081.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>A0854.00</Code>
+		<Name>NASTRO-S355MC-1.5X135</Name>
+		<Status>Active</Status>
+		<Rev>B</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>A0854.00_B-NASTRO-S355MC-1.5X135.CATDrawing</TWO_D>
+		<Pdf>A0854.00_B-NASTRO-S355MC-1.5X135.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>A0903.00</Code>
+		<Name>NASTRO C45  120X2.5</Name>
+		<Status>Active</Status>
+		<Rev>B</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>A0903.00_B-NASTRO C45  120X2.5.CATDrawing</TWO_D>
+		<Pdf>A0903.00_B-NASTRO C45  120X2.5.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>A0907.00</Code>
+		<Name>NASTRO-C45_2.5X109</Name>
+		<Status>Active</Status>
+		<Rev>B</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>A0907.00_B-NASTRO-C45_2.5X109.CATDrawing</TWO_D>
+		<Pdf>A0907.00_B-NASTRO-C45_2.5X109.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B3402_01</Code>
+		<Name>CONNETTORE_COSTAMPATO_DIRITTO_20150731</Name>
+		<Status>Active</Status>
+		<Rev>NULL</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B3402_01_AtoB_CONNETTORE_COSTAMPATO_DIRITTO_20150731.CATDrawing</TWO_D>
+		<Pdf>B3402_01_AtoB_CONNETTORE_COSTAMPATO_DIRITTO_20150731.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B3729_02</Code>
+		<Name>PIASTRA_SUP_TOUAREG_20150914</Name>
+		<Status>Obsolete</Status>
+		<Rev>C</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B3729_02_C_PIASTRA_SUP_TOUAREG_20150914.CATPart</THREE_D>
+		<Step>B3729_02_C_PIASTRA_SUP_TOUAREG_20150914.step</Step>
+		<TWO_D>B3729_02_C_PIASTRA_SUP_TOUAREG_20150914.CATDrawing</TWO_D>
+		<Pdf>B3729_02_C_PIASTRA_SUP_TOUAREG_20150914.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B3729_03</Code>
+		<Name>PIASTRA_SUP_TOUAREG_20150925</Name>
+		<Status>Active</Status>
+		<Rev>NULL</Rev>
+		<Date>25_09_2015</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B3729_03_PIASTRA_SUP_TOUAREG_20150925.CATPart</THREE_D>
+		<Step>B3729_03_PIASTRA_SUP_TOUAREG_20150925.step</Step>
+		<TWO_D>B3729_03_PIASTRA_SUP_TOUAREG_20150925.CATDrawing</TWO_D>
+		<Pdf>B3729_03_PIASTRA_SUP_TOUAREG_20150925.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4353.01</Code>
+		<Name>SCATOLA MICRO</Name>
+		<Status>Active</Status>
+		<Rev>G</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4353.01-G-SCATOLA MICRO.CATPart</THREE_D>
+		<Step>B4353.01-G-SCATOLA MICRO.step</Step>
+		<TWO_D>B4353.01-G-SCATOLA MICRO.CATDrawing</TWO_D>
+		<Pdf>B4353.01-G-SCATOLA MICRO.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4354.01</Code>
+		<Name>PIASTRA SUPERIORE</Name>
+		<Status>Active</Status>
+		<Rev>C</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4354.01_C-PIASTRA SUPERIORE.CATPart</THREE_D>
+		<Step>B4354.01_C-PIASTRA SUPERIORE.step</Step>
+		<TWO_D>B4354.01_C-PIASTRA SUPERIORE.CATDrawing</TWO_D>
+		<Pdf>B4354.01_C-PIASTRA SUPERIORE.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4355.02</Code>
+		<Name>MOLLA AUSILIARIA GANCIO SICUREZZA</Name>
+		<Status>Active</Status>
+		<Rev>E</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4355.02-E-MOLLA AUSILIARIA GANCIO SICUREZZA.CATPart</THREE_D>
+		<Step>B4355.02-E-MOLLA AUSILIARIA GANCIO SICUREZZA.step</Step>
+		<TWO_D>B4355.02-E-MOLLA AUSILIARIA GANCIO SICUREZZA.CATDrawing</TWO_D>
+		<Pdf>B4355.02-E-MOLLA AUSILIARIA GANCIO SICUREZZA.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4356.03</Code>
+		<Name>GANCIO-SICUREZZA-COSTAMPATO</Name>
+		<Status>Active</Status>
+		<Rev>B</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4356.03_B-GANCIO-SICUREZZA-COSTAMPATO.CATPart</THREE_D>
+		<Step>B4356.03_B-GANCIO-SICUREZZA-COSTAMPATO.step</Step>
+		<TWO_D>B4356.03_B-GANCIO-SICUREZZA-COSTAMPATO.CATDrawing</TWO_D>
+		<Pdf>B4356.03_B-GANCIO-SICUREZZA-COSTAMPATO.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4357.02</Code>
+		<Name>GANCIO COSTAMPATO</Name>
+		<Status>Active</Status>
+		<Rev>C</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4357.02_C-GANCIO COSTAMPATO.CATPart</THREE_D>
+		<Step>B4357.02_C-GANCIO COSTAMPATO.step</Step>
+		<TWO_D>B4357.02_C-GANCIO COSTAMPATO.CATDrawing</TWO_D>
+		<Pdf>B4357.02_C-GANCIO COSTAMPATO.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4358.01</Code>
+		<Name>CILINDRO ESPULSORE</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B4358.01_A- CILINDRO ESPULSORE.CATDrawing</TWO_D>
+		<Pdf>B4358.01_A- CILINDRO ESPULSORE.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4359.00</Code>
+		<Name>MOLLA PER ESPULSORE</Name>
+		<Status>Active</Status>
+		<Rev>E</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4359.00_E-MOLLA PER ESPULSORE.CATPart</THREE_D>
+		<Step>B4359.00_E-MOLLA PER ESPULSORE.step</Step>
+		<TWO_D>B4359.00_E-MOLLA PER ESPULSORE.CATDrawing</TWO_D>
+		<Pdf>B4359.00_E-MOLLA PER ESPULSORE.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4360.00</Code>
+		<Name>BUSSOLA ESPULSORE</Name>
+		<Status>Active</Status>
+		<Rev>C</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4360.00-C-BUSSOLA ESPULSORE.CATPart</THREE_D>
+		<Step>B4360.00-C-BUSSOLA ESPULSORE.step</Step>
+		<TWO_D>B4360.00-C-BUSSOLA ESPULSORE.CATDrawing</TWO_D>
+		<Pdf>B4360.00-C-BUSSOLA ESPULSORE.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4361.02</Code>
+		<Name>PIASTRA INFERIORE</Name>
+		<Status>Active</Status>
+		<Rev>E</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4361.02_E-PIASTRA INFERIORE.CATPart</THREE_D>
+		<Step>B4361.02_E-PIASTRA INFERIORE.step</Step>
+		<TWO_D>B4361.02_E-PIASTRA INFERIORE.CATDrawing</TWO_D>
+		<Pdf>B4361.02_E-PIASTRA INFERIORE.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4362.02</Code>
+		<Name>SALTARELLO TRANCIATO</Name>
+		<Status>Active</Status>
+		<Rev>NULL</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B4362.02_B2-SALTARELLO TRANCIATO.CATDrawing</TWO_D>
+		<Pdf>B4362.02_B2-SALTARELLO TRANCIATO.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4362.04</Code>
+		<Name>SALTARELLO TRANCIATO</Name>
+		<Status>Active</Status>
+		<Rev>NULL</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4362.04_SALTARELLO_TRANCIATO_NUOVO-STAMPO.CATPart</THREE_D>
+		<Step>B4362.04_SALTARELLO_TRANCIATO_NUOVO-STAMPO.step</Step>
+		<TWO_D>Null</TWO_D>
+		<Pdf>Null</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4363.01</Code>
+		<Name>GANCIO TRANCIATO</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B4363.01-A-GANCIO TRANCIATO.CATDrawing</TWO_D>
+		<Pdf>B4363.01-A-GANCIO TRANCIATO.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4364.02</Code>
+		<Name>SALTARELLO COSTAMPATO</Name>
+		<Status>Active</Status>
+		<Rev>C</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4364.02_C-SALTARELLO COSTAMP.CATPart</THREE_D>
+		<Step>B4364.02_C-SALTARELLO COSTAMP.step</Step>
+		<TWO_D>Null</TWO_D>
+		<Pdf>Null</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4364.04</Code>
+		<Name>SALTARELLO COSTAMPATO</Name>
+		<Status>Active</Status>
+		<Rev>NULL</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4364.04_SALTARELLO_COSTAMPATO.CATPart</THREE_D>
+		<Step>B4364.04_SALTARELLO_COSTAMPATO.step</Step>
+		<TWO_D>Null</TWO_D>
+		<Pdf>Null</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4366.00</Code>
+		<Name>PERNO SALTARELLO</Name>
+		<Status>Active</Status>
+		<Rev>C</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4366.00-C-PERNO SALTARELLO.CATPart</THREE_D>
+		<Step>B4366.00-C-PERNO SALTARELLO.step</Step>
+		<TWO_D>B4366.00-C-PERNO SALTARELLO.CATDrawing</TWO_D>
+		<Pdf>B4366.00-C-PERNO SALTARELLO.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4366.02</Code>
+		<Name>PERNO SALTARELLO</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B4366.02_A-PERNO SALTARELLO.CATDrawing</TWO_D>
+		<Pdf>B4366.02_A-PERNO SALTARELLO.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4367.00</Code>
+		<Name>MOLLA SALTARELLO</Name>
+		<Status>Active</Status>
+		<Rev>C</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4367.00_C-MOLLA SALTARELLO.CATPart</THREE_D>
+		<Step>B4367.00_C-MOLLA SALTARELLO.step</Step>
+		<TWO_D>B4367.00_C-MOLLA SALTARELLO.CATDrawing</TWO_D>
+		<Pdf>B4367.00_C-MOLLA SALTARELLO.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4369.03</Code>
+		<Name>GANCIO-SICUREZZA-TRANCIATO</Name>
+		<Status>Active</Status>
+		<Rev>C</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B4369.03_C-GANCIO-SICUREZZA-TRANCIATO.CATDrawing</TWO_D>
+		<Pdf>B4369.03_C-GANCIO-SICUREZZA-TRANCIATO.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4373.01</Code>
+		<Name>MOLLA GANCIO</Name>
+		<Status>Active</Status>
+		<Rev>B</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4373.01_B-MOLLA GANCIO.CATPart</THREE_D>
+		<Step>B4373.01_B-MOLLA GANCIO.step</Step>
+		<TWO_D>B4373.01_B-MOLLA GANCIO.CATDrawing</TWO_D>
+		<Pdf>B4373.01_B-MOLLA GANCIO.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4374.00</Code>
+		<Name>MOLLA GANCIO SICUREZZA</Name>
+		<Status>Active</Status>
+		<Rev>F</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4374.00_F-MOLLA GANCIO SICUREZZA.CATPart</THREE_D>
+		<Step>B4374.00_F-MOLLA GANCIO SICUREZZA.step</Step>
+		<TWO_D>B4374.00_F-MOLLA GANCIO SICUREZZA.CATDrawing</TWO_D>
+		<Pdf>B4374.00_F-MOLLA GANCIO SICUREZZA.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4375.00</Code>
+		<Name>PERNO DOPPIO GANCIO</Name>
+		<Status>Active</Status>
+		<Rev>D</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4375.00_D-PERNO DOPPIO GANCIO.CATPart</THREE_D>
+		<Step>B4375.00_D-PERNO DOPPIO GANCIO.step</Step>
+		<TWO_D>B4375.00_D-PERNO DOPPIO GANCIO.CATDrawing</TWO_D>
+		<Pdf>B4375.00_D-PERNO DOPPIO GANCIO.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4375.01</Code>
+		<Name>PERNO DOPPIO GANCIO</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B4375.01_A-PERNO DOPPIO GANCIO.CATDrawing</TWO_D>
+		<Pdf>B4375.01_A-PERNO DOPPIO GANCIO.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4780_00</Code>
+		<Name>COPPRISERRATURA_ALTEA_XL_5P8_827_505_B_20150914</Name>
+		<Status>Obsolete</Status>
+		<Rev>C</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4780_00_C_COPPRISERRATURA_ALTEA_XL_5P8_827_505_B_20150914.CATPart</THREE_D>
+		<Step>B4780_00_C_COPPRISERRATURA_ALTEA_XL_5P8_827_505_B_20150914.step</Step>
+		<TWO_D>B4780_00_C_COPPRISERRATURA_ALTEA_XL_5P8_827_505_B_20150914.CATDrawing</TWO_D>
+		<Pdf>B4780_00_C_COPPRISERRATURA_ALTEA_XL_5P8_827_505_B_20150914.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4780_01</Code>
+		<Name>PPRISERRATURA_ALTEA_XL_5P8_827_505_B_20150925</Name>
+		<Status>Active</Status>
+		<Rev>NULL</Rev>
+		<Date>25_09_2015</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4780_01_COPPRISERRATURA_ALTEA_XL_5P8_827_505_B_20150925.CATPart</THREE_D>
+		<Step>B4780_01_COPPRISERRATURA_ALTEA_XL_5P8_827_505_B_20150925.step</Step>
+		<TWO_D>B4780_01_COPPRISERRATURA_ALTEA_XL_5P8_827_505_B_20150925.CATDrawing</TWO_D>
+		<Pdf>B4780_01_COPPRISERRATURA_ALTEA_XL_5P8_827_505_B_20150925.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4781_02</Code>
+		<Name>COPPRISERRATURA_ALTEA_5P0_827_505_F_SMUSSO_20150914</Name>
+		<Status>Obsolete</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4781_02_A_COPPRISERRATURA_ALTEA_5P0_827_505_F_SMUSSO_20150914.CATPart</THREE_D>
+		<Step>B4781_02_A_COPPRISERRATURA_ALTEA_5P0_827_505_F_SMUSSO_20150914.step</Step>
+		<TWO_D>B4781_02_A_COPPRISERRATURA_ALTEA_5P0_827_505_F_SMUSSO_20150914.CATDrawing</TWO_D>
+		<Pdf>B4781_02_A_COPPRISERRATURA_ALTEA_5P0_827_505_F_SMUSSO_20150914.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4781_03</Code>
+		<Name>PPRISERRATURA_ALTEA_5P0_827_505_F_SMUSSO_20150925</Name>
+		<Status>Active</Status>
+		<Rev>NULL</Rev>
+		<Date>25_09_2015</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4781_03_COPPRISERRATURA_ALTEA_5P0_827_505_F_SMUSSO_20150925.CATPart</THREE_D>
+		<Step>B4781_03_COPPRISERRATURA_ALTEA_5P0_827_505_F_SMUSSO_20150925.step</Step>
+		<TWO_D>B4781_03_COPPRISERRATURA_ALTEA_5P0_827_505_F_SMUSSO_20150925.CATDrawing</TWO_D>
+		<Pdf>B4781_03_COPPRISERRATURA_ALTEA_5P0_827_505_F_SMUSSO_20150925.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4782_00</Code>
+		<Name>COPPRISERRATURA_TOLEDO_5P5_827_505_B_20150914</Name>
+		<Status>Obsolete</Status>
+		<Rev>B</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4782_00_B_COPPRISERRATURA_TOLEDO_5P5_827_505_B_20150914.CATPart</THREE_D>
+		<Step>B4782_00_B_COPPRISERRATURA_TOLEDO_5P5_827_505_B_20150914.step</Step>
+		<TWO_D>B4782_00_B_COPPRISERRATURA_TOLEDO_5P5_827_505_B_20150914.CATDrawing</TWO_D>
+		<Pdf>B4782_00_B_COPPRISERRATURA_TOLEDO_5P5_827_505_B_20150914.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4782_01</Code>
+		<Name>PPRISERRATURA_TOLEDO_5P5_827_505_B_20150925</Name>
+		<Status>Active</Status>
+		<Rev>NULL</Rev>
+		<Date>25_09_2015</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4782_01_COPPRISERRATURA_TOLEDO_5P5_827_505_B_20150925.CATPart</THREE_D>
+		<Step>B4782_01_COPPRISERRATURA_TOLEDO_5P5_827_505_B_20150925.step</Step>
+		<TWO_D>B4782_01_COPPRISERRATURA_TOLEDO_5P5_827_505_B_20150925.CATDrawing</TWO_D>
+		<Pdf>B4782_01_COPPRISERRATURA_TOLEDO_5P5_827_505_B_20150925.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4783_00</Code>
+		<Name>COPPRISERRATURA_LEON_1P0_827_505_D_20150914</Name>
+		<Status>Obsolete</Status>
+		<Rev>C</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4783_00_C_COPPRISERRATURA_LEON_1P0_827_505_D_20150914.CATPart</THREE_D>
+		<Step>B4783_00_C_COPPRISERRATURA_LEON_1P0_827_505_D_20150914.step</Step>
+		<TWO_D>B4783_00_C_COPPRISERRATURA_LEON_1P0_827_505_D_20150914.CATDrawing</TWO_D>
+		<Pdf>B4783_00_C_COPPRISERRATURA_LEON_1P0_827_505_D_20150914.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B4783_01</Code>
+		<Name>PPRISERRATURA_LEON_1P0_827_505_D_20150925</Name>
+		<Status>Active</Status>
+		<Rev>NULL</Rev>
+		<Date>25_09_2015</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B4783_01_COPPRISERRATURA_LEON_1P0_827_505_D_20150925.CATPart</THREE_D>
+		<Step>B4783_01_COPPRISERRATURA_LEON_1P0_827_505_D_20150925.step</Step>
+		<TWO_D>B4783_01_COPPRISERRATURA_LEON_1P0_827_505_D_20150925.CATDrawing</TWO_D>
+		<Pdf>B4783_01_COPPRISERRATURA_LEON_1P0_827_505_D_20150925.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5264.00</Code>
+		<Name>PREASSEMBLAGGIO PRIMA RULLATURA</Name>
+		<Status>Active</Status>
+		<Rev>B</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5264.00_B-PREASSEMBLAGGIO PRIMA RULLATURA.CATDrawing</TWO_D>
+		<Pdf>B5264.00_B-PREASSEMBLAGGIO PRIMA RULLATURA.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5265.00</Code>
+		<Name>PREASSEMBLAGGIO SECONDA RULLATURA</Name>
+		<Status>Active</Status>
+		<Rev>B</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5265.00_B-PREASSEMBLAGGIO SECONDA RULLATURA.CATDrawing</TWO_D>
+		<Pdf>B5265.00_B-PREASSEMBLAGGIO SECONDA RULLATURA.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5475.00</Code>
+		<Name>CONNETTORE COSTAMPATO-PER-8W0.953.236</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5475.00_A-CONNETTORE COSTAMPATO-PER-8W0.953.236.CATDrawing</TWO_D>
+		<Pdf>B5475.00_A-CONNETTORE COSTAMPATO-PER-8W0.953.236.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5478.00</Code>
+		<Name>CONNETTORE COSTAMPATO-PER-3V0.953.236-</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5478.00_A-CONNETTORE COSTAMPATO-PER-3V0.953.236-.CATDrawing</TWO_D>
+		<Pdf>B5478.00_A-CONNETTORE COSTAMPATO-PER-3V0.953.236-.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5481.00</Code>
+		<Name>CONNETTORE COSTAMPATO-PER-4M0.953.236-</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5481.00_A-CONNETTORE COSTAMPATO-PER-4M0.953.236-.CATDrawing</TWO_D>
+		<Pdf>B5481.00_A-CONNETTORE COSTAMPATO-PER-4M0.953.236-.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5767.03</Code>
+		<Name>Piastra_inferiore_tratt_superf</Name>
+		<Status>Active</Status>
+		<Rev>NULL</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5767.03-Piastra_inferiore_tratt_superf.CATDrawing</TWO_D>
+		<Pdf>B5767.03-Piastra_inferiore_tratt_superf.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5768.02</Code>
+		<Name>Piastra_superiore_tratt_superf</Name>
+		<Status>Active</Status>
+		<Rev>NULL</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5768.02_Piastra_superiore_tratt_superf.CATDrawing</TWO_D>
+		<Pdf>B5768.02_Piastra_superiore_tratt_superf.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5769.02</Code>
+		<Name>SALTARELLO TRATTAMENTO TERMICO</Name>
+		<Status>Active</Status>
+		<Rev>B</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5769.02-B-SALTARELLO TRATTAMENTO TERMICO.CATDrawing</TWO_D>
+		<Pdf>B5769.02-B-SALTARELLO TRATTAMENTO TERMICO.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5770.02</Code>
+		<Name>SALTARELLO-TRATTAMENTO SUPERFICIALE</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5770.02_A-SALTARELLO-TRATTAMENTO SUPERFICIALE.CATDrawing</TWO_D>
+		<Pdf>B5770.02_A-SALTARELLO-TRATTAMENTO SUPERFICIALE.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5771.01</Code>
+		<Name>GANCIO TRATTAMENTO TERMICO</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5771.01_A-GANCIO TRATTAMENTO TERMICO.CATDrawing</TWO_D>
+		<Pdf>B5771.01_A-GANCIO TRATTAMENTO TERMICO.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5772.01</Code>
+		<Name>GANCIO TRATTAMENTO SUPERFICIALE</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5772.01_A-GANCIO TRATTAMENTO SUPERFICIALE.CATDrawing</TWO_D>
+		<Pdf>B5772.01_A-GANCIO TRATTAMENTO SUPERFICIALE.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5773.00</Code>
+		<Name>PERNO DOPPIO GANCIO TRATTATO</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5773.00_A-PERNO DOPPIO GANCIO TRATTATO.CATDrawing</TWO_D>
+		<Pdf>B5773.00_A-PERNO DOPPIO GANCIO TRATTATO.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5773.01</Code>
+		<Name>RNO DOPPIO GANCIO TRATTATO</Name>
+		<Status>Active</Status>
+		<Rev>NULL</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5773.01-PERNO DOPPIO GANCIO TRATTATO.CATDrawing</TWO_D>
+		<Pdf>B5773.01-PERNO DOPPIO GANCIO TRATTATO.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5774.00</Code>
+		<Name>PERNO SALTARELLO TRATTATO</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5774.00_A-PERNO SALTARELLO TRATTATO.CATDrawing</TWO_D>
+		<Pdf>B5774.00_A-PERNO SALTARELLO TRATTATO.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5774.02</Code>
+		<Name>PERNO SALTARELLO TRATTATO</Name>
+		<Status>Active</Status>
+		<Rev>NULL</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5774.02-PERNO SALTARELLO TRATTATO.CATDrawing</TWO_D>
+		<Pdf>B5774.02-PERNO SALTARELLO TRATTATO.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5775.03</Code>
+		<Name>GANCIO SICUREZZA TRATTAMENTO SUPERFICIALE</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5775.03_A-GANCIO SICUREZZA TRATTAMENTO SUPERFICIALE.CATDrawing</TWO_D>
+		<Pdf>B5775.03_A-GANCIO SICUREZZA TRATTAMENTO SUPERFICIALE.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5779.00</Code>
+		<Name>MICRO IMC ZIPPY NO POST</Name>
+		<Status>Active</Status>
+		<Rev>D</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5779.00-D-MICRO IMC ZIPPY NO POST.CATDrawing</TWO_D>
+		<Pdf>B5779.00-D-MICRO IMC ZIPPY NO POST.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5780.00</Code>
+		<Name>CONNETTORE COSTAMPATO-PER-918.953.236.00</Name>
+		<Status>Active</Status>
+		<Rev>B</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5780.00-B-CONNETTORE COSTAMPATO-PER-918.953.236.00.CATDrawing</TWO_D>
+		<Pdf>B5780.00-B-CONNETTORE COSTAMPATO-PER-918.953.236.00.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5784.00</Code>
+		<Name>MOLLA PER ESPULSORE 40-70N</Name>
+		<Status>Active</Status>
+		<Rev>D</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5784.00-D-MOLLA PER ESPULSORE 40-70N.CATDrawing</TWO_D>
+		<Pdf>B5784.00-D-MOLLA PER ESPULSORE 40-70N.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5829.01</Code>
+		<Name>CONNETTORE COSTAMPATO-PER-8S0.953.236-</Name>
+		<Status>Active</Status>
+		<Rev>B</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5829.01_B-CONNETTORE COSTAMPATO-PER-8S0.953.236-.CATDrawing</TWO_D>
+		<Pdf>B5829.01_B-CONNETTORE COSTAMPATO-PER-8S0.953.236-.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5847.00</Code>
+		<Name>CONNETTORE COSTAMPATO-PER-95B.953.236-</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5847.00_A-CONNETTORE COSTAMPATO-PER-95B.953.236-.CATDrawing</TWO_D>
+		<Pdf>B5847.00_A-CONNETTORE COSTAMPATO-PER-95B.953.236-.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5904.03</Code>
+		<Name>GANCIO SICUREZZA TRATTAMENTO TERMICO</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5904.03_A-GANCIO SICUREZZA TRATTAMENTO TERMICO.CATDrawing</TWO_D>
+		<Pdf>B5904.03_A-GANCIO SICUREZZA TRATTAMENTO TERMICO.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5905.00</Code>
+		<Name>MOLLA PER ESPULSORE 55-85N</Name>
+		<Status>Active</Status>
+		<Rev>B</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5905.00_B-MOLLA PER ESPULSORE 55-85N.CATDrawing</TWO_D>
+		<Pdf>B5905.00_B-MOLLA PER ESPULSORE 55-85N.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5906.00</Code>
+		<Name>MOLLA PER ESPULSORE 70-110N</Name>
+		<Status>Active</Status>
+		<Rev>B</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5906.00_B-MOLLA PER ESPULSORE 70-110N.CATDrawing</TWO_D>
+		<Pdf>B5906.00_B-MOLLA PER ESPULSORE 70-110N.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5907.00</Code>
+		<Name>MOLLA PER ESPULSORE-20-40N</Name>
+		<Status>Active</Status>
+		<Rev>C</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5907.00_C-MOLLA PER ESPULSORE-20-40N.CATDrawing</TWO_D>
+		<Pdf>B5907.00_C-MOLLA PER ESPULSORE-20-40N.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5929.01</Code>
+		<Name>BOCCOLA -TORNITA-ALTA-20</Name>
+		<Status>Active</Status>
+		<Rev>C</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>B5929.01_C-BOCCOLA -TORNITA-ALTA-20.CATPart</THREE_D>
+		<Step>B5929.01_C-BOCCOLA -TORNITA-ALTA-20.step</Step>
+		<TWO_D>B5929.01_C-BOCCOLA -TORNITA-ALTA-20.CATDrawing</TWO_D>
+		<Pdf>B5929.01_C-BOCCOLA -TORNITA-ALTA-20.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B5930.01</Code>
+		<Name>BOCCOLA TRATTATA</Name>
+		<Status>Active</Status>
+		<Rev>B</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B5930.01-B-BOCCOLA TRATTATA.CATDrawing</TWO_D>
+		<Pdf>B5930.01-B-BOCCOLA TRATTATA.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>B6025.00</Code>
+		<Name>SALTARELLO BURATTATO</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>B6025.00_A-SALTARELLO BURATTATO.CATDrawing</TWO_D>
+		<Pdf>B6025.00_A-SALTARELLO BURATTATO.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>D3955.00</Code>
+		<Name>ASSY ESPULSORE MQB-14-09-10</Name>
+		<Status>Active</Status>
+		<Rev>NULL</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>D3955.00-R8-ASSY ESPULSORE MQB-14-09-10.step</THREE_D>
+		<Step>D3955.00-R8-ASSY ESPULSORE MQB-14-09-10.CATProduct</Step>
+		<TWO_D>Null</TWO_D>
+		<Pdf>Null</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>D4183.02</Code>
+		<Name>CABLAGGIO-L120-8S0.953.236</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>D4183.02_A-CABLAGGIO-L120-8S0.953.236.CATDrawing</TWO_D>
+		<Pdf>D4183.02_A-CABLAGGIO-L120-8S0.953.236.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>D4553.00</Code>
+		<Name>CABLAGGIO-L100- CONNETTORE VW PER 3V0.953.236</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>D4553.00_A-CABLAGGIO-L100- CONNETTORE VW PER 3V0.953.236.CATDrawing</TWO_D>
+		<Pdf>D4553.00_A-CABLAGGIO-L100- CONNETTORE VW PER 3V0.953.236.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>D5044.00</Code>
+		<Name>CABLAGGIO-L200-918.953.236</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>D5044.00_A-CABLAGGIO-L200-918.953.236.CATDrawing</TWO_D>
+		<Pdf>D5044.00_A-CABLAGGIO-L200-918.953.236.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>D5061.00</Code>
+		<Name>CABLAGGIO-L100- 95B.953.236</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>D5061.00_A-CABLAGGIO-L100- 95B.953.236.CATDrawing</TWO_D>
+		<Pdf>D5061.00_A-CABLAGGIO-L100- 95B.953.236.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>D5785.05</Code>
+		<Name>TAB_010_831_D__DRW_TZ__016_____MULTI_FKS_AUDI_____P_B_FREI__141207QCSI</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>D5785.05_A_TAB_010_831_D__DRW_TZ__016_____MULTI_FKS_AUDI_____P_B_FREI__141207QCSI.CATDrawing</TWO_D>
+		<Pdf>D5785.05_A_TAB_010_831_D__DRW_TZ__016_____MULTI_FKS_AUDI_____P_B_FREI__141207QCSI.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>D5804.00</Code>
+		<Name>CABLAGGIO-L110-4M0.953.236</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>D5804.00_A-CABLAGGIO-L110-4M0.953.236.CATDrawing</TWO_D>
+		<Pdf>D5804.00_A-CABLAGGIO-L110-4M0.953.236.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+	<Component>
+		<Code>D5805.00</Code>
+		<Name>CABLAGGIO-L115-8W0.953.236</Name>
+		<Status>Active</Status>
+		<Rev>A</Rev>
+		<Date>01_01_1970</Date>
+		<Designer>Bartola</Designer>
+		<THREE_D>Null</THREE_D>
+		<Step>Null</Step>
+		<TWO_D>D5805.00_A-CABLAGGIO-L115-8W0.953.236.CATDrawing</TWO_D>
+		<Pdf>D5805.00_A-CABLAGGIO-L115-8W0.953.236.pdf</Pdf>
+		<Weight>Null</Weight>
+		<Material>Null</Material>
+		<TThreat>Null</TThreat>
+		<Coat>Null</Coat>
+		<Supplyer>Null</Supplyer>
+	</Component>
+</PartList>

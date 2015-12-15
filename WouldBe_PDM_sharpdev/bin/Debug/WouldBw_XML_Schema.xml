@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<WouldBePDM xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<FamilyList>
+		<Family>
+			<FamilyName>Hood Latches</FamilyName>
+			<FamilyID>FAM1</FamilyID>
+			<FamilyStatus>Active</FamilyStatus>
+		</Family>
+		<Family>
+			<FamilyName>Tail Gate</FamilyName>
+			<FamilyID>FAM2</FamilyID>
+			<FamilyStatus>Active</FamilyStatus>
+		</Family>
+		<Family>
+			<FamilyName>Push Push</FamilyName>
+			<FamilyID>FAM3</FamilyID>
+			<FamilyStatus>Active</FamilyStatus>
+		</Family>
+		<Family>
+			<FamilyName>Windows Tank</FamilyName>
+			<FamilyID>FAM4</FamilyID>
+			<FamilyStatus>Active</FamilyStatus>
+		</Family>
+		<Family>
+			<FamilyName>Pump</FamilyName>
+			<FamilyID>FAM5</FamilyID>
+			<FamilyStatus>Active</FamilyStatus>
+		</Family>
+	</FamilyList>
+	<ProjectList>
+		<Project>
+			<ProjectName>MLB EVO</ProjectName>
+			<ProjectCode>PRJ1</ProjectCode>
+			<ProjectID>PRJ1</ProjectID>
+			<FamilyID>FAM1</FamilyID>
+			<CustomerName>AUDI</CustomerName>
+			<CustomerCode>CUS01</CustomerCode>
+			<ProjectStatus>Active</ProjectStatus>
+			<ProjectManager>Bartola</ProjectManager>
+		</Project>
+		<Project>
+			<ProjectName>Scirocco</ProjectName>
+			<ProjectCode>PRJ2</ProjectCode>
+			<ProjectID>PRJ2</ProjectID>
+			<FamilyID>FAM1</FamilyID>
+			<CustomerName>VW</CustomerName>
+			<CustomerCode>CUS02</CustomerCode>
+			<ProjectStatus>Work In Progress</ProjectStatus>
+			<ProjectManager>Capponi</ProjectManager>
+		</Project>
+		<Project>
+			<ProjectName>3 Punti</ProjectName>
+			<ProjectCode>PRJ3</ProjectCode>
+			<ProjectID>PRJ3</ProjectID>
+			<FamilyID>FAM1</FamilyID>
+			<CustomerName>VW</CustomerName>
+			<CustomerCode>CUS02</CustomerCode>
+			<ProjectStatus>Active</ProjectStatus>
+			<ProjectManager>Bartola</ProjectManager>
+		</Project>
+		<Project>
+			<ProjectName>PQ 35</ProjectName>
+			<ProjectCode>PRJ4</ProjectCode>
+			<ProjectID>PRJ4</ProjectID>
+			<FamilyID>FAM2</FamilyID>
+			<CustomerName>VW</CustomerName>
+			<CustomerCode>CUS02</CustomerCode>
+			<ProjectStatus>Active</ProjectStatus>
+			<ProjectManager>Capogrosso</ProjectManager>
+		</Project>
+		<Project>
+			<ProjectName>SBL1</ProjectName>
+			<ProjectCode>PRJ5</ProjectCode>
+			<FamilyID>FAM2</FamilyID>
+			<CustomerName>VW</CustomerName>
+			<CustomerCode>CUS02</CustomerCode>
+			<ProjectStatus>Stop</ProjectStatus>
+			<ProjectManager>Capogrosso</ProjectManager>
+		</Project>
+		<Project>
+			<ProjectName>SBL2</ProjectName>
+			<ProjectCode>PRJ6</ProjectCode>
+			<FamilyID>FAM2</FamilyID>
+			<CustomerName>AUDI</CustomerName>
+			<CustomerCode>CUS01</CustomerCode>
+			<ProjectStatus>Active</ProjectStatus>
+			<ProjectManager>Capogrosso</ProjectManager>
+		</Project>
+		<Project>
+			<ProjectName>SCS</ProjectName>
+			<ProjectCode>PRJ7</ProjectCode>
+			<FamilyID>FAM2</FamilyID>
+			<CustomerName>AUDI</CustomerName>
+			<CustomerCode>CUS01</CustomerCode>
+			<ProjectStatus>Active</ProjectStatus>
+			<ProjectManager>Capogrosso</ProjectManager>
+		</Project>
+	</ProjectList>
+	<ProductList>
+		<Product>
+			<ProductName>8W0.823.509</ProductName>
+			<ProductCar>AUDI TT</ProductCar>
+			<ProductCode>PROD1</ProductCode>
+			<ProductStatus>Active</ProductStatus>
+			<ProjectCode>PRJ1</ProjectCode>
+			<Product2DName>TAB_010_030_15D</Product2DName>
+			<Product2DFilename>TAB_010_030_15D</Product2DFilename>
+			<Product2DREV>TAB_010_030_15D</Product2DREV>
+			<Product2DDate>TAB_010_030_15D</Product2DDate>
+		</Product>
+		<Product>
+			<ProductName>8S0.823.509</ProductName>
+			<ProductCar>AUDI Q3</ProductCar>
+			<ProductCode>PROD2</ProductCode>
+			<ProductStatus>Active</ProductStatus>
+			<ProjectCode>PRJ1</ProjectCode>
+			<Product2D>1K8.823.509.N</Product2D>
+			<Product2DFilename>TAB_010_030_15D</Product2DFilename>
+			<Product2DREV>TAB_010_030_15D</Product2DREV>
+			<Product2DDate>TAB_010_030_15D</Product2DDate>
+		</Product>
+		<Product>
+			<ProductName>aaa.bbb.ccc.ddd</ProductName>
+			<ProductCar>AUDI Q2</ProductCar>
+			<ProductCode>PROD3</ProductCode>
+			<ProductStatus>Active</ProductStatus>
+			<ProjectCode>PRJ2</ProjectCode>
+			<Product2D>5M0.827.505.H</Product2D>
+			<Product2DFilename>TAB_010_030_15D</Product2DFilename>
+			<Product2DREV>TAB_010_030_15D</Product2DREV>
+			<Product2DDate>TAB_010_030_15D</Product2DDate>
+		</Product>
+		<Product>
+			<ProductName>kkk.ggg.hhh.jjj</ProductName>
+			<ProductCar>AUDI Q3</ProductCar>
+			<ProductCode>PROD3</ProductCode>
+			<ProductStatus>Active</ProductStatus>
+			<ProjectCode>PRJ4</ProjectCode>
+			<Product2D>Disegno2</Product2D>
+			<Product2DFilename>TAB_010_030_15D</Product2DFilename>
+			<Product2DREV>TAB_010_030_15D</Product2DREV>
+			<Product2DDate>TAB_010_030_15D</Product2DDate>
+		</Product>
+	</ProductList>
+	<PartList>
+		<Component>
+			<PartName>Saltarello</PartName>
+			<PartCode>B4362.03</PartCode>
+			<PartStatus>Active</PartStatus>
+			<PartRev>A</PartRev>
+			<PartDate>01_01_1970</PartDate>
+			<PartDesigner>Bartola</PartDesigner>
+			<PartTHREE_D>Component 1</PartTHREE_D>
+			<PartStep>3000</PartStep>
+			<PartTWO_D>1000</PartTWO_D>
+			<PartPdf>Component 3</PartPdf>
+			<PartWeight>Component 4</PartWeight>
+			<PartMaterial>4</PartMaterial>
+			<PartTThreat>Component 4</PartTThreat>
+			<PartCoat>4000</PartCoat>
+			<PartSupplyer>4000</PartSupplyer>
+                        <PartImage>B4362_03.jpg</PartImage>
+		</Component>
+		<Component>
+			<PartName>Gancio</PartName>
+			<PartCode>B5364.02</PartCode>
+			<PartStatus>Active</PartStatus>
+			<PartRev>B</PartRev>
+			<PartDate>01_01_1970</PartDate>
+			<PartDesigner>Bartola</PartDesigner>
+			<PartTHREE_D>Component 1</PartTHREE_D>
+			<PartStep>3000</PartStep>
+			<PartTWO_D>1000</PartTWO_D>
+			<PartPdf>Component 3</PartPdf>
+			<PartWeight>Component 4</PartWeight>
+			<PartMaterial>4</PartMaterial>
+			<PartTThreat>Component 4</PartTThreat>
+			<PartCoat>4000</PartCoat>
+			<PartSupplyer>4000</PartSupplyer>
+                        <PartImage>B5364_02.jpg</PartImage>
+		</Component>
+		<Component>
+			<PartName>perno</PartName>
+			<PartCode>D4467.00</PartCode>
+			<PartStatus>Active</PartStatus>
+			<PartRev>D</PartRev>
+			<PartDate>01_01_1970</PartDate>
+			<PartDesigner>Bartola</PartDesigner>
+			<PartTHREE_D>Component 1</PartTHREE_D>
+			<PartStep>3000</PartStep>
+			<PartTWO_D>1000</PartTWO_D>
+			<PartPdf>Component 3</PartPdf>
+			<PartWeight>Component 4</PartWeight>
+			<PartMaterial>4</PartMaterial>
+			<PartTThreat>Component 4</PartTThreat>
+			<PartCoat>4000</PartCoat>
+			<PartSupplyer>4000</PartSupplyer>
+                        <PartImage>D4467_00.jpg</PartImage>
+		</Component>
+	</PartList>
+	<PartMatch>
+		<ComponentList>
+			<PartListed>B4356.02_A</PartListed>
+			<ProjectListed>PRJ01</ProjectListed>
+		</ComponentList>
+		<ComponentList>
+			<PartListed>B4356.03_A</PartListed>
+			<ProjectListed>PRJ01</ProjectListed>
+		</ComponentList>
+	</PartMatch>
+</WouldBePDM>
