@@ -24,8 +24,19 @@ namespace wina
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
+//			Application.Run(new WouldBe_PDM_sharpdev.WouldBe_data());
+			Application.Run(new WouldBe_PDM_sharpdev.SplashScreen());
 			Application.Run(new MainForm());
 		}
+		
+//private static void main2(string[] args)
+//		{
+//			Application.EnableVisualStyles();
+//			Application.SetCompatibleTextRenderingDefault(false);
+//			Application.Run(new MainForm());
+////			Application.Run(new WouldBe_PDM_sharpdev.SplashScreen());
+//		}
+		
 		
 	}
 }
