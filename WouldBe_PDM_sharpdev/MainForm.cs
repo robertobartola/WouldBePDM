@@ -545,6 +545,9 @@ if (result.ToString()=="OK"){
 //            Prodtable.Columns.Add(new DataColumn("ProductCode", Type.GetType("System.String"))); 
      	}
 	}
+ 
+  string drawing_full_file= CAD_DIR_Location + "\\" + PdfFolder + "\\" + drawingfilenameBox.Text.ToString();
+  if (File.Exists(drawing_full_file)){button6.Enabled=true;} else{button6.Enabled=false;}
  foreach(DataRow dr in Matchtable.Rows) // search whole table
  	{
  	if(dr["ProjectListed"].ToString() == projectselectedID) // if id==2  FAM_Box.SelectedItem.ToString()
@@ -604,6 +607,8 @@ if (dr["PartCoat"].ToString()!="NULL")
 {coatingBox.AppendText(dr["PartCoat"].ToString());}
 if (dr["PartSupplyer"].ToString()!="NULL")
 {supplierBox.AppendText(dr["PartSupplyer"].ToString());}
+//string twodfulldir=CAD_DIR_Location + "\\" + PdfFolder + "\\";
+
 string fullfilejpgname=CAD_DIR_Location + "\\" + ImageFolder + "\\" + dr["PartImage"].ToString();//partimagefile;
 if (File.Exists (fullfilejpgname) ) 
 {
@@ -613,24 +618,31 @@ if (File.Exists (fullfilejpgname) )
 }
 if (SelectedToOpen3D!="")
 {Checkout_3D.Enabled=true;
-	OpenCADbutton.Enabled=true;
-	whereUSEDbutton.Enabled=true;
-	generateSTEPbuttron.Enabled=true;}
+	if (File.Exists(CAD_DIR_Location + "\\" + dr["PartTHREE_D"].ToString() )){OpenCADbutton.Enabled=true;}
+//	OpenCADbutton.Enabled=true
+//	whereUSEDbutton.Enabled=true;
+//	generateSTEPbuttron.Enabled=false;
+}
 if (SelectedToOpen2D!="")
 {Checkout_2D.Enabled=true;
-	open2Dbutton.Enabled=true;
-	where2Dbutton.Enabled=true;
-generatePDFbutton.Enabled=true;}
+	if (File.Exists(CAD_DIR_Location + "\\" + dr["PartTWO_D"].ToString() )){open2Dbutton.Enabled=true;}
+//	open2Dbutton.Enabled=true;
+//	where2Dbutton.Enabled=true;
+//generatePDFbutton.Enabled=true;
+}
 if (SelectedToOpenPdf!="")
 {
 	CheckOut_pdf.Enabled=true;
-	openPDFbutton.Enabled=true;
+	if (File.Exists(CAD_DIR_Location + "\\" + PdfFolder + "\\" + dr["PartPdf"].ToString())){openPDFbutton.Enabled=true;}
+//	openPDFbutton.Enabled=true;
 generatePDFbutton.Enabled=false;}
 if(SelectedToOpenStep!="")
 {
+		if (File.Exists(CAD_DIR_Location + "\\" + StepFolder + "\\" + dr["PartStep"].ToString())){OpenSTEPbutton.Enabled=true;}
 	CheckOut_Step.Enabled=true;
-	OpenSTEPbutton.Enabled=true;
-generateSTEPbuttron.Enabled=false;}
+//	OpenSTEPbutton.Enabled=true;
+generateSTEPbuttron.Enabled=false;
+}
                }
              }
 		}// select prod
@@ -848,7 +860,7 @@ if (InstallPathSVN != null)
 string commandtolaunch = "\"" + InstallPathSVN + "\"";
     System.Diagnostics.Process.Start(commandtolaunch, "/command:update " + " /path:" + "\"" + CAD_DIR_Location  + "\\" + SelectedToOpen3D + "\"");
 }
-
+if (File.Exists(CAD_DIR_Location + "\\" + ThreedBox.Text.ToString())){OpenCADbutton.Enabled=true;}
 		}
 	    public static System.Diagnostics.Process ViewFileFolder(string path)
 {
@@ -890,6 +902,7 @@ if (InstallPathSVN != null)
 string commandtolaunch = "\"" + InstallPathSVN + "\"";
     System.Diagnostics.Process.Start(commandtolaunch, "/command:update " + " /path:" + "\"" + CAD_DIR_Location  + "\\" + SelectedToOpen2D + "\"");
 }
+if (File.Exists(CAD_DIR_Location + "\\" + TwodBox.Text.ToString() )){open2Dbutton.Enabled=true;}
 
 		}
 		void CheckOut_StepClick(object sender, EventArgs e)
@@ -902,6 +915,7 @@ if (InstallPathSVN != null)
 string commandtolaunch = "\"" + InstallPathSVN + "\"";
     System.Diagnostics.Process.Start(commandtolaunch, "/command:update " + " /path:" + "\"" + CAD_DIR_Location  + "\\" + StepFolder +"\\" + SelectedToOpenStep + "\"");
 }
+		if (File.Exists(CAD_DIR_Location + "\\" + StepFolder + "\\" + StepBox.Text.ToString())){OpenSTEPbutton.Enabled=true;}
 		}
 		void CheckOut_pdfClick(object sender, EventArgs e)
 		{
@@ -913,6 +927,9 @@ if (InstallPathSVN != null)
 string commandtolaunch = "\"" + InstallPathSVN + "\"";
     System.Diagnostics.Process.Start(commandtolaunch, "/command:update " + " /path:" + "\"" + CAD_DIR_Location  + "\\" + PdfFolder +"\\" + SelectedToOpenPdf + "\"");
 }
+
+	if (File.Exists(CAD_DIR_Location + "\\" + PdfFolder + "\\" + PdfBox.Text.ToString())){openPDFbutton.Enabled=true;}
+
 		}
 		void Button5Click(object sender, EventArgs e)
 		{
@@ -1896,6 +1913,13 @@ jpegfile.Text=(filename);
 	
 			}
 			else {MessageBox.Show("Pleaase select a valid CODE");}
+		}
+		void Button6Click(object sender, EventArgs e)
+		{
+	 string drawing_full_file= CAD_DIR_Location + "\\" + PdfFolder + "\\" + drawingfilenameBox.Text.ToString();
+//  if (File.Exists(drawing_full_file)){button6.Enabled=true;} else{button6.Enabled=false;}
+	if (File.Exists (drawing_full_file) ) 
+		{ViewFileFolder(drawing_full_file );} 
 		}
 	}////PUBLIC - Name space
 

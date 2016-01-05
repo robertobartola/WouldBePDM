@@ -152,11 +152,11 @@
 	<PartList>
 		<Component>
 			<PartName>Ramones</PartName>
-			<PartCode>PRT001_01_A</PartCode>
+			<PartCode>PRT01_01_A</PartCode>
 			<PartStatus>Active</PartStatus>
 			<PartRev>073</PartRev>
 			<PartDate>16_08_1974</PartDate>
-			<PartDesigner>Part1.CATPart</PartDesigner>
+			<PartDesigner>Bartola</PartDesigner>
 			<PartTHREE_D>Part1.CATPart</PartTHREE_D>
 			<PartStep>Part1.stp</PartStep>
 			<PartTWO_D>Part1.CATDrawing</PartTWO_D>
@@ -170,11 +170,11 @@
 		</Component>
 		<Component>
 			<PartName>Stooges</PartName>
-			<PartCode>PRT002_01_C1</PartCode>
+			<PartCode>PRT02_01_C1</PartCode>
 			<PartStatus>Dormient</PartStatus>
 			<PartRev>067</PartRev>
 			<PartDate>31_10_1967</PartDate>
-			<PartDesigner>Part2.CATPart</PartDesigner>
+			<PartDesigner>Devoto</PartDesigner>
 			<PartTHREE_D>Part2.CATPart</PartTHREE_D>
 			<PartStep>Part2.stp</PartStep>
 			<PartTWO_D>Part2.CATDrawing</PartTWO_D>
@@ -188,11 +188,11 @@
 		</Component>
 		<Component>
 			<PartName>Clash</PartName>
-			<PartCode>PRT003_02_B</PartCode>
+			<PartCode>PRT03_02_B</PartCode>
 			<PartStatus>Active</PartStatus>
 			<PartRev>076</PartRev>
 			<PartDate>04_07_1976</PartDate>
-			<PartDesigner>Part3.CATPart</PartDesigner>
+			<PartDesigner>Curtis</PartDesigner>
 			<PartTHREE_D>Part3.CATPart</PartTHREE_D>
 			<PartStep>Part3.stp</PartStep>
 			<PartTWO_D>Part3.CATDrawing</PartTWO_D>
@@ -206,11 +206,11 @@
 		</Component>
 		<Component>
 			<PartName>Buzzcocks</PartName>
-			<PartCode>PRT004_04_A</PartCode>
+			<PartCode>PRT04_04_A</PartCode>
 			<PartStatus>Work In Progress</PartStatus>
 			<PartRev>076</PartRev>
 			<PartDate>03_07_1976</PartDate>
-			<PartDesigner>Part4.CATPart</PartDesigner>
+			<PartDesigner>CBGB</PartDesigner>
 			<PartTHREE_D>Part4.CATPart</PartTHREE_D>
 			<PartStep>Part4.stp</PartStep>
 			<PartTWO_D>Part4.CATDrawing</PartTWO_D>
@@ -224,11 +224,11 @@
 		</Component>
 		<Component>
 			<PartName>Nineninenine</PartName>
-			<PartCode>PRT005_01_R</PartCode>
+			<PartCode>PRT05_01_R</PartCode>
 			<PartStatus>Work In Progress</PartStatus>
 			<PartRev>078</PartRev>
 			<PartDate>01_03_1978</PartDate>
-			<PartDesigner>Part5.CATPart</PartDesigner>
+			<PartDesigner>Strummer</PartDesigner>
 			<PartTHREE_D>Part5.CATPart</PartTHREE_D>
 			<PartStep>Part5.stp</PartStep>
 			<PartTWO_D>Part5.CATDrawing</PartTWO_D>
@@ -242,11 +242,11 @@
 		</Component>
 		<Component>
 			<PartName>Gang</PartName>
-			<PartCode>PRT006_00_D4</PartCode>
+			<PartCode>PRT06_00_D4</PartCode>
 			<PartStatus>Active</PartStatus>
 			<PartRev>084</PartRev>
 			<PartDate>01_01_1984</PartDate>
-			<PartDesigner>Part6.CATPart</PartDesigner>
+			<PartDesigner>Volkerding </PartDesigner>
 			<PartTHREE_D>Part6.CATPart</PartTHREE_D>
 			<PartStep>Part6.stp</PartStep>
 			<PartTWO_D>Part6.CATDrawing</PartTWO_D>
@@ -260,11 +260,11 @@
 		</Component>
 		<Component>
 			<PartName>Skiantos</PartName>
-			<PartCode>PRT007_01_B6</PartCode>
+			<PartCode>PRT07_01_B6</PartCode>
 			<PartStatus>Active</PartStatus>
 			<PartRev>077</PartRev>
 			<PartDate>01_11_1977</PartDate>
-			<PartDesigner>Part7.CATPart</PartDesigner>
+			<PartDesigner>Pop</PartDesigner>
 			<PartTHREE_D>Part7.CATPart</PartTHREE_D>
 			<PartStep>Part7.step</PartStep>
 			<PartTWO_D>Part7.CATDrawing</PartTWO_D>
@@ -278,11 +278,11 @@
 		</Component>
 		<Component>
 			<PartName>DeadKennedys</PartName>
-			<PartCode>PRT008_04_C2</PartCode>
+			<PartCode>PRT08_04_C2</PartCode>
 			<PartStatus>Dormient</PartStatus>
 			<PartRev>078</PartRev>
 			<PartDate>01_06_1978</PartDate>
-			<PartDesigner>Part8.CATPart</PartDesigner>
+			<PartDesigner>Bowie</PartDesigner>
 			<PartTHREE_D>Part8.CATPart</PartTHREE_D>
 			<PartStep>Part8.stp</PartStep>
 			<PartTWO_D>Part8.CATDrawing</PartTWO_D>
@@ -296,11 +296,11 @@
 		</Component>
 		<Component>
 			<PartName>ManuChao</PartName>
-			<PartCode>PRT009_05_C0</PartCode>
+			<PartCode>PRT09_05_C0</PartCode>
 			<PartStatus>Active</PartStatus>
 			<PartRev>061</PartRev>
 			<PartDate>01_01_1998</PartDate>
-			<PartDesigner>Part9.CATPart</PartDesigner>
+			<PartDesigner>Siouxsie</PartDesigner>
 			<PartTHREE_D>Part9.CATPart</PartTHREE_D>
 			<PartStep>Part9.stp</PartStep>
 			<PartTWO_D>Part9.CATDrawing</PartTWO_D>
@@ -314,11 +314,11 @@
 		</Component>
 		<Component>
 			<PartName>ChuckBerry</PartName>
-			<PartCode>ASSY01_07_A</PartCode>
+			<PartCode>ASS01_07_A</PartCode>
 			<PartStatus>Dormient</PartStatus>
 			<PartRev>026</PartRev>
 			<PartDate>01_01_1951</PartDate>
-			<PartDesigner>Product1.CATProduct</PartDesigner>
+			<PartDesigner>Smith</PartDesigner>
 			<PartTHREE_D>Product1.CATProduct</PartTHREE_D>
 			<PartStep>Product1.stp</PartStep>
 			<PartTWO_D>Product1.CATDrawing</PartTWO_D>
@@ -332,11 +332,11 @@
 		</Component>
 		<Component>
 			<PartName>Punkreas</PartName>
-			<PartCode>ASSY02_00_B</PartCode>
+			<PartCode>ASS02_00_B</PartCode>
 			<PartStatus>Work In Progress</PartStatus>
 			<PartRev>089</PartRev>
 			<PartDate>01_12_1990</PartDate>
-			<PartDesigner>Product2.CATProduct</PartDesigner>
+			<PartDesigner>Biafra</PartDesigner>
 			<PartTHREE_D>Product2.CATProduct</PartTHREE_D>
 			<PartStep>Product2.stp</PartStep>
 			<PartTWO_D>Product2.CATDrawing</PartTWO_D>
@@ -350,11 +350,11 @@
 		</Component>
 		<Component>
 			<PartName>JoyDivision</PartName>
-			<PartCode>ASSY03_01_A</PartCode>
+			<PartCode>ASS03_01_A</PartCode>
 			<PartStatus>Work In Progress</PartStatus>
 			<PartRev>076</PartRev>
 			<PartDate>20_07_1976</PartDate>
-			<PartDesigner>Product3.CATProduct</PartDesigner>
+			<PartDesigner>Antony</PartDesigner>
 			<PartTHREE_D>Product3.CATProduct</PartTHREE_D>
 			<PartStep>Product3.stp</PartStep>
 			<PartTWO_D>Product3.CATDrawing</PartTWO_D>
@@ -369,127 +369,127 @@
 	</PartList>
 	<PartMatch>
 		<ComponentList>
-			<PartListed>PRT001_01_A</PartListed>
+			<PartListed>PRT01_01_A</PartListed>
 			<ProjectListed>PROD01</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT002_01_C1</PartListed>
+			<PartListed>PRT02_01_C1</PartListed>
 			<ProjectListed>PROD01</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT003_02_B</PartListed>
+			<PartListed>PRT03_02_B</PartListed>
 			<ProjectListed>PROD01</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT004_04_A</PartListed>
+			<PartListed>PRT04_04_A</PartListed>
 			<ProjectListed>PROD01</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT005_01_R</PartListed>
+			<PartListed>PRT05_01_R</PartListed>
 			<ProjectListed>PROD01</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT006_00_D4</PartListed>
+			<PartListed>PRT06_00_D4</PartListed>
 			<ProjectListed>PROD01</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT007_01_B6</PartListed>
+			<PartListed>PRT07_01_B6</PartListed>
 			<ProjectListed>PROD01</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT008_04_C2</PartListed>
+			<PartListed>PRT08_04_C2</PartListed>
 			<ProjectListed>PROD01</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT009_05_C0</PartListed>
+			<PartListed>PRT09_05_C0</PartListed>
 			<ProjectListed>PROD01</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>ASSY01_07_A</PartListed>
+			<PartListed>ASS01_07_A</PartListed>
 			<ProjectListed>PROD01</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>ASSY02_00_B</PartListed>
+			<PartListed>ASS02_00_B</PartListed>
 			<ProjectListed>PROD01</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>ASSY03_01_A</PartListed>
+			<PartListed>ASS03_01_A</PartListed>
 			<ProjectListed>PROD01</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT001_00_A</PartListed>
+			<PartListed>PRT01_00_A</PartListed>
 			<ProjectListed>PROD02</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT002_01_C1</PartListed>
+			<PartListed>PRT02_01_C1</PartListed>
 			<ProjectListed>PROD02</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT003_02_B</PartListed>
+			<PartListed>PRT03_02_B</PartListed>
 			<ProjectListed>PROD02</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT004_04_A</PartListed>
+			<PartListed>PRT04_04_A</PartListed>
 			<ProjectListed>PROD02</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT005_01_R</PartListed>
+			<PartListed>PRT05_01_R</PartListed>
 			<ProjectListed>PROD02</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT006_00_D4</PartListed>
+			<PartListed>PRT06_00_D4</PartListed>
 			<ProjectListed>PROD02</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT007_01_B6</PartListed>
+			<PartListed>PRT07_01_B6</PartListed>
 			<ProjectListed>PROD02</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT008_04_C2</PartListed>
+			<PartListed>PRT08_04_C2</PartListed>
 			<ProjectListed>PROD02</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT009_05_C0</PartListed>
+			<PartListed>PRT09_05_C0</PartListed>
 			<ProjectListed>PROD02</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>ASSY03_01_B</PartListed>
+			<PartListed>ASS03_01_B</PartListed>
 			<ProjectListed>PROD02</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT001_01_B</PartListed>
+			<PartListed>PRT01_01_B</PartListed>
 			<ProjectListed>PROD03</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT002_01_C1</PartListed>
+			<PartListed>PRT02_01_C1</PartListed>
 			<ProjectListed>PROD03</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT003_02_B</PartListed>
+			<PartListed>PRT03_02_B</PartListed>
 			<ProjectListed>PROD03</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT004_04_A</PartListed>
+			<PartListed>PRT04_04_A</PartListed>
 			<ProjectListed>PROD03</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT005_01_R</PartListed>
+			<PartListed>PRT05_01_R</PartListed>
 			<ProjectListed>PROD03</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT006_00_D4</PartListed>
+			<PartListed>PRT06_00_D4</PartListed>
 			<ProjectListed>PROD03</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>ASSY01_07_A</PartListed>
+			<PartListed>ASS01_07_A</PartListed>
 			<ProjectListed>PROD03</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>ASSY03_00_A</PartListed>
+			<PartListed>ASS03_00_A</PartListed>
 			<ProjectListed>PROD03</ProjectListed>
 		</ComponentList>
 		<ComponentList>
-			<PartListed>PRT002_01_C1</PartListed>
+			<PartListed>PRT02_01_C1</PartListed>
 			<ProjectListed>PROD04</ProjectListed>
 		</ComponentList>
 	</PartMatch>

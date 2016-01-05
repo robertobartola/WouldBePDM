@@ -79,6 +79,7 @@ namespace WouldBe_PDM_sharpdev
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.progressBar1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "SplashScreen";
 			this.Text = "SplashScreen";
 			this.Load += new System.EventHandler(this.SplashScreenLoad);

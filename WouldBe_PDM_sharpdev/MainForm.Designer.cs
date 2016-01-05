@@ -180,6 +180,7 @@ namespace wina
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.FAM_Box = new System.Windows.Forms.ComboBox();
 			this.PRJ_Box = new System.Windows.Forms.ComboBox();
 			this.textBox1 = new System.Windows.Forms.TextBox();
@@ -388,11 +389,11 @@ namespace wina
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(1017, 66);
+			this.button2.Location = new System.Drawing.Point(17, 221);
 			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(75, 23);
+			this.button2.Size = new System.Drawing.Size(121, 23);
 			this.button2.TabIndex = 7;
-			this.button2.Text = "Info";
+			this.button2.Text = "Would-Be PDM Info";
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.Button2Click);
 			// 
@@ -1121,6 +1122,7 @@ namespace wina
 			this.button6.TabIndex = 94;
 			this.button6.Text = "Open 2D";
 			this.button6.UseVisualStyleBackColor = true;
+			this.button6.Click += new System.EventHandler(this.Button6Click);
 			// 
 			// drawingfilenameBox
 			// 
@@ -1778,6 +1780,7 @@ namespace wina
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1120, 597);
 			this.Controls.Add(this.tabControl1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "MainForm";
 			this.Text = "Would-be PDM";
 			this.Load += new System.EventHandler(this.MainFormLoad);
