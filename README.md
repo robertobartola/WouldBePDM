@@ -9,5 +9,7 @@ Instruction will come.
 
 Enjoy Roberto
 
+PS. In the "releases" tag you can find the installer
+
 
 
