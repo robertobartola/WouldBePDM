@@ -158,6 +158,9 @@ namespace wina
 		private System.Windows.Forms.Button button30;
 		private System.Windows.Forms.TabPage tabPage1;
 		private System.Windows.Forms.GroupBox groupBox17;
+		private System.Windows.Forms.TextBox UG_LOW_exe;
+		private System.Windows.Forms.Button button31;
+		private System.Windows.Forms.Button button32;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -274,12 +277,15 @@ namespace wina
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.FindFilesTab = new System.Windows.Forms.TabPage();
 			this.groupBox17 = new System.Windows.Forms.GroupBox();
+			this.button31 = new System.Windows.Forms.Button();
+			this.button32 = new System.Windows.Forms.Button();
 			this.button23 = new System.Windows.Forms.Button();
 			this.button30 = new System.Windows.Forms.Button();
 			this.jpegfile = new System.Windows.Forms.TextBox();
 			this.ConfigTab = new System.Windows.Forms.TabPage();
 			this.groupBox13 = new System.Windows.Forms.GroupBox();
 			this.groupBox15 = new System.Windows.Forms.GroupBox();
+			this.UG_LOW_exe = new System.Windows.Forms.TextBox();
 			this.groupBox14 = new System.Windows.Forms.GroupBox();
 			this.UG_TOP_EXE = new System.Windows.Forms.TextBox();
 			this.label30 = new System.Windows.Forms.Label();
@@ -340,6 +346,7 @@ namespace wina
 			this.groupBox17.SuspendLayout();
 			this.ConfigTab.SuspendLayout();
 			this.groupBox13.SuspendLayout();
+			this.groupBox15.SuspendLayout();
 			this.groupBox14.SuspendLayout();
 			this.groupBox11.SuspendLayout();
 			this.groupBox16.SuspendLayout();
@@ -1281,6 +1288,8 @@ namespace wina
 			// 
 			// groupBox17
 			// 
+			this.groupBox17.Controls.Add(this.button31);
+			this.groupBox17.Controls.Add(this.button32);
 			this.groupBox17.Controls.Add(this.button23);
 			this.groupBox17.Controls.Add(this.button3);
 			this.groupBox17.Location = new System.Drawing.Point(892, 146);
@@ -1289,6 +1298,26 @@ namespace wina
 			this.groupBox17.TabIndex = 98;
 			this.groupBox17.TabStop = false;
 			this.groupBox17.Text = "Launch CAD";
+			// 
+			// button31
+			// 
+			this.button31.Location = new System.Drawing.Point(6, 53);
+			this.button31.Name = "button31";
+			this.button31.Size = new System.Drawing.Size(75, 23);
+			this.button31.TabIndex = 96;
+			this.button31.Text = "UG TOP";
+			this.button31.UseVisualStyleBackColor = true;
+			this.button31.Click += new System.EventHandler(this.Button31Click);
+			// 
+			// button32
+			// 
+			this.button32.Location = new System.Drawing.Point(113, 53);
+			this.button32.Name = "button32";
+			this.button32.Size = new System.Drawing.Size(75, 23);
+			this.button32.TabIndex = 95;
+			this.button32.Text = "UG LOW";
+			this.button32.UseVisualStyleBackColor = true;
+			this.button32.Click += new System.EventHandler(this.Button32Click);
 			// 
 			// button23
 			// 
@@ -1348,12 +1377,20 @@ namespace wina
 			// 
 			// groupBox15
 			// 
+			this.groupBox15.Controls.Add(this.UG_LOW_exe);
 			this.groupBox15.Location = new System.Drawing.Point(6, 145);
 			this.groupBox15.Name = "groupBox15";
 			this.groupBox15.Size = new System.Drawing.Size(599, 77);
 			this.groupBox15.TabIndex = 1;
 			this.groupBox15.TabStop = false;
 			this.groupBox15.Text = "UG NX LOW (i.e. V4)";
+			// 
+			// UG_LOW_exe
+			// 
+			this.UG_LOW_exe.Location = new System.Drawing.Point(6, 19);
+			this.UG_LOW_exe.Name = "UG_LOW_exe";
+			this.UG_LOW_exe.Size = new System.Drawing.Size(498, 20);
+			this.UG_LOW_exe.TabIndex = 30;
 			// 
 			// groupBox14
 			// 
@@ -1808,6 +1845,8 @@ namespace wina
 			this.groupBox17.ResumeLayout(false);
 			this.ConfigTab.ResumeLayout(false);
 			this.groupBox13.ResumeLayout(false);
+			this.groupBox15.ResumeLayout(false);
+			this.groupBox15.PerformLayout();
 			this.groupBox14.ResumeLayout(false);
 			this.groupBox14.PerformLayout();
 			this.groupBox11.ResumeLayout(false);

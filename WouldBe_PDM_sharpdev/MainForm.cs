@@ -52,7 +52,7 @@ namespace wina
         public string ApplicationPath_LOW =""; 
         public string Ug_NX_TOP_exe="";
         public string Ug_NX_LOW_exe="";
-//		public string Catia_new_fodler = ""; // (string)Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Dassault Systemes\B19\0\DEST_FOLDER_OSDS" , "ProcPath", null)+ "\\code\\bin";
+ //		public string Catia_new_fodler = ""; // (string)Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Dassault Systemes\B19\0\DEST_FOLDER_OSDS" , "ProcPath", null)+ "\\code\\bin";
 //		public string Catia_old_fodler = ""; //(string)Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Dassault Systemes\B24\0\DEST_FOLDER_OSDS" , "ProcPath", null)+ "\\code\\bin";
 //		public string ApplicationPath = (string)Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Common AppData" , "ProcPath", null)+ "\\DassaultSystemes\\CATEnv";
 //		public string LocalDir =@"C:\Users\rbartola\Documents\SharpDevelop Projects\WouldBe_PDM_sharpdev\WouldBe_PDM_sharpdev\";
@@ -207,7 +207,21 @@ if (File.Exists(WouldBeXML)){
             ds.Tables.Add(Matchtable); 
         }
 			else{FAM_Box.Enabled=false;}
+		
+		
+		
+		
+			if (File.Exists(CATDLLPath_TOP + "\\CATStart.exe")){button23.Enabled=true;}else{button23.Enabled=false;}
+			if (File.Exists(CATDLLPath_LOW + "\\CATStart.exe")){button3.Enabled=true;}else{button3.Enabled=false;}
+			if (File.Exists(Ug_NX_TOP_exe)){button31.Enabled=true;}else{button31.Enabled=false;}
+			if (File.Exists(Ug_NX_LOW_exe)){button32.Enabled=true;}else{button32.Enabled=false;}
+		
+		
+		
+		
 		}
+		
+		
 		void Button1Click(object sender, EventArgs e)
 		{
 			
@@ -823,8 +837,8 @@ generatePDFbutton.Enabled=false;
         CATDLLPath_LOW = @"C:\Program Files\Dassault Systemes\B19\win_b64\code\bin";
         EnvironmentName_LOW =  @"CATIA.V5R19.B19";
         ApplicationPath_LOW = @"C:\ProgramData\DassaultSystemes\CATEnv";
-        Ug_NX_TOP_exe= "";
-        Ug_NX_LOW_exe= "";
+        Ug_NX_TOP_exe= @"C:\Program Files\Siemens\NX 10.0\UGII\ugraf.exe";
+        Ug_NX_LOW_exe= @"C:\swbase\plmsw\nx85\UGII\ugraf.exe";
 		}
 		
             CADdirTextbox.Clear();
@@ -846,8 +860,11 @@ generatePDFbutton.Enabled=false;
 			CATIA_LOW_ENV_Dir.Clear();
 			CATIA_LOW_ENV_Dir.Text=(ApplicationPath_LOW);		
 			CATIA_LOW_ENV.Clear();
-			CATIA_LOW_ENV.Text=(EnvironmentName_LOW);			
-			
+			CATIA_LOW_ENV.Text=(EnvironmentName_LOW);
+			UG_TOP_EXE.Clear();
+			UG_TOP_EXE.Text=(Ug_NX_TOP_exe);
+			UG_LOW_exe.Clear();
+			UG_LOW_exe.Text=(Ug_NX_LOW_exe);
 		}
 		void Checkout_3DClick(object sender, EventArgs e)
 		{
@@ -1920,6 +1937,90 @@ jpegfile.Text=(filename);
 //  if (File.Exists(drawing_full_file)){button6.Enabled=true;} else{button6.Enabled=false;}
 	if (File.Exists (drawing_full_file) ) 
 		{ViewFileFolder(drawing_full_file );} 
+		}
+		void Button31Click(object sender, EventArgs e)
+		{
+	
+	DialogResult dialogResult = MessageBox.Show("Start UG NX TOP?", "UG NX Startup", MessageBoxButtons.YesNo);
+if(dialogResult == DialogResult.Yes)
+{
+                ProcessStartInfo psi = new ProcessStartInfo("\"" + Ug_NX_TOP_exe + "\"" );
+
+                Debug.WriteLine(psi.FileName + " " + " -nx");
+
+//                IntPtr oCatiaHwnd= IntPtr.Zero;
+//                bool bFound = false;
+
+                psi.UseShellExecute = false;
+                psi.RedirectStandardOutput = false;
+                psi.RedirectStandardError = true;
+
+                
+                
+   //Prozess starten und auf dessen Ende warten
+                //using (Process process = new Process())
+                Process process = new Process();
+                {
+                    process.EnableRaisingEvents = true;
+                    process.StartInfo = psi;
+                    process.Start();
+                    Application.DoEvents();
+                    Process[] Ps = Process.GetProcesses();
+                    int L = Ps.Length;
+                    int timeout = 5000;
+                    process.WaitForExit(timeout);
+                }
+   
+                }
+else if (dialogResult == DialogResult.No)
+{
+    //do something else
+}			
+			
+			
+		}
+		void Button32Click(object sender, EventArgs e)
+		{
+	
+	
+	DialogResult dialogResult = MessageBox.Show("Start UG NX LOW?", "UG NX Startup", MessageBoxButtons.YesNo);
+if(dialogResult == DialogResult.Yes)
+{
+                ProcessStartInfo psi = new ProcessStartInfo("\"" + Ug_NX_LOW_exe + "\"" );
+
+                Debug.WriteLine(psi.FileName + " " + " -nx");
+
+//                IntPtr oCatiaHwnd= IntPtr.Zero;
+//                bool bFound = false;
+
+                psi.UseShellExecute = false;
+                psi.RedirectStandardOutput = false;
+                psi.RedirectStandardError = true;
+
+                
+                
+   //Prozess starten und auf dessen Ende warten
+                //using (Process process = new Process())
+                Process process = new Process();
+                {
+                    process.EnableRaisingEvents = true;
+                    process.StartInfo = psi;
+                    process.Start();
+                    Application.DoEvents();
+                    Process[] Ps = Process.GetProcesses();
+                    int L = Ps.Length;
+                    int timeout = 5000;
+                    process.WaitForExit(timeout);
+                }
+   
+                }
+else if (dialogResult == DialogResult.No)
+{
+    //do something else
+}			
+		
+			
+			
 		}
 	}////PUBLIC - Name space
 
