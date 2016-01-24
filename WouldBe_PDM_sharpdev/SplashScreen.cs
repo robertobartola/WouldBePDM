@@ -37,17 +37,16 @@ namespace WouldBe_PDM_sharpdev
 		
 						
 		}
-		void SplashScreenLoad(object sender, EventArgs e)
-		{
 
-    }
-		
+				void SplashScreenClick(object sender, EventArgs e)
+				{this.Close();}
+				
 		void Timer1Tick(object sender, EventArgs e)
 		{
 	 counter++;
-    progressBar1.Value = counter *5;
+    progressBar1.Value = counter *1;
     // label2.Text = (5*counter).ToString();
-    if (counter ==20)
+    if (counter ==100)
     {
         timer1.Stop();
         this.Close();
@@ -65,14 +64,10 @@ namespace WouldBe_PDM_sharpdev
 //        WouldBe_PDM_sharpdev.MainForm mainForm = new WouldBe_PDM_sharpdev.MainForm(LoadedClass);
 //        WouldBe_PDM_sharpdev.mainForm.ShowDialog();
         this.Close();
-        
-        
-        
-        
-        
+         
     }
 		}
-		
+	
 		
 //		private static void main2(string[] args)
 //		{

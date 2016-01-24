@@ -38,6 +38,7 @@ namespace wina
 		public string ImageFolder="JPG";
 		string PROD_selected = "";
 		string PRT_selected = "";
+		public int EEcounter=0;
 		public string family_node_value, family_node_name, Family_level_name;
 		public string prj_proID, prj_proName ;
 		public string prod_proID , prod_proName ;
@@ -75,7 +76,7 @@ namespace wina
 		void MainFormLoad(object sender, EventArgs e)
 			{
 			InitializeValues();
-			textBox1.Clear();
+//			textBox1.Clear();
 
 			
             Famlytable = new DataTable();
@@ -222,193 +223,7 @@ if (File.Exists(WouldBeXML)){
 		}
 		
 		
-		void Button1Click(object sender, EventArgs e)
-		{
-			
-string TmpXMLexportName="tmpexport.xml";
-
-SaveFileDialog SaveFileDialog1 = new SaveFileDialog();
-SaveFileDialog1.InitialDirectory = ".";
-DialogResult result = SaveFileDialog1.ShowDialog();
-SaveFileDialog1.RestoreDirectory = true; // ?
-SaveFileDialog1.Title = "Browse XML";
-SaveFileDialog1.DefaultExt = "xml";
-SaveFileDialog1.CheckFileExists = true;
-SaveFileDialog1.CheckPathExists = true;
-SaveFileDialog1.Filter = "Xml files (*.xml)|*.xml|All files (*.*)|*.*";
-SaveFileDialog1.FilterIndex = 1;
-SaveFileDialog1.RestoreDirectory = true;    
-//string SubString = TmpXMLexportName.Substring(TmpXMLexportName.Length-3);
-//MessageBox.Show(SubString);
-
-if (result.ToString()=="OK"){
-	TmpXMLexportName=SaveFileDialog1.FileName; 
-	string SubString = TmpXMLexportName.Substring(TmpXMLexportName.Length-3);
-	if ( SubString != "xml") //(TmpXMLexportName.Lenght -3))
-{TmpXMLexportName=TmpXMLexportName + ".xml";}
-}
-          
-            XmlTextWriter writer = new XmlTextWriter(TmpXMLexportName, System.Text.Encoding.UTF8);
-            writer.WriteStartDocument(true);
-            writer.Formatting = Formatting.Indented;
-            writer.Indentation = 2;
-            writer.WriteStartElement("WouldBePDM");//WouldBePDM
-            writer.WriteStartElement("FamilyList");//FamilyList
-                   	for (int i = 0; i <= Famlytable.Rows.Count - 1; i++)
-                   	{
-                   	writer.WriteStartElement("Family"); //Family
-                    writer.WriteStartElement("FamilyName");
-                    writer.WriteString(Famlytable.Rows[i].ItemArray[1].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("FamilyID");
-                    writer.WriteString(Famlytable.Rows[i].ItemArray[0].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("FamilyStatus");
-                    writer.WriteString(Famlytable.Rows[i].ItemArray[2].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteEndElement(); //Family               
-             		}
-            writer.WriteEndElement(); //FamilyList
-            writer.WriteStartElement("ProjectList");  //ProjectList
-                   	for (int i = 0; i <= Prjtable.Rows.Count - 1; i++)
-                   	{
-                   	writer.WriteStartElement("Project"); //Project
-                    writer.WriteStartElement("ProjectName");
-                    writer.WriteString(Prjtable.Rows[i].ItemArray[1].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("ProjectCode");
-                    writer.WriteString(Prjtable.Rows[i].ItemArray[3].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("ProjectID");
-                    writer.WriteString(Prjtable.Rows[i].ItemArray[0].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("FamilyID");
-                    writer.WriteString(Prjtable.Rows[i].ItemArray[4].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("CustomerName");
-                    writer.WriteString(Prjtable.Rows[i].ItemArray[5].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("CustomerCode");
-                    writer.WriteString(Prjtable.Rows[i].ItemArray[6].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("ProjectStatus");
-                    writer.WriteString(Prjtable.Rows[i].ItemArray[2].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("ProjectManager");
-                    writer.WriteString(Prjtable.Rows[i].ItemArray[7].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteEndElement(); //Project               
-             		}
-            writer.WriteEndElement(); //ProjectList
-            writer.WriteStartElement("ProductList");  //ProductList
-                   	for (int i = 0; i <= Prodtable.Rows.Count - 1; i++)
-                   	{
-                   	writer.WriteStartElement("Product"); //Product
-                    writer.WriteStartElement("ProductName");
-                    writer.WriteString(Prodtable.Rows[i].ItemArray[0].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("ProductCar");
-                    writer.WriteString(Prodtable.Rows[i].ItemArray[1].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("ProductCode");
-                    writer.WriteString(Prodtable.Rows[i].ItemArray[2].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("ProductStatus");
-                    writer.WriteString(Prodtable.Rows[i].ItemArray[3].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("ProjectCode");
-                    writer.WriteString(Prodtable.Rows[i].ItemArray[4].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("Product2DName");
-                    writer.WriteString(Prodtable.Rows[i].ItemArray[5].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("Product2DFilename");
-                    writer.WriteString(Prodtable.Rows[i].ItemArray[6].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("Product2DREV");
-                    writer.WriteString(Prodtable.Rows[i].ItemArray[7].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("Product2DDate");
-                    writer.WriteString(Prodtable.Rows[i].ItemArray[8].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteEndElement(); //Product               
-             		}
-            writer.WriteEndElement(); //ProductList   
-            writer.WriteStartElement("PartList");  //PartList Parttable
-                   	for (int i = 0; i <= Parttable.Rows.Count - 1; i++)
-                   	{
-                   	writer.WriteStartElement("Component"); //Component
-                    writer.WriteStartElement("PartName");
-                    writer.WriteString(Parttable.Rows[i].ItemArray[1].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("PartCode");
-                    writer.WriteString(Parttable.Rows[i].ItemArray[0].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("PartStatus");
-                    writer.WriteString(Parttable.Rows[i].ItemArray[2].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("PartRev");
-                    writer.WriteString(Parttable.Rows[i].ItemArray[3].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("PartDate");
-                    writer.WriteString(Parttable.Rows[i].ItemArray[4].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("PartDesigner");
-                    writer.WriteString(Parttable.Rows[i].ItemArray[5].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("PartTHREE_D");
-                    writer.WriteString(Parttable.Rows[i].ItemArray[6].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("PartStep");
-                    writer.WriteString(Parttable.Rows[i].ItemArray[7].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("PartTWO_D");
-                    writer.WriteString(Parttable.Rows[i].ItemArray[8].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("PartPdf");
-                    writer.WriteString(Parttable.Rows[i].ItemArray[9].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("PartWeight");
-                    writer.WriteString(Parttable.Rows[i].ItemArray[10].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("PartMaterial");
-                    writer.WriteString(Parttable.Rows[i].ItemArray[11].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("PartTThreat");
-                    writer.WriteString(Parttable.Rows[i].ItemArray[12].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("PartCoat");
-                    writer.WriteString(Parttable.Rows[i].ItemArray[13].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("PartSupplyer");
-                    writer.WriteString(Parttable.Rows[i].ItemArray[14].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("PartImage");
-                    writer.WriteString(Parttable.Rows[i].ItemArray[15].ToString());
-                    writer.WriteEndElement();                   
-                    writer.WriteEndElement(); //Component               
-             		}
-            writer.WriteEndElement(); //PartList     
-            writer.WriteStartElement("PartMatch");  //PartMatch
-                   	for (int i = 0; i <= Matchtable.Rows.Count - 1; i++)
-                   	{
-                   	writer.WriteStartElement("ComponentList"); //ComponentList
-                    writer.WriteStartElement("PartListed");
-                    writer.WriteString(Matchtable.Rows[i].ItemArray[0].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteStartElement("ProjectListed");
-                    writer.WriteString(Matchtable.Rows[i].ItemArray[1].ToString());
-                    writer.WriteEndElement();
-                    writer.WriteEndElement(); //ComponentList               
-             		}
-            writer.WriteEndElement(); //PartMatch   
-            writer.WriteEndElement(); //WouldBePDM
-            writer.WriteEndDocument(); // END
-            writer.Close();
-            MessageBox.Show("XML File created ! " + TmpXMLexportName);
-            
-
-		}	
+		
         private void createNode(string pID, string pName, string pPrice, XmlTextWriter writer)
         {
             writer.WriteStartElement("Product");
@@ -427,12 +242,22 @@ if (result.ToString()=="OK"){
 		{
 //				
 			WouldBe_PDM_sharpdev.SplashScreen Splash = new WouldBe_PDM_sharpdev.SplashScreen();
+			WouldBe_PDM_sharpdev.retsegge RetseGge = new WouldBe_PDM_sharpdev.retsegge();
 //		    MessageBox.Show ("Timeout");
+			
+			if (EEcounter <= 2){EEcounter++;}
+			if (EEcounter == 6){
+		    	EEcounter=0;
+		    	RetseGge.Show();
+		    	WouldBe_PDM_sharpdev.retsegge.ActiveForm.Activate();
+		    	RetseGge.Activate();
+//		    	Application.Run(new WouldBe_PDM_sharpdev.retsegge());
+		    }
+			else{
 			Splash.Show();
 		    WouldBe_PDM_sharpdev.SplashScreen.ActiveForm.Activate();
 		    Splash.Activate();
-		    
-
+			}
 
 
 		}//Buttonclick - to delete?
@@ -442,8 +267,8 @@ if (result.ToString()=="OK"){
 		void GO_PRJ_BoxSelectedIndexChanged()
 		{
 			
-			textBox1.Clear();
-            textBox1.Text=("");
+//			textBox1.Clear();
+//            textBox1.Text=("");
             PART_Box.Items.Clear();
 			clearprojectboxes();
 			clearproductboxes();
@@ -456,9 +281,17 @@ if (result.ToString()=="OK"){
 			PROD_Box.Items.Clear();
 		    PROD_Box.Text=("Select a Product");
 		    groupBox8.Enabled=true;
+		    if (checkBoxPRJ.Checked==false){
+		    	PROD_Box.Enabled=true;}
 		    PART_Box.Text=("Select a Component");
 		    PART_Box.Enabled=false;
-		    PartIndexText.Enabled=false;
+		    
+//		    checkBoxPRJ.Checked=false;
+		    checkBoxPROD.Checked=false;
+		    checkBoxPRT.Checked=false;
+		    
+		    
+//		    PartIndexText.Enabled=false;
             		
  foreach(DataRow dr in Prjtable.Rows) // search whole table
  	{
@@ -467,6 +300,8 @@ if (result.ToString()=="OK"){
         	projectselectedID= dr["ID"].ToString();
         	projectstatusBox.AppendText(dr["Status"].ToString());//---projectstatus);
 			ProjectCodeBox.AppendText(dr["prjcode"].ToString());//---projectcode);
+			textBox1.AppendText(dr["CusCode"].ToString());
+			textBox2.AppendText(dr["Customer"].ToString());
 			projectManagerBox.AppendText(dr["PM"].ToString());//---projectmanager);
      	}
 	}
@@ -486,12 +321,26 @@ if (result.ToString()=="OK"){
 			famstatusBox.Clear();
 			PRJ_Box.Items.Clear();
 	    	PRJ_Box.Text=("Select a Project");
+	    	PRJ_Box.Enabled=true;
 		    groupBox7.Enabled=true;
 		    PROD_Box.Text=("Select a Product");
 		    groupBox8.Enabled=false;
 		    PART_Box.Text=("Select a Component");
 		    PART_Box.Enabled=false;
-		    PartIndexText.Enabled=false;
+//		    checkBoxPRJ.Checked=false;
+//		    checkBoxPROD.Checked=false;
+//		    checkBoxPRT.Checked=false;
+		    if (checkBoxPRJ.Checked==true){
+		    	checkBoxPRJ.Checked=false;
+		    	CheckBoxPRJCheckedChanged(null , null);}
+		    if (checkBoxPROD.Checked==true){
+		    	checkBoxPROD.Checked=false;
+		    	CheckBoxPRODCheckedChanged(null , null);}
+		    if (checkBoxPRT.Checked==true){
+		    	checkBoxPRT.Checked=false;
+		    	CheckBoxPRTCheckedChanged(null , null);}
+		    		    
+//		    PartIndexText.Enabled=false;
 		    clearboxes();
 		    clearprojectboxes();
 		    clearproductboxes();
@@ -534,15 +383,31 @@ if (result.ToString()=="OK"){
 		    groupBox5.Enabled=false;
 		    button18.Enabled=true;
 		    button6.Enabled=true;
+		    
+		    if (checkBoxPRJ.Checked==true){
+		    	checkBoxPRJ.Checked=false;
+		    	CheckBoxPRJCheckedChanged(null , null);}
+//		    if (checkBoxPROD.Checked==true){
+//		    	checkBoxPROD.Checked=false;
+//		    	CheckBoxPRODCheckedChanged(null , null);}
+		    if (checkBoxPRT.Checked==true){
+		    	checkBoxPRT.Checked=false;
+		    	CheckBoxPRTCheckedChanged(null , null);}
+		    
+		    
+//		    checkBoxPRJ.Checked=false;
+////		    checkBoxPROD.Checked=false;
+//		    checkBoxPRT.Checked=false;
 
 			PROD_selected = PROD_Box.SelectedItem.ToString() ;
-			textBox1.Clear();
-            textBox1.Text=("");
+//			textBox1.Clear();
+//            textBox1.Text=("");
 			string projectselectedID ="";
 
 		    PART_Box.Text=("Select a Component");
-		    PART_Box.Enabled=true;
-		    PartIndexText.Enabled=false;
+		    if(checkBoxPROD.Checked==false){
+		    	PART_Box.Enabled=true;}
+//		    PartIndexText.Enabled=false;
 			PROD_selected = PROD_Box.SelectedItem.ToString() ;
 	//start copy	
  foreach(DataRow dr in Prodtable.Rows) // search whole table
@@ -573,13 +438,30 @@ if (result.ToString()=="OK"){
 		void GO_PART_BoxSelectedIndexChanged()
 		{
 			
-			textBox1.Clear();
-            textBox1.Text=("");
-			PartIndexText.Enabled=true;
-			PartIndexText.Clear() ;
+//			textBox1.Clear();
+//            textBox1.Text=("");
+//			PartIndexText.Enabled=true;
+//			PartIndexText.Clear() ;
 			PRT_selected = PART_Box.SelectedItem.ToString() ;
 			clearboxes();
 			groupBox5.Enabled=true;
+			
+		    if (checkBoxPRJ.Checked==true){
+		    	checkBoxPRJ.Checked=false;
+		    	CheckBoxPRJCheckedChanged(null , null);}
+		    if (checkBoxPROD.Checked==true){
+		    	checkBoxPROD.Checked=false;
+		    	CheckBoxPRODCheckedChanged(null , null);}
+//		    if (checkBoxPRT.Checked==true){
+//		    	checkBoxPRT.Checked=false;
+//		    	CheckBoxPRTCheckedChanged(null , null);}
+			
+			
+//			checkBoxPRJ.Checked=false;
+//		    checkBoxPROD.Checked=false;
+////		    checkBoxPRT.Checked=false;
+			
+			
 			 XmlDocument xmlDoc2 = new XmlDocument();
 			xmlDoc2.Load(WouldBeXML);  
 
@@ -628,7 +510,7 @@ if (File.Exists (fullfilejpgname) )
 {
 	pictureBox1.Image=Image.FromFile(fullfilejpgname);
 	jpegfile.Text=(fullfilejpgname);
-	textBox1.AppendText(fullfilejpgname);
+//	textBox1.AppendText(fullfilejpgname);
 }
 if (SelectedToOpen3D!="")
 {Checkout_3D.Enabled=true;
@@ -752,6 +634,8 @@ famstatusBox.Clear();
 		public void clearprojectboxes()
 {
 ProjectCodeBox.Clear();
+textBox1.Clear();
+textBox2.Clear();
 projectstatusBox.Clear();
 projectManagerBox.Clear();
 }
@@ -801,6 +685,17 @@ generatePDFbutton.Enabled=false;
    }
 		public void InitializeValues()
 		{
+			// clear all
+			clearalldata();
+
+			
+			
+			
+			
+			
+			
+			
+			
 		if (File.Exists(WouldBeCFG)){
             XmlDocument xmlDoc0 = new XmlDocument();
             xmlDoc0.Load(WouldBeCFG);
@@ -878,6 +773,7 @@ string commandtolaunch = "\"" + InstallPathSVN + "\"";
     System.Diagnostics.Process.Start(commandtolaunch, "/command:update " + " /path:" + "\"" + CAD_DIR_Location  + "\\" + SelectedToOpen3D + "\"");
 }
 if (File.Exists(CAD_DIR_Location + "\\" + ThreedBox.Text.ToString())){OpenCADbutton.Enabled=true;}
+GO_PART_BoxSelectedIndexChanged();
 		}
 	    public static System.Diagnostics.Process ViewFileFolder(string path)
 {
@@ -920,7 +816,7 @@ string commandtolaunch = "\"" + InstallPathSVN + "\"";
     System.Diagnostics.Process.Start(commandtolaunch, "/command:update " + " /path:" + "\"" + CAD_DIR_Location  + "\\" + SelectedToOpen2D + "\"");
 }
 if (File.Exists(CAD_DIR_Location + "\\" + TwodBox.Text.ToString() )){open2Dbutton.Enabled=true;}
-
+GO_PART_BoxSelectedIndexChanged();
 		}
 		void CheckOut_StepClick(object sender, EventArgs e)
 		{
@@ -933,6 +829,7 @@ string commandtolaunch = "\"" + InstallPathSVN + "\"";
     System.Diagnostics.Process.Start(commandtolaunch, "/command:update " + " /path:" + "\"" + CAD_DIR_Location  + "\\" + StepFolder +"\\" + SelectedToOpenStep + "\"");
 }
 		if (File.Exists(CAD_DIR_Location + "\\" + StepFolder + "\\" + StepBox.Text.ToString())){OpenSTEPbutton.Enabled=true;}
+		GO_PART_BoxSelectedIndexChanged();
 		}
 		void CheckOut_pdfClick(object sender, EventArgs e)
 		{
@@ -946,18 +843,21 @@ string commandtolaunch = "\"" + InstallPathSVN + "\"";
 }
 
 	if (File.Exists(CAD_DIR_Location + "\\" + PdfFolder + "\\" + PdfBox.Text.ToString())){openPDFbutton.Enabled=true;}
-
+GO_PART_BoxSelectedIndexChanged();
 		}
 		void Button5Click(object sender, EventArgs e)
 		{
+			if (EEcounter == 3){EEcounter++;}
 	ViewFileFolder(CAD_DIR_Location);
 		}
 		void Button8Click(object sender, EventArgs e)
 		{
+						if (EEcounter == 4){EEcounter++;}
 	ViewFileFolder(CAD_DIR_Location + "\\" + PdfFolder);
 		}
 		void Button10Click(object sender, EventArgs e)
 		{
+						if (EEcounter == 5){EEcounter++;}
 			ViewFileFolder(CAD_DIR_Location + "\\" + StepFolder);
 		}
 		void OpenPDFbuttonClick(object sender, EventArgs e)
@@ -1085,8 +985,14 @@ string commandtolaunch = "\"" + InstallPathSVN + "\"";
 			string prtpdf ="";
 //			string PRT_selected ="";
 //			string prtcode ="";
+			string drawingfilename=drawingfilenameBox.Text.ToString();
+//				drawingfilenameBox.AppendText(dr["Product2DFilename"].ToString()); //product2dfilename);
 			
-			filetocheckout="";
+			filetocheckout=CAD_DIR_Location + "\\" + PdfFolder + "\\" + drawingfilename;
+			
+			
+			
+			
 			
 			 XmlDocument xmlDoc2 = new XmlDocument();
 			xmlDoc2.Load(WouldBeXML);  
@@ -1165,7 +1071,7 @@ string commandtolaunch = "\"" + InstallPathSVN + "\"";
 	
 	
 	
-	
+	GO_PROD_BoxSelectedIndexChanged();
 	
 		}
 		void Button4Click(object sender, EventArgs e)
@@ -1380,30 +1286,7 @@ else if (dialogResult == DialogResult.No)
             }  
                 
 		}
-		void Button19bClick(object sender, EventArgs e)
-		{
-			PartIndexText.Enabled=true;
-			PartIndexText.Visible=true;
-			
-//			ds.Tables.Add(Famlytable);
-//            ds.Tables.Add(Prjtable); 
-//            ds.Tables.Add(Prodtable); 
-//            ds.Tables.Add(Parttable); 
-//            ds.Tables.Add(Matchtable); 
-			
-			
-//for (int i = 0; i <= ds.Tables["Famlytable"].Rows.Count - 1; i++)   Status
-			for (int i = 0; i <= Famlytable.Rows.Count - 1; i++)
 				
-            {
-                //MessageBox.Show(ds.Tables[0].Rows[i].ItemArray[0] + " -- " + ds.Tables[0].Rows[i].ItemArray[1]);
-
-//                PartIndexText.AppendText(i+1 +"ciao");
-			PartIndexText.AppendText(Famlytable.Rows[i].ItemArray[0] + " - " + Famlytable.Rows[i].ItemArray[1] + " - " +Famlytable.Rows[i].ItemArray[2] + "\n");                
-             }  
-			
-			
-		} //save xml
 		public void WriteXML()
 		{
 MessageBox.Show("To make definitive update, please select current XML file in next steps \n" + WouldBeXML + "\n Otherwise the modifications will be temporaries!");
@@ -1593,6 +1476,8 @@ if (result.ToString()=="OK"){
 		{
 				famstatusBox.ReadOnly=true;
 				ProjectCodeBox.ReadOnly=true;
+				textBox1.ReadOnly=true;
+				textBox2.ReadOnly=true;
 				projectstatusBox.ReadOnly=true;
 				projectManagerBox.ReadOnly=true;
 				textBox3.ReadOnly=true;
@@ -1643,11 +1528,15 @@ dr["Status"]= famstatusBox.Text.ToString();// .Text();
 	
 			if (ProjectCodeBox.ReadOnly== true){
 				ProjectCodeBox.ReadOnly=false;
+				textBox1.ReadOnly=false;
+				textBox2.ReadOnly=false;
 				projectstatusBox.ReadOnly=false;
 				projectManagerBox.ReadOnly=false;	
 				button25.Text=("Undo");}
 	else {
 				ProjectCodeBox.ReadOnly=true;
+				textBox1.ReadOnly=true;
+				textBox2.ReadOnly=true;
 				projectstatusBox.ReadOnly=true;
 				projectManagerBox.ReadOnly=true;
 				button25.Text=("Modify");
@@ -1655,7 +1544,7 @@ dr["Status"]= famstatusBox.Text.ToString();// .Text();
 			}
 	if (button24.Visible==false){button24.Visible=true;}
 	else {button24.Visible=false;}
-			
+
 			
 		} // modify prj
 		void Button24Click(object sender, EventArgs e) //write prj
@@ -1668,8 +1557,8 @@ dr["Status"]= famstatusBox.Text.ToString();// .Text();
 	dr["Status"]=projectstatusBox.Text.ToString();
 	dr["prjcode"]=ProjectCodeBox.Text.ToString();
 //	dr["IDprjFam"]=
-//	dr["Customer"]=
-//	dr["CusCode"]=
+	dr["Customer"]=textBox2.Text.ToString();
+	dr["CusCode"]=textBox1.Text.ToString();
 	dr["PM"]=projectManagerBox.Text.ToString();
     	}
 	}
@@ -2022,6 +1911,176 @@ else if (dialogResult == DialogResult.No)
 			
 			
 		}
+		void Button33Click(object sender, EventArgs e)
+		{
+	System.Diagnostics.Process.Start("https://github.com/robertobartola/WouldBePDM");
+		}
+		void Button1Click(object sender, EventArgs e)
+		{
+	
+		WouldBe_PDM_sharpdev.ManyThanx ManyThanks = new WouldBe_PDM_sharpdev.ManyThanx();
+		    	ManyThanks.Show();
+		    	WouldBe_PDM_sharpdev.ManyThanx.ActiveForm.Activate();
+		    	ManyThanks.Activate();			
+		}
+		void CheckBoxPRJCheckedChanged(object sender, EventArgs e)
+		{
+			 MainFormLoad(null, null);
+				checkBoxPROD.Checked=false;
+				checkBox2.Checked=false;
+				PROD_Box.Enabled=false;
+				checkBoxPRT.Checked=false;
+				checkBox3.Checked=false;
+				PART_Box.Enabled=false;
+			if (checkBox1.Checked==false){
+					checkBox1.Checked=true;
+					groupBox7.Enabled=true;
+					PRJ_Box.Enabled=true;
+
+
+				foreach(DataRow dr in Prjtable.Rows)  	{					
+					
+						PRJ_Box.Items.Add(dr["Name"].ToString());
+				}
+			}
+				else{
+		    	checkBox1.Checked=false;
+		    	PRJ_Box.Enabled=false;
+						}
+		}
+		void CheckBoxPRODCheckedChanged(object sender, EventArgs e)
+		{
+				MainFormLoad(null, null);
+				checkBoxPRJ.Checked=false;
+				checkBox1.Checked=false;
+				PRJ_Box.Enabled=false;
+				checkBoxPRT.Checked=false;
+				checkBox3.Checked=false;
+				PART_Box.Enabled=false;
+			if (checkBox2.Checked==false){
+					checkBox2.Checked=true;
+					groupBox8.Enabled=true;
+					PROD_Box.Enabled=true;
+					foreach(DataRow dr in Prodtable.Rows) // search whole table
+ 	{
+   	{PROD_Box.Items.Add(dr["ProductName"].ToString()); }
+	}
+			}
+				else{
+		    	checkBox2.Checked=false;
+		    	PROD_Box.Enabled=false;
+						}
+		}
+		void CheckBoxPRTCheckedChanged(object sender, EventArgs e)
+		{
+				MainFormLoad(null, null);
+				checkBoxPRJ.Checked=false;
+				checkBox1.Checked=false;
+				PRJ_Box.Enabled=false;
+				checkBoxPROD.Checked=false;
+				checkBox2.Checked=false;
+				PROD_Box.Enabled=false;
+			if (checkBox3.Checked==false){
+					checkBox3.Checked=true;
+					groupBox5.Enabled=true;
+					PART_Box.Enabled=true;
+					
+	 foreach(DataRow dr in Matchtable.Rows) // search whole table
+ 	{
+   	{PART_Box.Items.Add(dr["PartListed"].ToString());  }
+	}	
+			}
+				else{
+		    	checkBox3.Checked=false;
+		    	PART_Box.Enabled=false;
+		    	groupBox5.Enabled=false;
+				}
+			
+//				if (groupBox5.Enabled==false) {groupBox5.Enabled=true;
+//				PART_Box.Enabled=true;
+//				
+//	 foreach(DataRow dr in Matchtable.Rows) // search whole table
+// 	{
+//// 	if(dr["ProjectListed"].ToString() == projectselectedID) // if id==2  FAM_Box.SelectedItem.ToString()
+//   	{PART_Box.Items.Add(dr["PartListed"].ToString());  }
+//	}		
+//			
+//			
+//			}
+//			else{groupBox5.Enabled=false;
+//			PART_Box.Enabled=false;
+//			PART_Box.Items.Clear();}
+//			
+//			
+//			if (checkBoxPRJ.Checked==true){
+//		    	checkBoxPRJ.Checked=false;
+//		    	groupBox7.Enabled=false;
+//		    }
+//		    if (checkBoxPROD.Checked==true){
+//		    	checkBoxPROD.Checked=false;
+//		    	groupBox8.Enabled=true;
+//		    }
+//		    
+//			
+//			
+//			
+		}
+		
+		void clearalldata()
+		{
+
+			FAM_Box.Items.Clear();
+		    FAM_Box.Text=("Select a Family");
+			PRJ_Box.Items.Clear();
+		    PRJ_Box.Text=("Select a Project");
+			PROD_Box.Items.Clear();
+		    PROD_Box.Text=("Select a Product");
+		    PART_Box.Items.Clear();
+		    PART_Box.Text=("Select a Component");
+   
+		    	groupBox7.Enabled=false;								
+				groupBox5.Enabled=false;				
+//				checkBoxPROD.Checked=false;
+//				PRJ_Box.Enabled=false;
+//				PART_Box.Enabled=false;  
+
+			famstatusBox.Text=("");
+			FAM_Box.Items.Clear();
+			
+				ProjectCodeBox.Text=("");
+				projectstatusBox.Text=("");
+				projectManagerBox.Text=("");
+				textBox1.Text=("");
+				textBox2.Text=("");
+				textBox3.Text=("");
+				drawingBox.Text=("");
+				drawingRevBox.Text=("");
+				drawingdateBox.Text=("");
+				drawingfilenameBox.Text=("");
+					
+					CodeBox.Text=("");
+					NameBox.Text=("");
+			
+              		
+CodeBox.Text=("");
+NameBox.Text=("");
+StatusBox.Text=("");
+RevBox.Text=("");
+DateBox.Text=("");
+DesignerBox.Text=("");
+ThreedBox.Text=("");
+StepBox.Text=("");
+TwodBox.Text=("");
+PdfBox.Text=("");
+weightBox.Text=("");
+materialBox.Text=("");
+ttreatmentBox.Text=("");
+coatingBox.Text=("");
+supplierBox.Text=("");
+pictureBox1.Image = null;
+		
+		}
+	
 	}////PUBLIC - Name space
 
 }

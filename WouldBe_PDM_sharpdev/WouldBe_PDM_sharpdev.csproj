@@ -68,6 +68,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ManyThanx.cs" />
+    <Compile Include="ManyThanx.Designer.cs">
+      <DependentUpon>ManyThanx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="retsegge.cs" />
+    <Compile Include="retsegge.Designer.cs">
+      <DependentUpon>retsegge.cs</DependentUpon>
+    </Compile>
     <Compile Include="Where_used.cs" />
     <Compile Include="Where_used.Designer.cs">
       <DependentUpon>Where_used.cs</DependentUpon>
@@ -97,6 +105,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ManyThanx.resx">
+      <DependentUpon>ManyThanx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="retsegge.resx">
+      <DependentUpon>retsegge.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Where_used.resx">
       <DependentUpon>Where_used.cs</DependentUpon>
     </EmbeddedResource>

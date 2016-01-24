@@ -82,7 +82,8 @@ namespace WouldBe_PDM_sharpdev
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "SplashScreen";
 			this.Text = "SplashScreen";
-			this.Load += new System.EventHandler(this.SplashScreenLoad);
+//			this.Load += new System.EventHandler(this.SplashScreenLoad);
+			this.Click += new System.EventHandler(this.SplashScreenClick);
 			this.ResumeLayout(false);
 
 		}
