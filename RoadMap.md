@@ -1,8 +1,8 @@
 # WouldBePDM
 "Would-Be a RoadMap"
 
-- Add a row (in family, prj, prod, part)       -----  V0.0.0.5
-- Documentation (improve instructions)         -----  V0.0.0.5
+- Add a row (in family, prj, prod, part)       -----  V0.0.0.6
+- Documentation (improve instructions)         -----  V0.0.0.6
 - Customize BOM views (for every prod)         -----  V0.0.1.0
 - Generate PDF                                 -----  V0.0.1.1
 - Generate STEP                                -----  V0.0.1.1
