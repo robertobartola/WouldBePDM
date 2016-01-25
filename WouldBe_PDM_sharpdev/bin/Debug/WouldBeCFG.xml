@@ -9,10 +9,10 @@
     </Directories>
     <CAD_PROP>
       <CATIA_TOP_EXE>C:\Program Files\Dassault Systemes\B24\win_b64\code\bin</CATIA_TOP_EXE>
-      <CATIA_TOP_ENV>CATIA.V5-6R2014.B24_RB</CATIA_TOP_ENV>
+      <CATIA_TOP_ENV>CATIA.V5-6R2014.B24_RB.txt</CATIA_TOP_ENV>
       <CATIA_TOP_ENV_Dir>C:\ProgramData\DassaultSystemes\CATEnv</CATIA_TOP_ENV_Dir>
       <CATIA_LOW_EXE>C:\Program Files\Dassault Systemes\B19\win_b64\code\bin</CATIA_LOW_EXE>
-      <CATIA_LOW_ENV>CATIA.V5R19.B19</CATIA_LOW_ENV>
+      <CATIA_LOW_ENV>CATIA.V5R19.B19.txt</CATIA_LOW_ENV>
       <CATIA_LOW_ENV_Dir>C:\ProgramData\DassaultSystemes\CATEnv</CATIA_LOW_ENV_Dir>
       <UG_TOP_EXE>C:\Program Files\Siemens\NX 10.0\UGII\ugraf.exe</UG_TOP_EXE>
       <UG_LOW_EXE>C:\swbase\plmsw\nx85\UGII\ugraf.exe</UG_LOW_EXE>

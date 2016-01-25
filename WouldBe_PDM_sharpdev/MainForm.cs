@@ -1161,19 +1161,19 @@ ImageFolder = filename;
             writer.WriteString(CATDLLPath_TOP); //node 
             writer.WriteEndElement();      //node end        
             writer.WriteStartElement("CATIA_TOP_ENV");//node begin
-            writer.WriteString(EnvironmentName_TOP); //node 
+            writer.WriteString(ApplicationPath_TOP); //node 
             writer.WriteEndElement();      //node end        
             writer.WriteStartElement("CATIA_TOP_ENV_Dir");//node begin
-            writer.WriteString(ApplicationPath_TOP); //node 
+            writer.WriteString(EnvironmentName_TOP); //node 
             writer.WriteEndElement();      //node end        
             writer.WriteStartElement("CATIA_LOW_EXE");//node begin
             writer.WriteString(CATDLLPath_LOW); //node 
             writer.WriteEndElement();      //node end        
             writer.WriteStartElement("CATIA_LOW_ENV");//node begin
-            writer.WriteString(EnvironmentName_LOW); //node 
+            writer.WriteString(ApplicationPath_LOW); //node 
             writer.WriteEndElement();      //node end        
             writer.WriteStartElement("CATIA_LOW_ENV_Dir");//node begin
-            writer.WriteString(ApplicationPath_LOW); //node  
+            writer.WriteString(EnvironmentName_LOW); //node  
             writer.WriteEndElement();      //node end        
             writer.WriteStartElement("UG_TOP_EXE");//node begin
             writer.WriteString(Ug_NX_TOP_exe); //node 
@@ -2079,6 +2079,107 @@ coatingBox.Text=("");
 supplierBox.Text=("");
 pictureBox1.Image = null;
 		
+		}
+		void Button17Click(object sender, EventArgs e)
+		{
+ string path=Environment.CurrentDirectory;
+  FolderBrowserDialog fbd = new FolderBrowserDialog();
+  if (CATIA_TOP_EXE.Text.ToString()!=""){fbd.SelectedPath = CATIA_TOP_EXE.Text.ToString();}
+  else{fbd.SelectedPath = Environment.CurrentDirectory;}
+  DialogResult result = fbd.ShowDialog();
+ if (result.ToString()=="OK"){path = fbd.SelectedPath; 
+  	CATDLLPath_TOP = path; // filename;
+           CATIA_TOP_EXE.Clear();
+			CATIA_TOP_EXE.Text=(CATDLLPath_TOP);
+  }
+		}
+		void Button20Click(object sender, EventArgs e)
+		{
+	 string path=Environment.CurrentDirectory;
+OpenFileDialog openFileDialog1 = new OpenFileDialog();
+   if (CATIA_TOP_ENV.Text.ToString()!=""){openFileDialog1.InitialDirectory = CATIA_TOP_ENV.Text.ToString();}
+   else{openFileDialog1.InitialDirectory = Environment.CurrentDirectory;}
+    openFileDialog1.Title = "Select ENV File";
+    openFileDialog1.CheckFileExists = true;
+    openFileDialog1.CheckPathExists = true;
+    //openFileDialog1.DefaultExt = "txt";
+    //openFileDialog1.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+    openFileDialog1.FilterIndex = 2;
+    openFileDialog1.RestoreDirectory = true;
+    openFileDialog1.ReadOnlyChecked = true;
+    openFileDialog1.ShowReadOnly = true;
+    if (openFileDialog1.ShowDialog() == DialogResult.OK)
+    {
+        path = openFileDialog1.FileName;
+        string filename = Path.GetFileName(path);
+ApplicationPath_TOP = filename;
+           CATIA_TOP_ENV_Dir.Clear();
+			CATIA_TOP_ENV_Dir.Text=(ApplicationPath_TOP);
+    } 
+		}
+		void Button21Click(object sender, EventArgs e)
+		{
+	 string path=Environment.CurrentDirectory;
+  FolderBrowserDialog fbd = new FolderBrowserDialog();
+  if (CATIA_TOP_ENV.Text.ToString()!=""){fbd.SelectedPath = CATIA_TOP_ENV.Text.ToString();}
+  else{fbd.SelectedPath = Environment.CurrentDirectory;}
+  DialogResult result = fbd.ShowDialog();
+ if (result.ToString()=="OK"){path = fbd.SelectedPath;    //}
+  	ApplicationPath_TOP = path; // filename;
+           CATIA_TOP_ENV.Clear();
+			CATIA_TOP_ENV.Text=(ApplicationPath_TOP);
+  }
+		}
+		void Button14Click(object sender, EventArgs e)
+		{
+string path=Environment.CurrentDirectory;
+  FolderBrowserDialog fbd = new FolderBrowserDialog();
+  if (CATIA_LOW_EXE.Text.ToString()!=""){fbd.SelectedPath = CATIA_LOW_EXE.Text.ToString();}
+  else{fbd.SelectedPath = Environment.CurrentDirectory;}
+  DialogResult result = fbd.ShowDialog();
+ if (result.ToString()=="OK"){path = fbd.SelectedPath; 
+  	CATDLLPath_LOW = path; // filename;
+           CATIA_LOW_EXE.Clear();
+			CATIA_LOW_EXE.Text=(CATDLLPath_LOW);
+  }	
+		}
+		void Button22Click(object sender, EventArgs e)
+		{
+	 string path=Environment.CurrentDirectory;
+OpenFileDialog openFileDialog1 = new OpenFileDialog();
+   if (CATIA_LOW_ENV.Text.ToString()!=""){openFileDialog1.InitialDirectory = CATIA_LOW_ENV.Text.ToString();}
+   else{openFileDialog1.InitialDirectory = Environment.CurrentDirectory;}
+    openFileDialog1.Title = "Select ENV File";
+    openFileDialog1.CheckFileExists = true;
+    openFileDialog1.CheckPathExists = true;
+    //openFileDialog1.DefaultExt = "txt";
+    //openFileDialog1.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+    openFileDialog1.FilterIndex = 2;
+    openFileDialog1.RestoreDirectory = true;
+    openFileDialog1.ReadOnlyChecked = true;
+    openFileDialog1.ShowReadOnly = true;
+    if (openFileDialog1.ShowDialog() == DialogResult.OK)
+    {
+        path = openFileDialog1.FileName;
+        string filename = Path.GetFileName(path);
+ApplicationPath_LOW = filename;
+           CATIA_LOW_ENV_Dir.Clear();
+			CATIA_LOW_ENV_Dir.Text=(ApplicationPath_LOW);
+    } 	
+		}
+		void Button15Click(object sender, EventArgs e)
+		{
+	 string path=Environment.CurrentDirectory;
+  FolderBrowserDialog fbd = new FolderBrowserDialog();
+  if (CATIA_LOW_ENV.Text.ToString()!=""){fbd.SelectedPath = CATIA_LOW_ENV.Text.ToString();}
+  else{fbd.SelectedPath = Environment.CurrentDirectory;}
+  DialogResult result = fbd.ShowDialog();
+ if (result.ToString()=="OK"){path = fbd.SelectedPath;    //}
+  	ApplicationPath_LOW = path; // filename;
+           CATIA_LOW_ENV.Clear();
+			CATIA_LOW_ENV.Text=(ApplicationPath_LOW);
+  }
+			
 		}
 	
 	}////PUBLIC - Name space
