@@ -53,7 +53,7 @@ namespace wina
         public string ApplicationPath_LOW =""; 
         public string Ug_NX_TOP_exe="";
         public string Ug_NX_LOW_exe="";
- //		public string Catia_new_fodler = ""; // (string)Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Dassault Systemes\B19\0\DEST_FOLDER_OSDS" , "ProcPath", null)+ "\\code\\bin";
+//		public string Catia_new_fodler = ""; // (string)Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Dassault Systemes\B19\0\DEST_FOLDER_OSDS" , "ProcPath", null)+ "\\code\\bin";
 //		public string Catia_old_fodler = ""; //(string)Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Dassault Systemes\B24\0\DEST_FOLDER_OSDS" , "ProcPath", null)+ "\\code\\bin";
 //		public string ApplicationPath = (string)Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Common AppData" , "ProcPath", null)+ "\\DassaultSystemes\\CATEnv";
 //		public string LocalDir =@"C:\Users\rbartola\Documents\SharpDevelop Projects\WouldBe_PDM_sharpdev\WouldBe_PDM_sharpdev\";
@@ -61,6 +61,10 @@ namespace wina
 		public DataSet ds = new DataSet();
         public DataTable Famlytable , Prjtable, Prodtable, Parttable, Matchtable;
         public DataRow Familyrow , Prjrow, Prodrow, Partrow, Matchrow;
+        public int famstatusBoxPRE=0, prjstatusBoxPRE=0, prodstatusBoxPRE=0;
+        public int Addfamiliystatus=0, Addprojectstatus=0 , Addproductstatus=0 , partwasinvisible=0 , Addpartstatus=0;
+        public string Family_pre_update="", Project_pre_update="", Product_pre_update="";
+        
 		public MainForm()
 		{
 
@@ -265,10 +269,10 @@ if (File.Exists(WouldBeXML)){
 		void PRJ_BoxSelectedIndexChanged(object sender, EventArgs e)
 		{ GO_PRJ_BoxSelectedIndexChanged();		}  //select prj			
 		void GO_PRJ_BoxSelectedIndexChanged()
-		{
+		{		
+			textBox5.Clear();
 			
-//			textBox1.Clear();
-//            textBox1.Text=("");
+			Project_pre_update=PRJ_Box.SelectedItem.ToString();
             PART_Box.Items.Clear();
 			clearprojectboxes();
 			clearproductboxes();
@@ -276,7 +280,9 @@ if (File.Exists(WouldBeXML)){
 			groupBox5.Enabled=false;
 			button18.Enabled=false;
 			button6.Enabled=false;
+			textBox5.Text=(PRJ_Box.SelectedItem.ToString());
 			string projectselectedID ="";
+			button25.Enabled=true;
 
 			PROD_Box.Items.Clear();
 		    PROD_Box.Text=("Select a Product");
@@ -285,12 +291,9 @@ if (File.Exists(WouldBeXML)){
 		    	PROD_Box.Enabled=true;}
 		    PART_Box.Text=("Select a Component");
 		    PART_Box.Enabled=false;
-		    
 //		    checkBoxPRJ.Checked=false;
 		    checkBoxPROD.Checked=false;
 		    checkBoxPRT.Checked=false;
-		    
-		    
 //		    PartIndexText.Enabled=false;
             		
  foreach(DataRow dr in Prjtable.Rows) // search whole table
@@ -303,6 +306,7 @@ if (File.Exists(WouldBeXML)){
 			textBox1.AppendText(dr["CusCode"].ToString());
 			textBox2.AppendText(dr["Customer"].ToString());
 			projectManagerBox.AppendText(dr["PM"].ToString());//---projectmanager);
+			prjID.AppendText(projectselectedID);
      	}
 	}
  foreach(DataRow dr in Prodtable.Rows) // search whole table
@@ -319,6 +323,7 @@ if (File.Exists(WouldBeXML)){
 			string familyselectedID ="";
             string familystatus = "" ;
 			famstatusBox.Clear();
+			famID.Clear();
 			PRJ_Box.Items.Clear();
 	    	PRJ_Box.Text=("Select a Project");
 	    	PRJ_Box.Enabled=true;
@@ -346,6 +351,8 @@ if (File.Exists(WouldBeXML)){
 		    clearproductboxes();
 		    groupBox5.Enabled=false;
             famstatusBox.Enabled=true;
+            famID.Enabled=true;
+            button19.Enabled=true;
           
  foreach(DataRow dr in Famlytable.Rows) // search whole table
  	{
@@ -356,7 +363,11 @@ if (File.Exists(WouldBeXML)){
 		familystatus= dr["Status"].ToString();
 		familyname=dr["Name"].ToString();
 		famstatusBox.AppendText(dr["Status"].ToString());
+		famID.AppendText(dr["ID"].ToString());
         //dr["Product_name"] = "cde"; //change the name
+        textBox4.Clear();
+        textBox4.Text=FAM_Box.SelectedItem.ToString();
+        Family_pre_update=FAM_Box.SelectedItem.ToString();
     	}
 	}
  foreach(DataRow dr in Prjtable.Rows) // search whole table
@@ -383,6 +394,10 @@ if (File.Exists(WouldBeXML)){
 		    groupBox5.Enabled=false;
 		    button18.Enabled=true;
 		    button6.Enabled=true;
+		    button27.Enabled=true;
+		    button38.Enabled=true;
+//		    textBox6.Text=(PROD_Box.SelectedItem.ToString());
+		    
 		    
 		    if (checkBoxPRJ.Checked==true){
 		    	checkBoxPRJ.Checked=false;
@@ -420,6 +435,8 @@ if (File.Exists(WouldBeXML)){
 			drawingdateBox.AppendText(dr["Product2DDate"].ToString()); //product2ddate);
 			textBox3.AppendText(dr["ProductStatus"].ToString()); //productstatus);
 			drawingfilenameBox.AppendText(dr["Product2DFilename"].ToString()); //product2dfilename);
+			prodID.Text=((dr["ProductCode"].ToString()));
+			carBOX.Text=((dr["ProductCar"].ToString()));
 //            Prodtable.Columns.Add(new DataColumn("ProductCar", Type.GetType("System.String"))); // To add
 //            Prodtable.Columns.Add(new DataColumn("ProductCode", Type.GetType("System.String"))); 
      	}
@@ -445,7 +462,7 @@ if (File.Exists(WouldBeXML)){
 			PRT_selected = PART_Box.SelectedItem.ToString() ;
 			clearboxes();
 			groupBox5.Enabled=true;
-			
+			button28.Enabled=true;
 		    if (checkBoxPRJ.Checked==true){
 		    	checkBoxPRJ.Checked=false;
 		    	CheckBoxPRJCheckedChanged(null , null);}
@@ -461,7 +478,7 @@ if (File.Exists(WouldBeXML)){
 //		    checkBoxPROD.Checked=false;
 ////		    checkBoxPRT.Checked=false;
 			
-			
+//			textBox7.Text=(PART_Box.SelectedItem.ToString());
 			 XmlDocument xmlDoc2 = new XmlDocument();
 			xmlDoc2.Load(WouldBeXML);  
 
@@ -509,7 +526,8 @@ string fullfilejpgname=CAD_DIR_Location + "\\" + ImageFolder + "\\" + dr["PartIm
 if (File.Exists (fullfilejpgname) ) 
 {
 	pictureBox1.Image=Image.FromFile(fullfilejpgname);
-	jpegfile.Text=(fullfilejpgname);
+//	jpegfile.Text=(fullfilejpgname);
+	jpegfile.Text=(dr["PartImage"].ToString());
 //	textBox1.AppendText(fullfilejpgname);
 }
 if (SelectedToOpen3D!="")
@@ -630,14 +648,20 @@ else if (dialogResult == DialogResult.No)
 		public void clearfamilyboxes()
 {
 famstatusBox.Clear();
+famID.Clear();
+textBox4.Clear();
+button19.Enabled=false;
 }
 		public void clearprojectboxes()
 {
 ProjectCodeBox.Clear();
+textBox5.Clear();
 textBox1.Clear();
 textBox2.Clear();
 projectstatusBox.Clear();
+prjID.Clear();
 projectManagerBox.Clear();
+button25.Enabled=false;
 }
 		public void clearproductboxes()
 {
@@ -646,6 +670,15 @@ drawingRevBox.Clear();
 drawingdateBox.Clear();
 drawingfilenameBox.Clear();
 textBox3.Clear();
+textBox6.Clear();
+prodID.Clear();
+carBOX.Clear();
+button27.Enabled=false;
+button38.Enabled=false;
+//prodID.ReadOnly=true;
+//carBOX.ReadOnly=true;
+
+
 }		
 		public void clearboxes()
 {
@@ -664,6 +697,7 @@ materialBox.Clear();
 ttreatmentBox.Clear();
 coatingBox.Clear();
 supplierBox.Clear();
+//textBox7.Clear();
 Checkout_3D.Enabled=false;
 OpenCADbutton.Enabled=false;
 whereUSEDbutton.Enabled=false;
@@ -688,14 +722,6 @@ generatePDFbutton.Enabled=false;
 			// clear all
 			clearalldata();
 
-			
-			
-			
-			
-			
-			
-			
-			
 		if (File.Exists(WouldBeCFG)){
             XmlDocument xmlDoc0 = new XmlDocument();
             xmlDoc0.Load(WouldBeCFG);
@@ -1199,17 +1225,34 @@ ImageFolder = filename;
 		}
 		void Button19Click(object sender, EventArgs e)
 		{
+			// nota sposta da altra parte
+//			textBox4.Clear();
+//			textBox4.AppendText(FAM_Box.SelectedItem.ToString());
+           
+			if (FAM_Box.SelectedItem== null){}
+			else{
+
 	if (famstatusBox.ReadOnly== true){
 				famstatusBox.ReadOnly=false;
+				FAM_Box.Visible=false;
+//				Family_pre_update=FAM_Box.SelectedItem.ToString();
+//				MessageBox.Show("value " + Family_pre_update);
+				famID.ReadOnly=false;
+				button35.Visible=false;
 				button19.Text=("Undo");}
 	else {
 				famstatusBox.ReadOnly=true;
+				FAM_Box.Visible=true;
+
+				famID.ReadOnly=true;
 				button19.Text=("Modify");
-				Go_ComboBox1SelectedIndexChanged();
+				button35.Visible=true;
+				if (FAM_Box.Text!="Select a Family"){
+					Go_ComboBox1SelectedIndexChanged();}
 			}
 	if (Write_status.Visible==false){Write_status.Visible=true;}
 	else {Write_status.Visible=false;}
-	                                 
+			}
 		}
 		void Button23Click(object sender, EventArgs e)
 		{
@@ -1475,6 +1518,7 @@ if (result.ToString()=="OK"){
 		public void Readonly_All()
 		{
 				famstatusBox.ReadOnly=true;
+				famID.ReadOnly=true;
 				ProjectCodeBox.ReadOnly=true;
 				textBox1.ReadOnly=true;
 				textBox2.ReadOnly=true;
@@ -1505,77 +1549,145 @@ if (result.ToString()=="OK"){
 		}
 		void Write_statusClick(object sender, EventArgs e)
 		{
-			
+			if(Addfamiliystatus==1){
+			Familyrow = Famlytable.NewRow();
+			Familyrow["ID"] = famID.Text.ToString(); 
+//            Familyrow["Name"] = FAM_Box.SelectedItem.ToString() ;
+			Familyrow["Name"] = textBox4.Text.ToString() ;
+            Familyrow["Status"] = famstatusBox.Text.ToString() ;
+            Famlytable.Rows.Add(Familyrow);
+			}else{
 			 foreach(DataRow dr in Famlytable.Rows) // search whole table
  	{
- 		if(dr["Name"].ToString() == FAM_Box.SelectedItem.ToString()) // if id==2  FAM_Box.SelectedItem.ToString()
+			 	if(dr["Name"].ToString() == Family_pre_update) //FAM_Box.SelectedItem.ToString()) // if id==2  FAM_Box.SelectedItem.ToString()
+//			 	if (Familyrow["Name"] == Family_pre_update)
     	{
 //    	familyselectedID= dr["ID"].ToString();//familyid;
 //    	familyid=familyselectedID;
-dr["Status"]= famstatusBox.Text.ToString();// .Text();
+		dr["ID"]=famID.Text.ToString();
+		dr["Status"]= famstatusBox.Text.ToString();// .Text();
+//		Familyrow["Name"] = textBox4.Text.ToString() ;
+		dr["Name"] = textBox4.Text.ToString() ;
+		Family_pre_update="";
 //		familyname=dr["Name"].ToString();
 //		famstatusBox.AppendText(dr["Status"].ToString());
         //dr["Product_name"] = "cde"; //change the name
     	}
-	}
+			 }}
  	WriteXML();
+ 	Addfamiliystatus=0;
 	famstatusBox.ReadOnly=true;
+	famID.ReadOnly=true;
 	Write_status.Visible=false;
 	button19.Text=("Modify");
+	FAM_Box.Visible=true;
+	FAM_Box.Items.Clear();
+	foreach(DataRow dr in Famlytable.Rows){
+		FAM_Box.Items.Add(dr["Name"].ToString());
+	}
 		}
 		void Button25Click(object sender, EventArgs e) // modify prj
 		{
-	
+	// PRJ_Box
+//	        Addprojectstatus=0;
+//        Project_pre_update="";
+if (PRJ_Box.SelectedItem== null){}
+			else{
+
 			if (ProjectCodeBox.ReadOnly== true){
+		PRJ_Box.Visible=false;
 				ProjectCodeBox.ReadOnly=false;
 				textBox1.ReadOnly=false;
 				textBox2.ReadOnly=false;
+				prjID.ReadOnly=false;
+				prjID.Enabled=true;
+//				projectstatusBox.Enabled=true;
 				projectstatusBox.ReadOnly=false;
-				projectManagerBox.ReadOnly=false;	
+				projectManagerBox.ReadOnly=false;
+				button36.Visible=false;
 				button25.Text=("Undo");}
 	else {
 				ProjectCodeBox.ReadOnly=true;
 				textBox1.ReadOnly=true;
 				textBox2.ReadOnly=true;
-				projectstatusBox.ReadOnly=true;
+				prjID.ReadOnly=true;
 				projectManagerBox.ReadOnly=true;
 				button25.Text=("Modify");
-				GO_PRJ_BoxSelectedIndexChanged();  //to search
+				PRJ_Box.Visible=true;
+				Addprojectstatus=0;
+				button36.Visible=true;
+				GO_PRJ_BoxSelectedIndexChanged(); 
+				projectstatusBox.ReadOnly=true;				//to search
 			}
 	if (button24.Visible==false){button24.Visible=true;}
 	else {button24.Visible=false;}
 
 			
 		} // modify prj
+		}
 		void Button24Click(object sender, EventArgs e) //write prj
 		{
+			
+			if(Addprojectstatus==1)
+			{
+			Prjrow = Prjtable.NewRow();
+			Prjrow["ID"]= prjID.Text.ToString();// .Text();
+			Prjrow["Status"]=projectstatusBox.Text.ToString();
+			Prjrow["prjcode"]=ProjectCodeBox.Text.ToString();
+			Prjrow["Name"]=textBox5.Text;
+			Prjrow["Customer"]=textBox2.Text.ToString();
+			Prjrow["CusCode"]=textBox1.Text.ToString();
+			Prjrow["PM"]=projectManagerBox.Text.ToString();
+			Prjrow["IDprjFam"] =famID.Text;
+			Prjtable.Rows.Add(Prjrow);
+			Addprojectstatus=0;
+						}
+			else{
+			
 	 foreach(DataRow dr in Prjtable.Rows) // search whole table
- 	{
- 		if(dr["Name"].ToString() == PRJ_Box.SelectedItem.ToString()) // if id==2  FAM_Box.SelectedItem.ToString()
+ 	{ 
+	 	if(dr["Name"].ToString() ==Project_pre_update)
     	{
-//	dr["ID"]= projectselectedID.Text.ToString();// .Text();
+	dr["ID"]= prjID.Text.ToString();// .Text();
 	dr["Status"]=projectstatusBox.Text.ToString();
 	dr["prjcode"]=ProjectCodeBox.Text.ToString();
-//	dr["IDprjFam"]=
+	dr["Name"]=textBox5.Text;
 	dr["Customer"]=textBox2.Text.ToString();
 	dr["CusCode"]=textBox1.Text.ToString();
 	dr["PM"]=projectManagerBox.Text.ToString();
     	}
 	}
+			}
+			
 			 	WriteXML();
-//	famstatusBox.ReadOnly=true;
+			 	PRJ_Box.Items.Clear();
+			 	foreach(DataRow dr in Prjtable.Rows) // search whole table
+ 	{
+			 		if(dr["IDprjFam"].ToString() == famID.Text) // if id==2  FAM_Box.SelectedItem.ToString()
+   	{PRJ_Box.Items.Add(dr["Name"].ToString()); }
+	}
 	button24.Visible=false;
-	button25.Text=("Modify");					
+	button25.Text=("Modify");
+	PRJ_Box.Visible=true;
+	
 		}//write prj
 		void Button27Click(object sender, EventArgs e) // modify prod
 		{
+			if(PROD_Box.SelectedItem==null){}
+			else{
 			if (textBox3.ReadOnly== true){
 				textBox3.ReadOnly=false;
 				drawingBox.ReadOnly=false;
 				drawingRevBox.ReadOnly=false;
 				drawingdateBox.ReadOnly=false;
 				drawingfilenameBox.ReadOnly=false;
-				button26.Visible=true;				
+				carBOX.ReadOnly=false;
+				button26.Visible=true;
+				PROD_Box.Visible=false;
+				prodID.Enabled=true;
+				prodID.ReadOnly=false;
+				button18.Enabled=false;
+				button6.Enabled=false;
 				button27.Text=("Undo");}
 	else {
 				textBox3.ReadOnly=true;
@@ -1583,34 +1695,91 @@ dr["Status"]= famstatusBox.Text.ToString();// .Text();
 				drawingRevBox.ReadOnly=true;
 				drawingdateBox.ReadOnly=true;	
 				drawingfilenameBox.ReadOnly=true;
+				carBOX.ReadOnly=true;
 				button27.Text=("Modify");
 				button26.Visible=false;
+				PROD_Box.Visible=true;
+				button18.Enabled=true;
+				button6.Enabled=true;
+//				prodID.Enabled=false;
+				prodID.ReadOnly=true;
 				GO_PROD_BoxSelectedIndexChanged();  //to search
 			}	
+		}
 		} // modify prod 
 		void Button26Click(object sender, EventArgs e) //write prod
 		{
+			string projectselectedID ="";
+			
+			if(Addproductstatus==1){
+				Prodrow = Prodtable.NewRow();
+		Prodrow["ProductName"]= textBox6.Text.ToString();
+      Prodrow["ProductCar"]=carBOX.Text.ToString();
+      Prodrow["ProductCode"]=prodID.Text.ToString();
+      Prodrow["ProductStatus"]=textBox3.Text.ToString();
+      Prodrow["ProjectCode"]=prjID.Text.ToString();
+      Prodrow["Product2DName"]=drawingBox.Text.ToString();
+      Prodrow["Product2DFilename"]=drawingfilenameBox.Text.ToString();
+      Prodrow["Product2DREV"]=drawingRevBox.Text.ToString();
+      Prodrow["Product2DDate"]=drawingdateBox.Text.ToString(); 	
+      Prodtable.Rows.Add(Prodrow);
+      Addproductstatus=0;
+			}
+			else{
 		 foreach(DataRow dr in Prodtable.Rows) // search whole table
  	{
  		if(dr["ProductName"].ToString() == PROD_Box.SelectedItem.ToString()) // if id==2  FAM_Box.SelectedItem.ToString()
     	{
-//	dr["ProductName"]= ....Text.ToString();
-//      dr["ProductCar"]=....Text.ToString();
-//      dr["ProductCode"]=....Text.ToString();
+	dr["ProductName"]= textBox6.Text.ToString();
+      dr["ProductCar"]=carBOX.Text.ToString();
+      dr["ProductCode"]=prodID.Text.ToString();
       dr["ProductStatus"]=textBox3.Text.ToString();
-//      dr["ProjectCode"]=....Text.ToString();
+      dr["ProjectCode"]=prjID.Text.ToString();
       dr["Product2DName"]=drawingBox.Text.ToString();
       dr["Product2DFilename"]=drawingfilenameBox.Text.ToString();
       dr["Product2DREV"]=drawingRevBox.Text.ToString();
       dr["Product2DDate"]=drawingdateBox.Text.ToString(); 				
     	}
 	}
+			}
+			
 			 	WriteXML();
-//	famstatusBox.ReadOnly=true;
 	button26.Visible=false;
-	button27.Text=("Modify");			
+	button27.Text=("Modify");
+		PROD_Box.Visible=true;
+		
+		
+		PROD_Box.Items.Clear();
+		
+		foreach(DataRow dr in Prjtable.Rows) // search whole table
+ 	{
+ 		if(dr["Name"].ToString() == PRJ_Box.SelectedItem.ToString()) // if id==2  FAM_Box.SelectedItem.ToString()
+    	{
+        	projectselectedID= dr["ID"].ToString();
+//        	projectstatusBox.AppendText(dr["Status"].ToString());//---projectstatus);
+//			ProjectCodeBox.AppendText(dr["prjcode"].ToString());//---projectcode);
+//			textBox1.AppendText(dr["CusCode"].ToString());
+//			textBox2.AppendText(dr["Customer"].ToString());
+//			projectManagerBox.AppendText(dr["PM"].ToString());//---projectmanager);
+//			prjID.AppendText(projectselectedID);
+     	}
+	}
+
+		foreach(DataRow dr in Prodtable.Rows) // search whole table
+ 	{
+ 	if(dr["ProjectCode"].ToString() == projectselectedID) // if id==2  FAM_Box.SelectedItem.ToString()
+   	{PROD_Box.Items.Add(dr["ProductName"].ToString()); }
+	}
+			prodID.ReadOnly=true;
+			carBOX.ReadOnly=true;
+		GO_PRJ_BoxSelectedIndexChanged();	
+				button37.Text=("Add");
+				button27.Visible=true;
+				button26.Visible=false;
+		
 		}//write prod	
-		void Button28Click(object sender, EventArgs e) //modify prt
+		void Button28Click(object sender, EventArgs e) //modify prt 
+
 		{
 				if (CodeBox.ReadOnly== true){
 				CodeBox.ReadOnly=false;
@@ -1631,8 +1800,21 @@ dr["Status"]= famstatusBox.Text.ToString();// .Text();
 				button30.Visible=true;
 				jpegfile.ReadOnly=false;
 				jpegfile.Visible=true;
-//				pictureBox1.ReadOnly=false; //check
-				button29.Visible=true;				
+				button29.Visible=true;
+				WhereUsed.Enabled=false;
+				OpenCADbutton.Enabled=false;
+				Checkout_3D.Enabled=false;
+				whereUSEDbutton.Enabled=false;
+				open2Dbutton.Enabled=false;
+				Checkout_2D.Enabled=false;
+				where2Dbutton.Enabled=false;
+				OpenSTEPbutton.Enabled=false;
+				CheckOut_Step.Enabled=false;
+				button38.Visible=false;
+//				generateSTEPbuttron.Enabled=false;
+				openPDFbutton.Enabled=false;
+				CheckOut_pdf.Enabled=false;
+//				generatePDFbutton.Enabled=false;				
 				button28.Text=("Undo");}
 	else {
 				CodeBox.ReadOnly=true;
@@ -1653,8 +1835,22 @@ dr["Status"]= famstatusBox.Text.ToString();// .Text();
 				button30.Visible=false;
 				jpegfile.ReadOnly=true;
 				jpegfile.Visible=false;
+				button38.Visible=true;
 //				pictureBox1.ReadOnly=false; //check
 				button28.Text=("Modify");
+				WhereUsed.Enabled=true;
+				OpenCADbutton.Enabled=true;
+				Checkout_3D.Enabled=true;
+				whereUSEDbutton.Enabled=true;
+				open2Dbutton.Enabled=true;
+				Checkout_2D.Enabled=true;
+				where2Dbutton.Enabled=true;
+				OpenSTEPbutton.Enabled=true;
+				CheckOut_Step.Enabled=true;
+//				generateSTEPbuttron.Enabled=false;
+				openPDFbutton.Enabled=true;
+				CheckOut_pdf.Enabled=true;
+//				generatePDFbutton.Enabled=false;	
 				button29.Visible=false;
 				GO_PART_BoxSelectedIndexChanged();  //to search
 			}	
@@ -1662,7 +1858,11 @@ dr["Status"]= famstatusBox.Text.ToString();// .Text();
 		} //modify prt
 		void Button29Click(object sender, EventArgs e) //write prt
 		{
+			
+			if (CodeBox.Text!=""){
 	
+			if(Addpartstatus==0){
+			
 		 foreach(DataRow dr in Parttable.Rows) // search whole table
  	{
  		if(dr["PartCode"].ToString() == PART_Box.SelectedItem.ToString()) // if id==2  FAM_Box.SelectedItem.ToString()
@@ -1710,19 +1910,61 @@ dr["Status"]= famstatusBox.Text.ToString();// .Text();
  			if (supplierBox.Text.ToString()!="")
  			{ dr["PartSupplyer"]= supplierBox.Text.ToString();}
  			else {dr["PartSupplyer"]="NULL";}
- 			if (pictureBox1.Text.ToString()!="")
- 			{ dr["PartImage"]= pictureBox1.Text.ToString();}
+ 			if (jpegfile.Text.ToString()!="")
+ 			{ dr["PartImage"]= jpegfile.Text.ToString();}
  			else {dr["PartImage"]="NULL";}
 
     	}
 	}
-			 	WriteXML();
+			}
+			else{
+			  {			
+						
+//if (CodeBox.Text!=""){}else{MessageBox.Show("Please enter a part code");}
+						Partrow=Parttable.NewRow();
+					
+if (CodeBox.Text!=""){Partrow["PartCode"]=CodeBox.Text.ToString();}else{Partrow["PartCode"]="NULL";}
+if (NameBox.Text!=""){Partrow["PartName"]=NameBox.Text.ToString();}else{Partrow["PartName"]="NULL";}
+if (StatusBox.Text!=""){Partrow["PartStatus"]=StatusBox.Text.ToString();}else{Partrow["PartStatus"]="NULL";}
+if (RevBox.Text!=""){Partrow["PartRev"]=RevBox.Text.ToString();}else{Partrow["PartRev"]="NULL";}
+if (DateBox.Text!=""){Partrow["PartDate"]=DateBox.Text.ToString();}else{Partrow["PartDate"]="NULL";}
+if (DesignerBox.Text!=""){Partrow["PartDesigner"]=DesignerBox.Text.ToString();}else{Partrow["PartDesigner"]="NULL";}
+if (ThreedBox.Text!=""){Partrow["PartTHREE_D"]=ThreedBox.Text.ToString();}else{Partrow["PartTHREE_D"]="NULL";}
+if (StepBox.Text!=""){Partrow["PartStep"]=StepBox.Text.ToString();}else{Partrow["PartStep"]="NULL";}
+if (TwodBox.Text!=""){Partrow["PartTWO_D"]=TwodBox.Text.ToString();}else{Partrow["PartTWO_D"]="NULL";}
+if (PdfBox.Text!=""){Partrow["PartPdf"]=PdfBox.Text.ToString();}else{Partrow["PartPdf"]="NULL";}
+if (weightBox.Text!=""){Partrow["PartWeight"]=weightBox.Text.ToString();}else{Partrow["PartWeight"]="NULL";}
+if (materialBox.Text!=""){Partrow["PartMaterial"]=materialBox.Text.ToString();}else{Partrow["PartMaterial"]="NULL";}
+if (ttreatmentBox.Text!=""){Partrow["PartTThreat"]=ttreatmentBox.Text.ToString();}else{Partrow["PartTThreat"]="NULL";}
+if (coatingBox.Text!=""){Partrow["PartCoat"]=coatingBox.Text.ToString();}else{Partrow["PartCoat"]="NULL";}
+if (supplierBox.Text!=""){Partrow["PartSupplyer"]=supplierBox.Text.ToString();}else{Partrow["PartSupplyer"]="NULL";}
+if(jpegfile.Text!=""){Partrow["PartImage"]=jpegfile.Text.ToString();}else{Partrow["PartImage"]="NULL";}
+Parttable.Rows.Add(Partrow);
+//					}else{MessageBox.Show("Please enter a part code");}
+
+
+			Matchrow=Matchtable.NewRow();
+			Matchrow["PartListed"]= CodeBox.Text.ToString();
+            Matchrow["ProjectListed"]= prodID.Text.ToString();
+			Matchtable.Rows.Add(Matchrow);
+
+
+
+}
+               }	
+		
+		//}
+		 WriteXML();
 //	famstatusBox.ReadOnly=true;
 	button29.Visible=false;
-	button28.Text=("Modify");		
+	button28.Text=("Modify");
+	button38.Text=("Add");	
+	button38.Visible=true;
 	button30.Visible=false;
 //	jpegfile.ReadOnly=true;
 	jpegfile.Visible=false;		
+	
+	}else{MessageBox.Show("Please enter a part code");}
 		} //write prt
 		void Button30Click(object sender, EventArgs e)
 		{
@@ -2046,6 +2288,7 @@ else if (dialogResult == DialogResult.No)
 
 			famstatusBox.Text=("");
 			FAM_Box.Items.Clear();
+			famID.Text=("");
 			
 				ProjectCodeBox.Text=("");
 				projectstatusBox.Text=("");
@@ -2181,7 +2424,320 @@ ApplicationPath_LOW = filename;
   }
 			
 		}
+		void Button34Click(object sender, EventArgs e)
+		{
+	ViewFileFolder(Environment.CurrentDirectory);
+		}
+		void Button35Click(object sender, EventArgs e)
+		{
+//					if (FAM_Box.Text!="Select a Family"){
+			
+//			if (FAM_Box.SelectedItem== null){}
+//			else{
+			
+			
+			
+	if (famstatusBox.ReadOnly== true){
+				Addfamiliystatus=1;
+				famstatusBox.ReadOnly=false;
+				famID.ReadOnly=false;
+				button35.Text=("Undo");
+				button19.Visible=false;
+//				FAM_Box.Items.Add("Replace with family");
+//				FAM_Box.SelectedIndex = FAM_Box.FindStringExact("Replace with family");
+				famstatusBox.Text=("Insert status");
+				famID.Text=("Insert ID");
+				FAM_Box.Visible=false;
+				textBox4.Text=("Replace with family");
+//				FAM_Box.SelectedIndex = FAM_Box.FindStringExact("Replace with family");
+				if(FAM_Box.SelectedText!=null){
+					famstatusBox.Enabled=true;
+					famstatusBoxPRE=0;
+					famID.Enabled=true;
+				}else{famstatusBoxPRE=1;}
+				}
+	else {
+//				if (FAM_Box.Text!="Select a Family"){
+//					Go_ComboBox1SelectedIndexChanged();
+				famstatusBox.ReadOnly=true;
+				button19.Visible=true;
+				famID.ReadOnly=true;
+				button35.Text=("Add");
+				Addfamiliystatus=0;
+				FAM_Box.Visible=true;
+				if(famstatusBoxPRE==0){
+					famstatusBox.Enabled=false;
+					famID.Enabled=false;
+				}
+				
+				
+				
+				}
+//			}
+	if (Write_status.Visible==false){Write_status.Visible=true;}
+	else {Write_status.Visible=false;}		
+			
+//			}
+			
+//			}
+		}
+		void Button36Click(object sender, EventArgs e)
+		{
+						
+			if (projectstatusBox.ReadOnly== true){
+				Addprojectstatus=1;
+				
+				ProjectCodeBox.ReadOnly=false;
+				textBox1.ReadOnly=false;
+				textBox2.ReadOnly=false;
+				prjID.ReadOnly=false;
+				prjID.Enabled=true;
+//				projectstatusBox.Enabled=true;
+				projectstatusBox.ReadOnly=false;
+				projectManagerBox.ReadOnly=false;
+				button36.Text=("Undo");
+				button25.Visible=false;
+				projectstatusBox.Text=("Insert status");
+				prjID.Text=("Insert ID");
+				PRJ_Box.Visible=false;
+				textBox5.Text=("Replace with project");
+				textBox2.Text=("Replace with name");
+				//Replace with 
+				textBox1.Text=("Replace with code");
+				ProjectCodeBox.Text=("Replace with project");
+				projectManagerBox.Text=("Replace with Project Manager");
+				
+//				FAM_Box.SelectedIndex = FAM_Box.FindStringExact("Replace with family");
+				if(PRJ_Box.SelectedText!=null){
+					projectstatusBox.Enabled=true;
+					prjID.Enabled=true;
+					prjstatusBoxPRE=0;
+				}else{prjstatusBoxPRE=1;}
+				}
+	else {
+				ProjectCodeBox.ReadOnly=true;
+				textBox1.ReadOnly=true;
+				textBox2.ReadOnly=true;
+				button25.Visible=true;
+				prjID.ReadOnly=true;
+//				projectstatusBox.ReadOnly=true;
+				projectManagerBox.ReadOnly=true;
+				projectManagerBox.ReadOnly=true;
+				PRJ_Box.Visible=true;
+				Addprojectstatus=0;
+				if (PRJ_Box.SelectedItem!= null){GO_PRJ_BoxSelectedIndexChanged();}  //to search
+				else{Go_ComboBox1SelectedIndexChanged();}
+				projectstatusBox.ReadOnly=true;
+				button36.Text=("Add");
+				Addprojectstatus=0;
+				if(prjstatusBoxPRE==0){
+//					projectstatusBox.Enabled=false;
+					prjID.Enabled=false;
+				}
+				
+				
+				
+				}
+//			}
+	if (button24.Visible==false){button24.Visible=true;}
+	else {button24.Visible=false;}	
+			
+			
+			
+			
+	
+		}
+		void Button37Click(object sender, EventArgs e)
+		{
+//			string projectselectedID;
+	//to migrate from prj to prod
+							
+			if (textBox3.ReadOnly==true){  //prod
+				Addproductstatus=1; //prod
+				textBox6.Text=("Replace with Name");
+				textBox3.ReadOnly=false;
+				textBox3.Text=("Replace with status");
+				drawingBox.ReadOnly=false;
+				drawingBox.Text=("Replace with drawing");
+				drawingRevBox.ReadOnly=false;
+				drawingRevBox.Text=("Replace with REV");
+				drawingdateBox.ReadOnly=false;
+				drawingdateBox.Text=("Replace with date");
+				drawingfilenameBox.ReadOnly=false;
+				drawingfilenameBox.Text=("Replace with filename");
+				carBOX.ReadOnly=false;
+				carBOX.Text=("Replace with car");
+				button26.Visible=true;
+				PROD_Box.Visible=false;
+				prodID.Enabled=true;
+				prodID.ReadOnly=false;
+				prodID.Text=("Replace with ID");
+				button27.Visible=false;
+				button37.Text=("Undo");
+				button18.Enabled=false;
+				button6.Enabled=false;
+					}
+	else {
+				textBox3.ReadOnly=true;
+				drawingBox.ReadOnly=true;
+				drawingRevBox.ReadOnly=true;
+				drawingdateBox.ReadOnly=true;	
+				drawingfilenameBox.ReadOnly=true;
+				carBOX.ReadOnly=true;
+				button37.Text=("Add");
+				button18.Enabled=true;
+				button6.Enabled=true;
+				button27.Visible=true;
+				Addproductstatus=0; //prod
+				button26.Visible=false;
+				PROD_Box.Visible=true;
+//				prodID.Enabled=false;
+				prodID.ReadOnly=true;
+				if (PROD_Box.SelectedItem!=null){
+					GO_PROD_BoxSelectedIndexChanged();
+					textBox3.Enabled=true;
+					prodID.Enabled=true;
+					prodstatusBoxPRE=0;
+				}else{prodstatusBoxPRE=1;
+				GO_PRJ_BoxSelectedIndexChanged();}
+			}	
+				if(prodstatusBoxPRE==0){
+//					projectstatusBox.Enabled=false;
+//					prodID.Enabled=false;
+				}
+		}
+		void Button38Click(object sender, EventArgs e)
+		{
+	
+			if (CodeBox.ReadOnly== true){
+				CodeBox.ReadOnly=false;
+				NameBox.ReadOnly=false;
+				StatusBox.ReadOnly=false;
+				RevBox.ReadOnly=false;
+				DateBox.ReadOnly=false;
+				DesignerBox.ReadOnly=false;
+				ThreedBox.ReadOnly=false;
+				StepBox.ReadOnly=false;
+				TwodBox.ReadOnly=false;
+				PdfBox.ReadOnly=false;
+				weightBox.ReadOnly=false;
+				materialBox.ReadOnly=false;
+				ttreatmentBox.ReadOnly=false;
+				coatingBox.ReadOnly=false;
+				supplierBox.ReadOnly=false;
+				button30.Visible=true;
+				jpegfile.ReadOnly=false;
+					
+				CodeBox.Text="Insert value";
+				NameBox.Text="Insert value";
+				StatusBox.Text="Insert value";
+				RevBox.Text="Insert value";
+				DateBox.Text="Insert value";
+				DesignerBox.Text="Insert value";
+				ThreedBox.Text="Insert value";
+				StepBox.Text="Insert value";
+				TwodBox.Text="Insert value";
+				PdfBox.Text="Insert value";
+				weightBox.Text="Insert value";
+				materialBox.Text="Insert value";
+				ttreatmentBox.Text="Insert value";
+				coatingBox.Text="Insert value";
+				supplierBox.Text="Insert value";
+				jpegfile.Text="Insert value";
+//pictureBox1.Image.Dispose();
+            	pictureBox1.Image = null;
+            
+				jpegfile.Visible=true;
+				button29.Visible=true;
+				WhereUsed.Enabled=false;
+				OpenCADbutton.Enabled=false;
+				Checkout_3D.Enabled=false;
+				whereUSEDbutton.Enabled=false;
+				open2Dbutton.Enabled=false;
+				Checkout_2D.Enabled=false;
+				where2Dbutton.Enabled=false;
+				OpenSTEPbutton.Enabled=false;
+				CheckOut_Step.Enabled=false;
+				button28.Visible=false;
+//				generateSTEPbuttron.Enabled=false;
+				openPDFbutton.Enabled=false;
+				CheckOut_pdf.Enabled=false;
+				if(groupBox5.Enabled==false){partwasinvisible=1;}
+				groupBox5.Enabled=true;
+//				generatePDFbutton.Enabled=false;				
+				button38.Text=("Undo");
+				Addpartstatus=1;
+			// add a part
+			}
+						
+	else {
+				CodeBox.ReadOnly=true;
+				NameBox.ReadOnly=true;
+				StatusBox.ReadOnly=true;
+				RevBox.ReadOnly=true;
+				DateBox.ReadOnly=true;
+				DesignerBox.ReadOnly=true;
+				ThreedBox.ReadOnly=true;
+				StepBox.ReadOnly=true;
+				TwodBox.ReadOnly=true;
+				PdfBox.ReadOnly=true;
+				weightBox.ReadOnly=true;
+				materialBox.ReadOnly=true;
+				ttreatmentBox.ReadOnly=true;
+				coatingBox.ReadOnly=true;
+				supplierBox.ReadOnly=true;
+				button30.Visible=false;
+				jpegfile.ReadOnly=true;
+				jpegfile.Visible=false;
+				button28.Visible=true;
+				button28.Enabled=false;
+				
+				CodeBox.Text="";
+				NameBox.Text="";
+				StatusBox.Text="";
+				RevBox.Text="";
+				DateBox.Text="";
+				DesignerBox.Text="";
+				ThreedBox.Text="";
+				StepBox.Text="";
+				TwodBox.Text="";
+				PdfBox.Text="";
+				weightBox.Text="";
+				materialBox.Text="";
+				ttreatmentBox.Text="";
+				coatingBox.Text="";
+				supplierBox.Text="";
+				jpegfile.Text="";
+
+//				pictureBox1.ReadOnly=false; //check
+				button38.Text=("Add");
+				WhereUsed.Enabled=true;
+				button29.Visible=false;
+				if(partwasinvisible==1){groupBox5.Enabled=true;
+					partwasinvisible=0;}
+				if(PART_Box.SelectedItem!=null){
+					OpenCADbutton.Enabled=true;
+				Checkout_3D.Enabled=true;
+				whereUSEDbutton.Enabled=true;
+				open2Dbutton.Enabled=true;
+				Checkout_2D.Enabled=true;
+				where2Dbutton.Enabled=true;
+				OpenSTEPbutton.Enabled=true;
+				CheckOut_Step.Enabled=true;
+//				generateSTEPbuttron.Enabled=false;
+				openPDFbutton.Enabled=true;
+				CheckOut_pdf.Enabled=true;
+//				generatePDFbutton.Enabled=false;	
+				Addpartstatus=0;
+					GO_PART_BoxSelectedIndexChanged();}  //to search
+			}	
+			
+			}
+			
+			
+			
+		}
 	
 	}////PUBLIC - Name space
 
-}
+//}

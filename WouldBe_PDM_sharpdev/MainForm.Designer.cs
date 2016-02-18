@@ -14,7 +14,7 @@ namespace wina
 		/// Designer variable used to keep track of non-visual components.
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
-		private System.Windows.Forms.ComboBox FAM_Box;
+		public System.Windows.Forms.ComboBox FAM_Box;
 		private System.Windows.Forms.ComboBox PRJ_Box;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.ComboBox PROD_Box;
@@ -168,6 +168,24 @@ namespace wina
 		private System.Windows.Forms.Label label36;
 		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.Label label35;
+		private System.Windows.Forms.Button button34;
+		private System.Windows.Forms.Button button35;
+		private System.Windows.Forms.TextBox famID;
+		private System.Windows.Forms.Label label37;
+		private System.Windows.Forms.GroupBox groupBox19;
+		private System.Windows.Forms.GroupBox groupBox18;
+		private System.Windows.Forms.Button button36;
+		private System.Windows.Forms.Button button37;
+		private System.Windows.Forms.TextBox textBox4;
+		private System.Windows.Forms.TextBox textBox6;
+		private System.Windows.Forms.TextBox textBox5;
+		private System.Windows.Forms.TextBox prjID;
+		private System.Windows.Forms.Label label38;
+		private System.Windows.Forms.TextBox carBOX;
+		private System.Windows.Forms.Label label40;
+		private System.Windows.Forms.TextBox prodID;
+		private System.Windows.Forms.Label label39;
+		private System.Windows.Forms.Button button38;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -239,14 +257,21 @@ namespace wina
 			this.button4 = new System.Windows.Forms.Button();
 			this.button12 = new System.Windows.Forms.Button();
 			this.FindFilesTab = new System.Windows.Forms.TabPage();
+			this.button38 = new System.Windows.Forms.Button();
+			this.button1 = new System.Windows.Forms.Button();
+			this.button33 = new System.Windows.Forms.Button();
+			this.button2 = new System.Windows.Forms.Button();
+			this.groupBox18 = new System.Windows.Forms.GroupBox();
+			this.button34 = new System.Windows.Forms.Button();
+			this.button10 = new System.Windows.Forms.Button();
+			this.button8 = new System.Windows.Forms.Button();
+			this.button5 = new System.Windows.Forms.Button();
 			this.checkBox3 = new System.Windows.Forms.CheckBox();
 			this.checkBox2 = new System.Windows.Forms.CheckBox();
 			this.checkBox1 = new System.Windows.Forms.CheckBox();
 			this.checkBoxPRT = new System.Windows.Forms.CheckBox();
 			this.checkBoxPROD = new System.Windows.Forms.CheckBox();
 			this.checkBoxPRJ = new System.Windows.Forms.CheckBox();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button33 = new System.Windows.Forms.Button();
 			this.groupBox17 = new System.Windows.Forms.GroupBox();
 			this.button31 = new System.Windows.Forms.Button();
 			this.button32 = new System.Windows.Forms.Button();
@@ -254,17 +279,25 @@ namespace wina
 			this.button3 = new System.Windows.Forms.Button();
 			this.button30 = new System.Windows.Forms.Button();
 			this.jpegfile = new System.Windows.Forms.TextBox();
-			this.button2 = new System.Windows.Forms.Button();
 			this.PART_Box = new System.Windows.Forms.ComboBox();
 			this.groupBox6 = new System.Windows.Forms.GroupBox();
+			this.FAM_Box = new System.Windows.Forms.ComboBox();
+			this.textBox4 = new System.Windows.Forms.TextBox();
+			this.famID = new System.Windows.Forms.TextBox();
+			this.label37 = new System.Windows.Forms.Label();
+			this.button35 = new System.Windows.Forms.Button();
 			this.Write_status = new System.Windows.Forms.Button();
 			this.button19 = new System.Windows.Forms.Button();
 			this.famstatusBox = new System.Windows.Forms.TextBox();
 			this.label11 = new System.Windows.Forms.Label();
-			this.FAM_Box = new System.Windows.Forms.ComboBox();
 			this.groupBox9 = new System.Windows.Forms.GroupBox();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.groupBox7 = new System.Windows.Forms.GroupBox();
+			this.prjID = new System.Windows.Forms.TextBox();
+			this.label38 = new System.Windows.Forms.Label();
+			this.PRJ_Box = new System.Windows.Forms.ComboBox();
+			this.textBox5 = new System.Windows.Forms.TextBox();
+			this.button36 = new System.Windows.Forms.Button();
 			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.label36 = new System.Windows.Forms.Label();
 			this.textBox1 = new System.Windows.Forms.TextBox();
@@ -277,7 +310,6 @@ namespace wina
 			this.projectManagerBox = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.PRJ_Box = new System.Windows.Forms.ComboBox();
 			this.groupBox5 = new System.Windows.Forms.GroupBox();
 			this.button29 = new System.Windows.Forms.Button();
 			this.button28 = new System.Windows.Forms.Button();
@@ -324,8 +356,14 @@ namespace wina
 			this.ThreedBox = new System.Windows.Forms.TextBox();
 			this.OpenCADbutton = new System.Windows.Forms.Button();
 			this.whereUSEDbutton = new System.Windows.Forms.Button();
-			this.button10 = new System.Windows.Forms.Button();
 			this.groupBox8 = new System.Windows.Forms.GroupBox();
+			this.carBOX = new System.Windows.Forms.TextBox();
+			this.label40 = new System.Windows.Forms.Label();
+			this.prodID = new System.Windows.Forms.TextBox();
+			this.label39 = new System.Windows.Forms.Label();
+			this.PROD_Box = new System.Windows.Forms.ComboBox();
+			this.button37 = new System.Windows.Forms.Button();
+			this.textBox6 = new System.Windows.Forms.TextBox();
 			this.button26 = new System.Windows.Forms.Button();
 			this.button27 = new System.Windows.Forms.Button();
 			this.button18 = new System.Windows.Forms.Button();
@@ -339,11 +377,9 @@ namespace wina
 			this.label14 = new System.Windows.Forms.Label();
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.label13 = new System.Windows.Forms.Label();
-			this.PROD_Box = new System.Windows.Forms.ComboBox();
 			this.label12 = new System.Windows.Forms.Label();
-			this.button8 = new System.Windows.Forms.Button();
 			this.label4 = new System.Windows.Forms.Label();
-			this.button5 = new System.Windows.Forms.Button();
+			this.groupBox19 = new System.Windows.Forms.GroupBox();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.ConfigTab.SuspendLayout();
 			this.groupBox13.SuspendLayout();
@@ -814,28 +850,32 @@ namespace wina
 			// 
 			// FindFilesTab
 			// 
+			this.FindFilesTab.Controls.Add(this.button38);
+			this.FindFilesTab.Controls.Add(this.button1);
+			this.FindFilesTab.Controls.Add(this.button33);
+			this.FindFilesTab.Controls.Add(this.button2);
+			this.FindFilesTab.Controls.Add(this.groupBox18);
+			this.FindFilesTab.Controls.Add(this.button34);
+			this.FindFilesTab.Controls.Add(this.button10);
+			this.FindFilesTab.Controls.Add(this.button8);
+			this.FindFilesTab.Controls.Add(this.button5);
 			this.FindFilesTab.Controls.Add(this.checkBox3);
 			this.FindFilesTab.Controls.Add(this.checkBox2);
 			this.FindFilesTab.Controls.Add(this.checkBox1);
 			this.FindFilesTab.Controls.Add(this.checkBoxPRT);
 			this.FindFilesTab.Controls.Add(this.checkBoxPROD);
 			this.FindFilesTab.Controls.Add(this.checkBoxPRJ);
-			this.FindFilesTab.Controls.Add(this.button1);
-			this.FindFilesTab.Controls.Add(this.button33);
 			this.FindFilesTab.Controls.Add(this.groupBox17);
 			this.FindFilesTab.Controls.Add(this.button30);
 			this.FindFilesTab.Controls.Add(this.jpegfile);
-			this.FindFilesTab.Controls.Add(this.button2);
 			this.FindFilesTab.Controls.Add(this.PART_Box);
 			this.FindFilesTab.Controls.Add(this.groupBox6);
 			this.FindFilesTab.Controls.Add(this.groupBox9);
 			this.FindFilesTab.Controls.Add(this.groupBox7);
 			this.FindFilesTab.Controls.Add(this.groupBox5);
-			this.FindFilesTab.Controls.Add(this.button10);
 			this.FindFilesTab.Controls.Add(this.groupBox8);
-			this.FindFilesTab.Controls.Add(this.button8);
 			this.FindFilesTab.Controls.Add(this.label4);
-			this.FindFilesTab.Controls.Add(this.button5);
+			this.FindFilesTab.Controls.Add(this.groupBox19);
 			this.FindFilesTab.Location = new System.Drawing.Point(4, 22);
 			this.FindFilesTab.Name = "FindFilesTab";
 			this.FindFilesTab.Padding = new System.Windows.Forms.Padding(3);
@@ -843,6 +883,96 @@ namespace wina
 			this.FindFilesTab.TabIndex = 0;
 			this.FindFilesTab.Text = "PDM";
 			this.FindFilesTab.UseVisualStyleBackColor = true;
+			// 
+			// button38
+			// 
+			this.button38.Enabled = false;
+			this.button38.Location = new System.Drawing.Point(827, 378);
+			this.button38.Name = "button38";
+			this.button38.Size = new System.Drawing.Size(48, 23);
+			this.button38.TabIndex = 113;
+			this.button38.Text = "Add";
+			this.button38.UseVisualStyleBackColor = true;
+			this.button38.Click += new System.EventHandler(this.Button38Click);
+			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(125, 231);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(62, 23);
+			this.button1.TabIndex = 100;
+			this.button1.Text = "Thanks";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.Button1Click);
+			// 
+			// button33
+			// 
+			this.button33.Location = new System.Drawing.Point(59, 231);
+			this.button33.Name = "button33";
+			this.button33.Size = new System.Drawing.Size(62, 23);
+			this.button33.TabIndex = 99;
+			this.button33.Text = "Webpage";
+			this.button33.UseVisualStyleBackColor = true;
+			this.button33.Click += new System.EventHandler(this.Button33Click);
+			// 
+			// button2
+			// 
+			this.button2.Location = new System.Drawing.Point(17, 231);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(38, 23);
+			this.button2.TabIndex = 7;
+			this.button2.Text = "Info";
+			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.Button2Click);
+			// 
+			// groupBox18
+			// 
+			this.groupBox18.Location = new System.Drawing.Point(9, 215);
+			this.groupBox18.Name = "groupBox18";
+			this.groupBox18.Size = new System.Drawing.Size(276, 53);
+			this.groupBox18.TabIndex = 109;
+			this.groupBox18.TabStop = false;
+			this.groupBox18.Text = "Would-Be PDM Info V 0.0.0.6";
+			// 
+			// button34
+			// 
+			this.button34.Location = new System.Drawing.Point(91, 186);
+			this.button34.Name = "button34";
+			this.button34.Size = new System.Drawing.Size(75, 23);
+			this.button34.TabIndex = 107;
+			this.button34.Text = "Main dir";
+			this.button34.UseVisualStyleBackColor = true;
+			this.button34.Click += new System.EventHandler(this.Button34Click);
+			// 
+			// button10
+			// 
+			this.button10.Location = new System.Drawing.Point(91, 160);
+			this.button10.Name = "button10";
+			this.button10.Size = new System.Drawing.Size(75, 23);
+			this.button10.TabIndex = 91;
+			this.button10.Text = "STEP dir";
+			this.button10.UseVisualStyleBackColor = true;
+			this.button10.Click += new System.EventHandler(this.Button10Click);
+			// 
+			// button8
+			// 
+			this.button8.Location = new System.Drawing.Point(10, 186);
+			this.button8.Name = "button8";
+			this.button8.Size = new System.Drawing.Size(75, 23);
+			this.button8.TabIndex = 90;
+			this.button8.Text = "PDF dir";
+			this.button8.UseVisualStyleBackColor = true;
+			this.button8.Click += new System.EventHandler(this.Button8Click);
+			// 
+			// button5
+			// 
+			this.button5.Location = new System.Drawing.Point(10, 160);
+			this.button5.Name = "button5";
+			this.button5.Size = new System.Drawing.Size(75, 23);
+			this.button5.TabIndex = 89;
+			this.button5.Text = "CAD dir";
+			this.button5.UseVisualStyleBackColor = true;
+			this.button5.Click += new System.EventHandler(this.Button5Click);
 			// 
 			// checkBox3
 			// 
@@ -903,26 +1033,6 @@ namespace wina
 			this.checkBoxPRJ.Text = "List all PRJs";
 			this.checkBoxPRJ.UseVisualStyleBackColor = true;
 			this.checkBoxPRJ.Click += new System.EventHandler(this.CheckBoxPRJCheckedChanged);
-			// 
-			// button1
-			// 
-			this.button1.Location = new System.Drawing.Point(209, 245);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(62, 23);
-			this.button1.TabIndex = 100;
-			this.button1.Text = "Thanks";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.Button1Click);
-			// 
-			// button33
-			// 
-			this.button33.Location = new System.Drawing.Point(144, 245);
-			this.button33.Name = "button33";
-			this.button33.Size = new System.Drawing.Size(62, 23);
-			this.button33.TabIndex = 99;
-			this.button33.Text = "Webpage";
-			this.button33.UseVisualStyleBackColor = true;
-			this.button33.Click += new System.EventHandler(this.Button33Click);
 			// 
 			// groupBox17
 			// 
@@ -997,16 +1107,6 @@ namespace wina
 			this.jpegfile.TabIndex = 96;
 			this.jpegfile.Visible = false;
 			// 
-			// button2
-			// 
-			this.button2.Location = new System.Drawing.Point(17, 245);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(121, 23);
-			this.button2.TabIndex = 7;
-			this.button2.Text = "Would-Be PDM Info";
-			this.button2.UseVisualStyleBackColor = true;
-			this.button2.Click += new System.EventHandler(this.Button2Click);
-			// 
 			// PART_Box
 			// 
 			this.PART_Box.Enabled = false;
@@ -1020,55 +1120,21 @@ namespace wina
 			// 
 			// groupBox6
 			// 
+			this.groupBox6.Controls.Add(this.FAM_Box);
+			this.groupBox6.Controls.Add(this.textBox4);
+			this.groupBox6.Controls.Add(this.famID);
+			this.groupBox6.Controls.Add(this.label37);
+			this.groupBox6.Controls.Add(this.button35);
 			this.groupBox6.Controls.Add(this.Write_status);
 			this.groupBox6.Controls.Add(this.button19);
 			this.groupBox6.Controls.Add(this.famstatusBox);
 			this.groupBox6.Controls.Add(this.label11);
-			this.groupBox6.Controls.Add(this.FAM_Box);
 			this.groupBox6.Location = new System.Drawing.Point(6, 34);
 			this.groupBox6.Name = "groupBox6";
-			this.groupBox6.Size = new System.Drawing.Size(279, 98);
+			this.groupBox6.Size = new System.Drawing.Size(279, 104);
 			this.groupBox6.TabIndex = 85;
 			this.groupBox6.TabStop = false;
 			this.groupBox6.Text = "Family";
-			// 
-			// Write_status
-			// 
-			this.Write_status.Location = new System.Drawing.Point(203, 53);
-			this.Write_status.Name = "Write_status";
-			this.Write_status.Size = new System.Drawing.Size(56, 23);
-			this.Write_status.TabIndex = 91;
-			this.Write_status.Text = "Write";
-			this.Write_status.UseVisualStyleBackColor = true;
-			this.Write_status.Visible = false;
-			this.Write_status.Click += new System.EventHandler(this.Write_statusClick);
-			// 
-			// button19
-			// 
-			this.button19.Location = new System.Drawing.Point(149, 54);
-			this.button19.Name = "button19";
-			this.button19.Size = new System.Drawing.Size(48, 23);
-			this.button19.TabIndex = 90;
-			this.button19.Text = "Modify";
-			this.button19.UseVisualStyleBackColor = true;
-			this.button19.Click += new System.EventHandler(this.Button19Click);
-			// 
-			// famstatusBox
-			// 
-			this.famstatusBox.Enabled = false;
-			this.famstatusBox.Location = new System.Drawing.Point(6, 56);
-			this.famstatusBox.Name = "famstatusBox";
-			this.famstatusBox.ReadOnly = true;
-			this.famstatusBox.Size = new System.Drawing.Size(126, 20);
-			this.famstatusBox.TabIndex = 88;
-			// 
-			// label11
-			// 
-			this.label11.Location = new System.Drawing.Point(6, 40);
-			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(100, 23);
-			this.label11.TabIndex = 89;
-			this.label11.Text = "Status";
 			// 
 			// FAM_Box
 			// 
@@ -1079,6 +1145,79 @@ namespace wina
 			this.FAM_Box.TabIndex = 0;
 			this.FAM_Box.Text = "Select a Family";
 			this.FAM_Box.SelectedIndexChanged += new System.EventHandler(this.ComboBox1SelectedIndexChanged);
+			// 
+			// textBox4
+			// 
+			this.textBox4.Location = new System.Drawing.Point(12, 12);
+			this.textBox4.Name = "textBox4";
+			this.textBox4.Size = new System.Drawing.Size(213, 20);
+			this.textBox4.TabIndex = 111;
+			// 
+			// famID
+			// 
+			this.famID.Enabled = false;
+			this.famID.Location = new System.Drawing.Point(159, 51);
+			this.famID.Name = "famID";
+			this.famID.ReadOnly = true;
+			this.famID.Size = new System.Drawing.Size(100, 20);
+			this.famID.TabIndex = 93;
+			// 
+			// label37
+			// 
+			this.label37.Location = new System.Drawing.Point(138, 53);
+			this.label37.Name = "label37";
+			this.label37.Size = new System.Drawing.Size(38, 19);
+			this.label37.TabIndex = 94;
+			this.label37.Text = "ID";
+			// 
+			// button35
+			// 
+			this.button35.Location = new System.Drawing.Point(59, 75);
+			this.button35.Name = "button35";
+			this.button35.Size = new System.Drawing.Size(48, 23);
+			this.button35.TabIndex = 92;
+			this.button35.Text = "Add";
+			this.button35.UseVisualStyleBackColor = true;
+			this.button35.Click += new System.EventHandler(this.Button35Click);
+			// 
+			// Write_status
+			// 
+			this.Write_status.Location = new System.Drawing.Point(111, 75);
+			this.Write_status.Name = "Write_status";
+			this.Write_status.Size = new System.Drawing.Size(56, 23);
+			this.Write_status.TabIndex = 91;
+			this.Write_status.Text = "Write";
+			this.Write_status.UseVisualStyleBackColor = true;
+			this.Write_status.Visible = false;
+			this.Write_status.Click += new System.EventHandler(this.Write_statusClick);
+			// 
+			// button19
+			// 
+			this.button19.Enabled = false;
+			this.button19.Location = new System.Drawing.Point(7, 75);
+			this.button19.Name = "button19";
+			this.button19.Size = new System.Drawing.Size(48, 23);
+			this.button19.TabIndex = 90;
+			this.button19.Text = "Modify";
+			this.button19.UseVisualStyleBackColor = true;
+			this.button19.Click += new System.EventHandler(this.Button19Click);
+			// 
+			// famstatusBox
+			// 
+			this.famstatusBox.Enabled = false;
+			this.famstatusBox.Location = new System.Drawing.Point(6, 51);
+			this.famstatusBox.Name = "famstatusBox";
+			this.famstatusBox.ReadOnly = true;
+			this.famstatusBox.Size = new System.Drawing.Size(126, 20);
+			this.famstatusBox.TabIndex = 88;
+			// 
+			// label11
+			// 
+			this.label11.Location = new System.Drawing.Point(6, 35);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(100, 23);
+			this.label11.TabIndex = 89;
+			this.label11.Text = "Status";
 			// 
 			// groupBox9
 			// 
@@ -1100,6 +1239,11 @@ namespace wina
 			// 
 			// groupBox7
 			// 
+			this.groupBox7.Controls.Add(this.prjID);
+			this.groupBox7.Controls.Add(this.label38);
+			this.groupBox7.Controls.Add(this.PRJ_Box);
+			this.groupBox7.Controls.Add(this.textBox5);
+			this.groupBox7.Controls.Add(this.button36);
 			this.groupBox7.Controls.Add(this.textBox2);
 			this.groupBox7.Controls.Add(this.label36);
 			this.groupBox7.Controls.Add(this.textBox1);
@@ -1112,7 +1256,6 @@ namespace wina
 			this.groupBox7.Controls.Add(this.projectManagerBox);
 			this.groupBox7.Controls.Add(this.label2);
 			this.groupBox7.Controls.Add(this.label1);
-			this.groupBox7.Controls.Add(this.PRJ_Box);
 			this.groupBox7.Enabled = false;
 			this.groupBox7.Location = new System.Drawing.Point(288, 35);
 			this.groupBox7.Name = "groupBox7";
@@ -1121,106 +1264,22 @@ namespace wina
 			this.groupBox7.TabStop = false;
 			this.groupBox7.Text = "Project";
 			// 
-			// textBox2
+			// prjID
 			// 
-			this.textBox2.Location = new System.Drawing.Point(6, 174);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.ReadOnly = true;
-			this.textBox2.Size = new System.Drawing.Size(270, 20);
-			this.textBox2.TabIndex = 96;
+			this.prjID.Enabled = false;
+			this.prjID.Location = new System.Drawing.Point(162, 55);
+			this.prjID.Name = "prjID";
+			this.prjID.ReadOnly = true;
+			this.prjID.Size = new System.Drawing.Size(100, 20);
+			this.prjID.TabIndex = 112;
 			// 
-			// label36
+			// label38
 			// 
-			this.label36.Location = new System.Drawing.Point(2, 158);
-			this.label36.Name = "label36";
-			this.label36.Size = new System.Drawing.Size(100, 23);
-			this.label36.TabIndex = 97;
-			this.label36.Text = "Customer Name";
-			// 
-			// textBox1
-			// 
-			this.textBox1.Location = new System.Drawing.Point(138, 133);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.ReadOnly = true;
-			this.textBox1.Size = new System.Drawing.Size(126, 20);
-			this.textBox1.TabIndex = 94;
-			// 
-			// label35
-			// 
-			this.label35.Location = new System.Drawing.Point(138, 117);
-			this.label35.Name = "label35";
-			this.label35.Size = new System.Drawing.Size(100, 23);
-			this.label35.TabIndex = 95;
-			this.label35.Text = "Customer Code";
-			// 
-			// button24
-			// 
-			this.button24.Location = new System.Drawing.Point(62, 199);
-			this.button24.Name = "button24";
-			this.button24.Size = new System.Drawing.Size(56, 23);
-			this.button24.TabIndex = 93;
-			this.button24.Text = "Write";
-			this.button24.UseVisualStyleBackColor = true;
-			this.button24.Visible = false;
-			this.button24.Click += new System.EventHandler(this.Button24Click);
-			// 
-			// button25
-			// 
-			this.button25.Location = new System.Drawing.Point(8, 200);
-			this.button25.Name = "button25";
-			this.button25.Size = new System.Drawing.Size(48, 23);
-			this.button25.TabIndex = 92;
-			this.button25.Text = "Modify";
-			this.button25.UseVisualStyleBackColor = true;
-			this.button25.Click += new System.EventHandler(this.Button25Click);
-			// 
-			// ProjectCodeBox
-			// 
-			this.ProjectCodeBox.Location = new System.Drawing.Point(6, 56);
-			this.ProjectCodeBox.Name = "ProjectCodeBox";
-			this.ProjectCodeBox.ReadOnly = true;
-			this.ProjectCodeBox.Size = new System.Drawing.Size(270, 20);
-			this.ProjectCodeBox.TabIndex = 55;
-			// 
-			// projectstatusBox
-			// 
-			this.projectstatusBox.Location = new System.Drawing.Point(6, 135);
-			this.projectstatusBox.Name = "projectstatusBox";
-			this.projectstatusBox.ReadOnly = true;
-			this.projectstatusBox.Size = new System.Drawing.Size(126, 20);
-			this.projectstatusBox.TabIndex = 59;
-			// 
-			// label3
-			// 
-			this.label3.Location = new System.Drawing.Point(6, 119);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(100, 23);
-			this.label3.TabIndex = 60;
-			this.label3.Text = "Status";
-			// 
-			// projectManagerBox
-			// 
-			this.projectManagerBox.Location = new System.Drawing.Point(7, 96);
-			this.projectManagerBox.Name = "projectManagerBox";
-			this.projectManagerBox.ReadOnly = true;
-			this.projectManagerBox.Size = new System.Drawing.Size(270, 20);
-			this.projectManagerBox.TabIndex = 57;
-			// 
-			// label2
-			// 
-			this.label2.Location = new System.Drawing.Point(3, 80);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(100, 23);
-			this.label2.TabIndex = 58;
-			this.label2.Text = "Project Manager";
-			// 
-			// label1
-			// 
-			this.label1.Location = new System.Drawing.Point(2, 40);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(100, 23);
-			this.label1.TabIndex = 56;
-			this.label1.Text = "Project Code";
+			this.label38.Location = new System.Drawing.Point(143, 56);
+			this.label38.Name = "label38";
+			this.label38.Size = new System.Drawing.Size(38, 19);
+			this.label38.TabIndex = 113;
+			this.label38.Text = "ID";
 			// 
 			// PRJ_Box
 			// 
@@ -1231,6 +1290,124 @@ namespace wina
 			this.PRJ_Box.TabIndex = 1;
 			this.PRJ_Box.Text = "Select a Project";
 			this.PRJ_Box.SelectedIndexChanged += new System.EventHandler(this.PRJ_BoxSelectedIndexChanged);
+			// 
+			// textBox5
+			// 
+			this.textBox5.Location = new System.Drawing.Point(10, 18);
+			this.textBox5.Name = "textBox5";
+			this.textBox5.Size = new System.Drawing.Size(254, 20);
+			this.textBox5.TabIndex = 111;
+			// 
+			// button36
+			// 
+			this.button36.Location = new System.Drawing.Point(60, 201);
+			this.button36.Name = "button36";
+			this.button36.Size = new System.Drawing.Size(48, 23);
+			this.button36.TabIndex = 98;
+			this.button36.Text = "Add";
+			this.button36.UseVisualStyleBackColor = true;
+			this.button36.Click += new System.EventHandler(this.Button36Click);
+			// 
+			// textBox2
+			// 
+			this.textBox2.Location = new System.Drawing.Point(6, 93);
+			this.textBox2.Name = "textBox2";
+			this.textBox2.ReadOnly = true;
+			this.textBox2.Size = new System.Drawing.Size(128, 20);
+			this.textBox2.TabIndex = 96;
+			// 
+			// label36
+			// 
+			this.label36.Location = new System.Drawing.Point(2, 77);
+			this.label36.Name = "label36";
+			this.label36.Size = new System.Drawing.Size(100, 23);
+			this.label36.TabIndex = 97;
+			this.label36.Text = "Customer Name";
+			// 
+			// textBox1
+			// 
+			this.textBox1.Location = new System.Drawing.Point(138, 92);
+			this.textBox1.Name = "textBox1";
+			this.textBox1.ReadOnly = true;
+			this.textBox1.Size = new System.Drawing.Size(126, 20);
+			this.textBox1.TabIndex = 94;
+			// 
+			// label35
+			// 
+			this.label35.Location = new System.Drawing.Point(138, 76);
+			this.label35.Name = "label35";
+			this.label35.Size = new System.Drawing.Size(100, 23);
+			this.label35.TabIndex = 95;
+			this.label35.Text = "Customer Code";
+			// 
+			// button24
+			// 
+			this.button24.Location = new System.Drawing.Point(112, 201);
+			this.button24.Name = "button24";
+			this.button24.Size = new System.Drawing.Size(56, 23);
+			this.button24.TabIndex = 93;
+			this.button24.Text = "Write";
+			this.button24.UseVisualStyleBackColor = true;
+			this.button24.Visible = false;
+			this.button24.Click += new System.EventHandler(this.Button24Click);
+			// 
+			// button25
+			// 
+			this.button25.Location = new System.Drawing.Point(8, 201);
+			this.button25.Name = "button25";
+			this.button25.Size = new System.Drawing.Size(48, 23);
+			this.button25.TabIndex = 92;
+			this.button25.Text = "Modify";
+			this.button25.UseVisualStyleBackColor = true;
+			this.button25.Click += new System.EventHandler(this.Button25Click);
+			// 
+			// ProjectCodeBox
+			// 
+			this.ProjectCodeBox.Location = new System.Drawing.Point(6, 131);
+			this.ProjectCodeBox.Name = "ProjectCodeBox";
+			this.ProjectCodeBox.ReadOnly = true;
+			this.ProjectCodeBox.Size = new System.Drawing.Size(270, 20);
+			this.ProjectCodeBox.TabIndex = 55;
+			// 
+			// projectstatusBox
+			// 
+			this.projectstatusBox.Location = new System.Drawing.Point(6, 54);
+			this.projectstatusBox.Name = "projectstatusBox";
+			this.projectstatusBox.ReadOnly = true;
+			this.projectstatusBox.Size = new System.Drawing.Size(126, 20);
+			this.projectstatusBox.TabIndex = 59;
+			// 
+			// label3
+			// 
+			this.label3.Location = new System.Drawing.Point(6, 39);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(100, 23);
+			this.label3.TabIndex = 60;
+			this.label3.Text = "Status";
+			// 
+			// projectManagerBox
+			// 
+			this.projectManagerBox.Location = new System.Drawing.Point(7, 171);
+			this.projectManagerBox.Name = "projectManagerBox";
+			this.projectManagerBox.ReadOnly = true;
+			this.projectManagerBox.Size = new System.Drawing.Size(270, 20);
+			this.projectManagerBox.TabIndex = 57;
+			// 
+			// label2
+			// 
+			this.label2.Location = new System.Drawing.Point(3, 155);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(100, 23);
+			this.label2.TabIndex = 58;
+			this.label2.Text = "Project Manager";
+			// 
+			// label1
+			// 
+			this.label1.Location = new System.Drawing.Point(2, 115);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(100, 23);
+			this.label1.TabIndex = 56;
+			this.label1.Text = "Project Code";
 			// 
 			// groupBox5
 			// 
@@ -1695,18 +1872,15 @@ namespace wina
 			this.whereUSEDbutton.Text = "Where Used";
 			this.whereUSEDbutton.UseVisualStyleBackColor = true;
 			// 
-			// button10
-			// 
-			this.button10.Location = new System.Drawing.Point(18, 193);
-			this.button10.Name = "button10";
-			this.button10.Size = new System.Drawing.Size(75, 23);
-			this.button10.TabIndex = 91;
-			this.button10.Text = "STEP dir";
-			this.button10.UseVisualStyleBackColor = true;
-			this.button10.Click += new System.EventHandler(this.Button10Click);
-			// 
 			// groupBox8
 			// 
+			this.groupBox8.Controls.Add(this.carBOX);
+			this.groupBox8.Controls.Add(this.label40);
+			this.groupBox8.Controls.Add(this.prodID);
+			this.groupBox8.Controls.Add(this.label39);
+			this.groupBox8.Controls.Add(this.PROD_Box);
+			this.groupBox8.Controls.Add(this.button37);
+			this.groupBox8.Controls.Add(this.textBox6);
 			this.groupBox8.Controls.Add(this.button26);
 			this.groupBox8.Controls.Add(this.button27);
 			this.groupBox8.Controls.Add(this.button18);
@@ -1720,7 +1894,6 @@ namespace wina
 			this.groupBox8.Controls.Add(this.label14);
 			this.groupBox8.Controls.Add(this.textBox3);
 			this.groupBox8.Controls.Add(this.label13);
-			this.groupBox8.Controls.Add(this.PROD_Box);
 			this.groupBox8.Controls.Add(this.label12);
 			this.groupBox8.Enabled = false;
 			this.groupBox8.Location = new System.Drawing.Point(576, 35);
@@ -1730,9 +1903,69 @@ namespace wina
 			this.groupBox8.TabStop = false;
 			this.groupBox8.Text = "Product";
 			// 
+			// carBOX
+			// 
+			this.carBOX.Location = new System.Drawing.Point(147, 96);
+			this.carBOX.Name = "carBOX";
+			this.carBOX.ReadOnly = true;
+			this.carBOX.Size = new System.Drawing.Size(129, 20);
+			this.carBOX.TabIndex = 116;
+			// 
+			// label40
+			// 
+			this.label40.Location = new System.Drawing.Point(143, 80);
+			this.label40.Name = "label40";
+			this.label40.Size = new System.Drawing.Size(100, 23);
+			this.label40.TabIndex = 117;
+			this.label40.Text = "Car-platform";
+			// 
+			// prodID
+			// 
+			this.prodID.Enabled = false;
+			this.prodID.Location = new System.Drawing.Point(196, 54);
+			this.prodID.Name = "prodID";
+			this.prodID.ReadOnly = true;
+			this.prodID.Size = new System.Drawing.Size(100, 20);
+			this.prodID.TabIndex = 114;
+			// 
+			// label39
+			// 
+			this.label39.Location = new System.Drawing.Point(177, 55);
+			this.label39.Name = "label39";
+			this.label39.Size = new System.Drawing.Size(38, 19);
+			this.label39.TabIndex = 115;
+			this.label39.Text = "ID";
+			// 
+			// PROD_Box
+			// 
+			this.PROD_Box.FormattingEnabled = true;
+			this.PROD_Box.Location = new System.Drawing.Point(6, 15);
+			this.PROD_Box.Name = "PROD_Box";
+			this.PROD_Box.Size = new System.Drawing.Size(214, 21);
+			this.PROD_Box.TabIndex = 9;
+			this.PROD_Box.Text = "Select a Product";
+			this.PROD_Box.SelectedIndexChanged += new System.EventHandler(this.PROD_BoxSelectedIndexChanged);
+			// 
+			// button37
+			// 
+			this.button37.Location = new System.Drawing.Point(61, 201);
+			this.button37.Name = "button37";
+			this.button37.Size = new System.Drawing.Size(48, 23);
+			this.button37.TabIndex = 98;
+			this.button37.Text = "Add";
+			this.button37.UseVisualStyleBackColor = true;
+			this.button37.Click += new System.EventHandler(this.Button37Click);
+			// 
+			// textBox6
+			// 
+			this.textBox6.Location = new System.Drawing.Point(8, 15);
+			this.textBox6.Name = "textBox6";
+			this.textBox6.Size = new System.Drawing.Size(197, 20);
+			this.textBox6.TabIndex = 111;
+			// 
 			// button26
 			// 
-			this.button26.Location = new System.Drawing.Point(62, 199);
+			this.button26.Location = new System.Drawing.Point(114, 201);
 			this.button26.Name = "button26";
 			this.button26.Size = new System.Drawing.Size(56, 23);
 			this.button26.TabIndex = 97;
@@ -1743,7 +1976,7 @@ namespace wina
 			// 
 			// button27
 			// 
-			this.button27.Location = new System.Drawing.Point(8, 200);
+			this.button27.Location = new System.Drawing.Point(8, 201);
 			this.button27.Name = "button27";
 			this.button27.Size = new System.Drawing.Size(48, 23);
 			this.button27.TabIndex = 96;
@@ -1754,9 +1987,9 @@ namespace wina
 			// button18
 			// 
 			this.button18.Enabled = false;
-			this.button18.Location = new System.Drawing.Point(214, 53);
+			this.button18.Location = new System.Drawing.Point(226, 11);
 			this.button18.Name = "button18";
-			this.button18.Size = new System.Drawing.Size(64, 37);
+			this.button18.Size = new System.Drawing.Size(70, 37);
 			this.button18.TabIndex = 95;
 			this.button18.Text = "CheckOut\r\nPRJ";
 			this.button18.UseVisualStyleBackColor = true;
@@ -1765,7 +1998,7 @@ namespace wina
 			// button6
 			// 
 			this.button6.Enabled = false;
-			this.button6.Location = new System.Drawing.Point(137, 55);
+			this.button6.Location = new System.Drawing.Point(185, 132);
 			this.button6.Name = "button6";
 			this.button6.Size = new System.Drawing.Size(58, 23);
 			this.button6.TabIndex = 94;
@@ -1783,10 +2016,10 @@ namespace wina
 			// 
 			// drawingdateBox
 			// 
-			this.drawingdateBox.Location = new System.Drawing.Point(140, 135);
+			this.drawingdateBox.Location = new System.Drawing.Point(93, 135);
 			this.drawingdateBox.Name = "drawingdateBox";
 			this.drawingdateBox.ReadOnly = true;
-			this.drawingdateBox.Size = new System.Drawing.Size(136, 20);
+			this.drawingdateBox.Size = new System.Drawing.Size(88, 20);
 			this.drawingdateBox.TabIndex = 92;
 			// 
 			// label16
@@ -1799,7 +2032,7 @@ namespace wina
 			// 
 			// label15
 			// 
-			this.label15.Location = new System.Drawing.Point(140, 119);
+			this.label15.Location = new System.Drawing.Point(93, 119);
 			this.label15.Name = "label15";
 			this.label15.Size = new System.Drawing.Size(100, 23);
 			this.label15.TabIndex = 93;
@@ -1810,7 +2043,7 @@ namespace wina
 			this.drawingRevBox.Location = new System.Drawing.Point(8, 135);
 			this.drawingRevBox.Name = "drawingRevBox";
 			this.drawingRevBox.ReadOnly = true;
-			this.drawingRevBox.Size = new System.Drawing.Size(126, 20);
+			this.drawingRevBox.Size = new System.Drawing.Size(79, 20);
 			this.drawingRevBox.TabIndex = 90;
 			// 
 			// drawingBox
@@ -1818,7 +2051,7 @@ namespace wina
 			this.drawingBox.Location = new System.Drawing.Point(8, 96);
 			this.drawingBox.Name = "drawingBox";
 			this.drawingBox.ReadOnly = true;
-			this.drawingBox.Size = new System.Drawing.Size(270, 20);
+			this.drawingBox.Size = new System.Drawing.Size(129, 20);
 			this.drawingBox.TabIndex = 88;
 			// 
 			// label14
@@ -1834,7 +2067,7 @@ namespace wina
 			this.textBox3.Location = new System.Drawing.Point(6, 55);
 			this.textBox3.Name = "textBox3";
 			this.textBox3.ReadOnly = true;
-			this.textBox3.Size = new System.Drawing.Size(126, 20);
+			this.textBox3.Size = new System.Drawing.Size(165, 20);
 			this.textBox3.TabIndex = 88;
 			// 
 			// label13
@@ -1845,16 +2078,6 @@ namespace wina
 			this.label13.TabIndex = 89;
 			this.label13.Text = "Drawing";
 			// 
-			// PROD_Box
-			// 
-			this.PROD_Box.FormattingEnabled = true;
-			this.PROD_Box.Location = new System.Drawing.Point(6, 15);
-			this.PROD_Box.Name = "PROD_Box";
-			this.PROD_Box.Size = new System.Drawing.Size(270, 21);
-			this.PROD_Box.TabIndex = 9;
-			this.PROD_Box.Text = "Select a Product";
-			this.PROD_Box.SelectedIndexChanged += new System.EventHandler(this.PROD_BoxSelectedIndexChanged);
-			// 
 			// label12
 			// 
 			this.label12.Location = new System.Drawing.Point(6, 39);
@@ -1862,16 +2085,6 @@ namespace wina
 			this.label12.Size = new System.Drawing.Size(100, 23);
 			this.label12.TabIndex = 89;
 			this.label12.Text = "Status";
-			// 
-			// button8
-			// 
-			this.button8.Location = new System.Drawing.Point(17, 165);
-			this.button8.Name = "button8";
-			this.button8.Size = new System.Drawing.Size(75, 23);
-			this.button8.TabIndex = 90;
-			this.button8.Text = "PDF dir";
-			this.button8.UseVisualStyleBackColor = true;
-			this.button8.Click += new System.EventHandler(this.Button8Click);
 			// 
 			// label4
 			// 
@@ -1881,15 +2094,14 @@ namespace wina
 			this.label4.TabIndex = 12;
 			this.label4.Text = "Component";
 			// 
-			// button5
+			// groupBox19
 			// 
-			this.button5.Location = new System.Drawing.Point(17, 138);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(75, 23);
-			this.button5.TabIndex = 89;
-			this.button5.Text = "CAD dir";
-			this.button5.UseVisualStyleBackColor = true;
-			this.button5.Click += new System.EventHandler(this.Button5Click);
+			this.groupBox19.Location = new System.Drawing.Point(7, 144);
+			this.groupBox19.Name = "groupBox19";
+			this.groupBox19.Size = new System.Drawing.Size(275, 69);
+			this.groupBox19.TabIndex = 110;
+			this.groupBox19.TabStop = false;
+			this.groupBox19.Text = "Open dir";
 			// 
 			// tabControl1
 			// 
@@ -1909,7 +2121,7 @@ namespace wina
 			this.Controls.Add(this.tabControl1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "MainForm";
-			this.Text = "Would-be PDM";
+			this.Text = "Would-be PDM     (https://github.com/robertobartola/WouldBePDM)";
 			this.Load += new System.EventHandler(this.MainFormLoad);
 			this.ConfigTab.ResumeLayout(false);
 			this.groupBox13.ResumeLayout(false);
@@ -1949,6 +2161,6 @@ namespace wina
 			this.ResumeLayout(false);
 
 		}
+		}
 	}
-	}
-//}
+	
