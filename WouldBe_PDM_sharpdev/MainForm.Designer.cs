@@ -186,6 +186,15 @@ namespace wina
 		private System.Windows.Forms.TextBox prodID;
 		private System.Windows.Forms.Label label39;
 		private System.Windows.Forms.Button button38;
+		private System.Windows.Forms.Button CheckBOM;
+		private System.Windows.Forms.Button Modify_Bom;
+		private System.Windows.Forms.Label label41;
+		private System.Windows.Forms.TextBox Config_XML_filename;
+		private System.Windows.Forms.Label label42;
+		private System.Windows.Forms.Button button39;
+		private System.Windows.Forms.TextBox Filter_XML_filename;
+		private System.Windows.Forms.Label label43;
+		private System.Windows.Forms.Button button40;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -210,6 +219,14 @@ namespace wina
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.ConfigTab = new System.Windows.Forms.TabPage();
+			this.Filter_XML_filename = new System.Windows.Forms.TextBox();
+			this.label43 = new System.Windows.Forms.Label();
+			this.button40 = new System.Windows.Forms.Button();
+			this.Config_XML_filename = new System.Windows.Forms.TextBox();
+			this.label42 = new System.Windows.Forms.Label();
+			this.button39 = new System.Windows.Forms.Button();
+			this.Modify_Bom = new System.Windows.Forms.Button();
+			this.label41 = new System.Windows.Forms.Label();
 			this.groupBox13 = new System.Windows.Forms.GroupBox();
 			this.groupBox15 = new System.Windows.Forms.GroupBox();
 			this.UG_LOW_exe = new System.Windows.Forms.TextBox();
@@ -357,6 +374,7 @@ namespace wina
 			this.OpenCADbutton = new System.Windows.Forms.Button();
 			this.whereUSEDbutton = new System.Windows.Forms.Button();
 			this.groupBox8 = new System.Windows.Forms.GroupBox();
+			this.CheckBOM = new System.Windows.Forms.Button();
 			this.carBOX = new System.Windows.Forms.TextBox();
 			this.label40 = new System.Windows.Forms.Label();
 			this.prodID = new System.Windows.Forms.TextBox();
@@ -407,6 +425,14 @@ namespace wina
 			// ConfigTab
 			// 
 			this.ConfigTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+			this.ConfigTab.Controls.Add(this.Filter_XML_filename);
+			this.ConfigTab.Controls.Add(this.label43);
+			this.ConfigTab.Controls.Add(this.button40);
+			this.ConfigTab.Controls.Add(this.Config_XML_filename);
+			this.ConfigTab.Controls.Add(this.label42);
+			this.ConfigTab.Controls.Add(this.button39);
+			this.ConfigTab.Controls.Add(this.Modify_Bom);
+			this.ConfigTab.Controls.Add(this.label41);
 			this.ConfigTab.Controls.Add(this.groupBox13);
 			this.ConfigTab.Controls.Add(this.groupBox11);
 			this.ConfigTab.Controls.Add(this.groupBox10);
@@ -418,6 +444,74 @@ namespace wina
 			this.ConfigTab.TabIndex = 1;
 			this.ConfigTab.Text = "Config";
 			this.ConfigTab.UseVisualStyleBackColor = true;
+			// 
+			// Filter_XML_filename
+			// 
+			this.Filter_XML_filename.Location = new System.Drawing.Point(13, 542);
+			this.Filter_XML_filename.Name = "Filter_XML_filename";
+			this.Filter_XML_filename.Size = new System.Drawing.Size(255, 20);
+			this.Filter_XML_filename.TabIndex = 36;
+			// 
+			// label43
+			// 
+			this.label43.Location = new System.Drawing.Point(13, 528);
+			this.label43.Name = "label43";
+			this.label43.Size = new System.Drawing.Size(100, 23);
+			this.label43.TabIndex = 35;
+			this.label43.Text = "Filter XML file";
+			// 
+			// button40
+			// 
+			this.button40.Enabled = false;
+			this.button40.Location = new System.Drawing.Point(274, 542);
+			this.button40.Name = "button40";
+			this.button40.Size = new System.Drawing.Size(75, 23);
+			this.button40.TabIndex = 37;
+			this.button40.Text = "Change";
+			this.button40.UseVisualStyleBackColor = true;
+			// 
+			// Config_XML_filename
+			// 
+			this.Config_XML_filename.Location = new System.Drawing.Point(13, 493);
+			this.Config_XML_filename.Name = "Config_XML_filename";
+			this.Config_XML_filename.Size = new System.Drawing.Size(255, 20);
+			this.Config_XML_filename.TabIndex = 33;
+			// 
+			// label42
+			// 
+			this.label42.Location = new System.Drawing.Point(13, 479);
+			this.label42.Name = "label42";
+			this.label42.Size = new System.Drawing.Size(100, 23);
+			this.label42.TabIndex = 32;
+			this.label42.Text = "Config XML File";
+			// 
+			// button39
+			// 
+			this.button39.Enabled = false;
+			this.button39.Location = new System.Drawing.Point(274, 493);
+			this.button39.Name = "button39";
+			this.button39.Size = new System.Drawing.Size(75, 23);
+			this.button39.TabIndex = 34;
+			this.button39.Text = "Change";
+			this.button39.UseVisualStyleBackColor = true;
+			// 
+			// Modify_Bom
+			// 
+			this.Modify_Bom.Location = new System.Drawing.Point(711, 497);
+			this.Modify_Bom.Name = "Modify_Bom";
+			this.Modify_Bom.Size = new System.Drawing.Size(75, 23);
+			this.Modify_Bom.TabIndex = 30;
+			this.Modify_Bom.Text = "BOM filter";
+			this.Modify_Bom.UseVisualStyleBackColor = true;
+			this.Modify_Bom.Click += new System.EventHandler(this.Modify_BomClick);
+			// 
+			// label41
+			// 
+			this.label41.Location = new System.Drawing.Point(700, 480);
+			this.label41.Name = "label41";
+			this.label41.Size = new System.Drawing.Size(116, 23);
+			this.label41.TabIndex = 31;
+			this.label41.Text = "Modify the BOM filter";
 			// 
 			// groupBox13
 			// 
@@ -932,7 +1026,7 @@ namespace wina
 			this.groupBox18.Size = new System.Drawing.Size(276, 53);
 			this.groupBox18.TabIndex = 109;
 			this.groupBox18.TabStop = false;
-			this.groupBox18.Text = "Would-Be PDM Info V 0.0.0.6";
+			this.groupBox18.Text = "Would-Be PDM Info V 0.0.1.0";
 			// 
 			// button34
 			// 
@@ -1874,6 +1968,7 @@ namespace wina
 			// 
 			// groupBox8
 			// 
+			this.groupBox8.Controls.Add(this.CheckBOM);
 			this.groupBox8.Controls.Add(this.carBOX);
 			this.groupBox8.Controls.Add(this.label40);
 			this.groupBox8.Controls.Add(this.prodID);
@@ -1902,6 +1997,16 @@ namespace wina
 			this.groupBox8.TabIndex = 87;
 			this.groupBox8.TabStop = false;
 			this.groupBox8.Text = "Product";
+			// 
+			// CheckBOM
+			// 
+			this.CheckBOM.Location = new System.Drawing.Point(229, 200);
+			this.CheckBOM.Name = "CheckBOM";
+			this.CheckBOM.Size = new System.Drawing.Size(75, 23);
+			this.CheckBOM.TabIndex = 118;
+			this.CheckBOM.Text = "Check BOM";
+			this.CheckBOM.UseVisualStyleBackColor = true;
+			this.CheckBOM.Click += new System.EventHandler(this.CheckBOMClick);
 			// 
 			// carBOX
 			// 
@@ -2124,6 +2229,7 @@ namespace wina
 			this.Text = "Would-be PDM     (https://github.com/robertobartola/WouldBePDM)";
 			this.Load += new System.EventHandler(this.MainFormLoad);
 			this.ConfigTab.ResumeLayout(false);
+			this.ConfigTab.PerformLayout();
 			this.groupBox13.ResumeLayout(false);
 			this.groupBox15.ResumeLayout(false);
 			this.groupBox15.PerformLayout();

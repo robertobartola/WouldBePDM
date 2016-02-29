@@ -32,6 +32,7 @@ namespace wina
 		const string Xml_prt_list = ("PRTList.xml");
 		const string WouldBeXML = ("WouldBeXML.xml");
 		const string WouldBeCFG = ("WouldBeCFG.xml");
+		const string WouldBeFILTER = ("WouldBeFILTER.xml");
 		public string CAD_DIR_Location = ("WouldBePDMData");
 		public string StepFolder="OUT";
 		public string PdfFolder="OUT";
@@ -59,11 +60,18 @@ namespace wina
 //		public string LocalDir =@"C:\Users\rbartola\Documents\SharpDevelop Projects\WouldBe_PDM_sharpdev\WouldBe_PDM_sharpdev\";
 		public string filetocheckout = "";
 		public DataSet ds = new DataSet();
-        public DataTable Famlytable , Prjtable, Prodtable, Parttable, Matchtable;
-        public DataRow Familyrow , Prjrow, Prodrow, Partrow, Matchrow;
+        public DataTable Famlytable , Prjtable, Prodtable, Parttable, Matchtable, Filtertable;
+        public DataRow Familyrow , Prjrow, Prodrow, Partrow, Matchrow, Filterrow;
         public int famstatusBoxPRE=0, prjstatusBoxPRE=0, prodstatusBoxPRE=0;
         public int Addfamiliystatus=0, Addprojectstatus=0 , Addproductstatus=0 , partwasinvisible=0 , Addpartstatus=0;
         public string Family_pre_update="", Project_pre_update="", Product_pre_update="";
+        public string Search1_textfilter="", Search2_textfilter="", Search3_textfilter="", Search4_textfilter="";
+        public string Search_codefilter1="", Search_codefilter2="", Search_codefilter3="";
+        public string Search_codefilter4="", Search_codefilter5="", Search_codefilter6="";
+        
+               
+        
+        
         
 		public MainForm()
 		{
@@ -130,7 +138,20 @@ namespace wina
             Matchtable= new DataTable();
             Matchtable.Columns.Add(new DataColumn("PartListed", Type.GetType("System.String")));
             Matchtable.Columns.Add(new DataColumn("ProjectListed", Type.GetType("System.String")));
-
+            
+            Filtertable= new DataTable();
+            Filtertable.Columns.Add(new DataColumn("Project_Filter", Type.GetType("System.String")));
+            Filtertable.Columns.Add(new DataColumn("FilterText1", Type.GetType("System.String")));
+            Filtertable.Columns.Add(new DataColumn("FilterText2", Type.GetType("System.String")));
+            Filtertable.Columns.Add(new DataColumn("FilterText3", Type.GetType("System.String")));
+            Filtertable.Columns.Add(new DataColumn("FilterText4", Type.GetType("System.String")));
+            Filtertable.Columns.Add(new DataColumn("FilterCode1", Type.GetType("System.String")));      
+            Filtertable.Columns.Add(new DataColumn("FilterCode2", Type.GetType("System.String")));
+            Filtertable.Columns.Add(new DataColumn("FilterCode3", Type.GetType("System.String")));
+            Filtertable.Columns.Add(new DataColumn("FilterCode4", Type.GetType("System.String")));
+            Filtertable.Columns.Add(new DataColumn("FilterCode5", Type.GetType("System.String")));
+            Filtertable.Columns.Add(new DataColumn("FilterCode6", Type.GetType("System.String")));
+            
 if (File.Exists(WouldBeXML)){             
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(WouldBeXML);
@@ -214,8 +235,32 @@ if (File.Exists(WouldBeXML)){
 			else{FAM_Box.Enabled=false;}
 		
 		
+			
+			if (File.Exists(WouldBeFILTER)){             
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load(WouldBeFILTER);
+            XmlNodeList nodeList = xmlDoc.DocumentElement.SelectNodes("/WouldBeFILTER/FilterList/Filters");
+            foreach (XmlNode filetr_node in nodeList)
+            {
+//			FAM_Box.Items.Add(filetr_node.SelectSingleNode("FamilyName").InnerText);   //to improve
+			Filterrow = Filtertable.NewRow();
+			Filterrow["Project_Filter"] = filetr_node.SelectSingleNode("Project_Filter").InnerText ;
+            Filterrow["FilterText1"] = filetr_node.SelectSingleNode("FilterText1").InnerText ;
+            Filterrow["FilterText2"] = filetr_node.SelectSingleNode("FilterText2").InnerText ;
+            Filterrow["FilterText3"] = filetr_node.SelectSingleNode("FilterText3").InnerText ;
+            Filterrow["FilterText4"] = filetr_node.SelectSingleNode("FilterText4").InnerText ;
+            Filterrow["FilterCode1"] = filetr_node.SelectSingleNode("FilterCode1").InnerText ;
+            Filterrow["FilterCode2"] = filetr_node.SelectSingleNode("FilterCode2").InnerText ;
+            Filterrow["FilterCode3"] = filetr_node.SelectSingleNode("FilterCode3").InnerText ;
+            Filterrow["FilterCode4"] = filetr_node.SelectSingleNode("FilterCode4").InnerText ;
+            Filterrow["FilterCode5"] = filetr_node.SelectSingleNode("FilterCode5").InnerText ;
+            Filterrow["FilterCode6"] = filetr_node.SelectSingleNode("FilterCode6").InnerText ;
+            Filtertable.Rows.Add(Filterrow);
+            }   
 		
-		
+			}
+			
+			
 			if (File.Exists(CATDLLPath_TOP + "\\CATStart.exe")){button23.Enabled=true;}else{button23.Enabled=false;}
 			if (File.Exists(CATDLLPath_LOW + "\\CATStart.exe")){button3.Enabled=true;}else{button3.Enabled=false;}
 			if (File.Exists(Ug_NX_TOP_exe)){button31.Enabled=true;}else{button31.Enabled=false;}
@@ -449,6 +494,9 @@ if (File.Exists(WouldBeXML)){
  	if(dr["ProjectListed"].ToString() == projectselectedID) // if id==2  FAM_Box.SelectedItem.ToString()
    	{PART_Box.Items.Add(dr["PartListed"].ToString());  }
 	}		
+ 
+ CheckBOM.Enabled=true;
+ 
 		}
 		void PART_BoxSelectedIndexChanged(object sender, EventArgs e)
 		{GO_PART_BoxSelectedIndexChanged();} //select part
@@ -677,6 +725,7 @@ button27.Enabled=false;
 button38.Enabled=false;
 //prodID.ReadOnly=true;
 //carBOX.ReadOnly=true;
+CheckBOM.Enabled=false;
 
 
 }		
@@ -764,6 +813,12 @@ generatePDFbutton.Enabled=false;
 		
             CADdirTextbox.Clear();
 			CADdirTextbox.Text=(CAD_DIR_Location);
+			
+			Config_XML_filename.Clear();
+			Config_XML_filename.Text=(WouldBeCFG);
+			Filter_XML_filename.Clear();
+			Filter_XML_filename.Text=(WouldBeFILTER);
+	
 			PDFdirBox.Clear();
 			PDFdirBox.Text=(PdfFolder);
 			StepDirBox.Clear();
@@ -786,6 +841,10 @@ generatePDFbutton.Enabled=false;
 			UG_TOP_EXE.Text=(Ug_NX_TOP_exe);
 			UG_LOW_exe.Clear();
 			UG_LOW_exe.Text=(Ug_NX_LOW_exe);
+			
+//			initialize_bomview();
+			
+			
 		}
 		void Checkout_3DClick(object sender, EventArgs e)
 		{
@@ -1008,7 +1067,7 @@ string commandtolaunch = "\"" + InstallPathSVN + "\"";
 			string prtthreed ="";
 			string prtstep ="";
 			string prttwod ="";
-			string prtpdf ="";
+			string prtpdf ="", jpgimagefile="";
 //			string PRT_selected ="";
 //			string prtcode ="";
 			string drawingfilename=drawingfilenameBox.Text.ToString();
@@ -1033,6 +1092,7 @@ string commandtolaunch = "\"" + InstallPathSVN + "\"";
                 prtstep= nodepart.SelectSingleNode("PartStep").InnerText ;
                 prttwod= nodepart.SelectSingleNode("PartTWO_D").InnerText ;
                 prtpdf= nodepart.SelectSingleNode("PartPdf").InnerText ;
+                jpgimagefile=nodepart.SelectSingleNode("PartImage").InnerText ;
                 			
 			foreach (string CODE in PART_Box.Items )
 			{
@@ -1077,6 +1137,21 @@ string commandtolaunch = "\"" + InstallPathSVN + "\"";
 					}
 					
 					}
+					
+					
+					if (jpgimagefile!="NULL"){
+					if (jpgimagefile!="")
+					{ 
+						if (filetocheckout=="") {
+							filetocheckout= CAD_DIR_Location + "\\" + ImageFolder + "\\" + jpgimagefile;	}
+						else{filetocheckout= filetocheckout + "*" + CAD_DIR_Location + "\\" + ImageFolder + "\\" + jpgimagefile;}
+					}
+					}
+					
+					
+					
+					
+					
 				}
 			}
 			
@@ -2733,11 +2808,319 @@ ApplicationPath_LOW = filename;
 			}	
 			
 			}
+		void CheckBOMClick(object sender, EventArgs e)
+		{
+//			string product_to_bom="";
+//		if (prodID.Text!=""){
+//			MessageBox.Show(PRJ_Box.SelectedItem.ToString());
+			foreach(DataRow dr in Filtertable.Rows) // search whole table
+ 	{
+ 		if(dr["Project_Filter"].ToString() == prjID.Text.ToString()) // if id==2  FAM_Box.SelectedItem.ToString()
+    	{
+ 			Search1_textfilter=dr["FilterText1"].ToString();
+ 			Search2_textfilter=dr["FilterText2"].ToString();
+ 			Search3_textfilter=dr["FilterText3"].ToString();
+ 			Search4_textfilter=dr["FilterText4"].ToString();
+ 			Search_codefilter1=dr["FilterCode1"].ToString();
+ 			Search_codefilter2=dr["FilterCode2"].ToString();
+ 			Search_codefilter3=dr["FilterCode3"].ToString();
+ 			Search_codefilter4=dr["FilterCode4"].ToString();
+ 			Search_codefilter5=dr["FilterCode5"].ToString();
+ 			Search_codefilter6=dr["FilterCode6"].ToString();
+ 			
+// 			MessageBox.Show("testi " + Search1_textfilter + Search2_textfilter + Search3_textfilter +Search4_textfilter);
+ 		
+ 		}
+	}
 			
-			
+
+			WouldBe_PDM_sharpdev.BomView BomView = new WouldBe_PDM_sharpdev.BomView();
+			BomView.Show();
+		    BomView.textBox3.Text=(prodID.Text.ToString());
+		    BomView.textBox1.Text=(PROD_Box.SelectedItem.ToString());
+		    
+		    BomView.Search1_textfilter_2.Text=Search1_textfilter;
+		    BomView.Search2_textfilter_2.Text=Search2_textfilter;
+		    BomView.Search3_textfilter_2.Text=Search3_textfilter;
+		    BomView.Search4_textfilter_2.Text=Search4_textfilter;
+		    
+		    BomView.Search_codefilter1.Text=Search_codefilter1;
+		    BomView.Search_codefilter2.Text=Search_codefilter2;
+		    BomView.Search_codefilter3.Text=Search_codefilter3;
+		    BomView.Search_codefilter4.Text=Search_codefilter4;
+		    BomView.Search_codefilter5.Text=Search_codefilter5;
+		    BomView.Search_codefilter6.Text=Search_codefilter6;
+	
+
+		    foreach(string product_to_bom in PART_Box.Items)
+		    
+//		    foreach(DataRow dr2 in Matchtable.Rows) // search whole table
+ 	{
+//		    	if(dr2["ProjectListed"].ToString() == PROD_Box.SelectedItem.ToString()) // if id==2  FAM_Box.SelectedItem.ToString()
+		    	
+   	{
+//		    		PART_Box.Items.Add(dr["PartListed"].ToString());  
+//		    		product_to_bom=dr2["PartListed"].ToString();
+		    	
+//		    	}
+//	}		
+		    
+    
+	foreach(DataRow dr in Parttable.Rows) // search whole table
+ 			{
+ 		if(dr["PartCode"].ToString()==product_to_bom) //  if (  PRT_selected ==prtcode)
+              {
+ 			if(Search1_textfilter!=""){
+ 			if (dr["PartName"].ToString().Contains(Search1_textfilter))
+{	
+// 				BomView.Search1_text.Text=dr["PartName"].ToString();
+BomView.Search1_text.AppendText(dr["PartName"].ToString());
+BomView.Search1_text.AppendText("\n");
+if (dr["PartCode"].ToString()!="NULL")
+{BomView.Search1_code.AppendText((dr["PartCode"].ToString()));
+	BomView.Search1_code.AppendText("\n");
+//	BomView.Search1_code.Text=(dr["PartCode"].ToString());
+ 				}
+ 			}}
+
+ 			if(Search2_textfilter!=""){
+ if (dr["PartName"].ToString().Contains(Search2_textfilter))
+{	
+ 				BomView.Search2_text.AppendText(dr["PartName"].ToString());
+BomView.Search2_text.AppendText("\n");
+// 				BomView.Search2_text.Text=dr["PartName"].ToString();
+if (dr["PartCode"].ToString()!="NULL"){
+	BomView.Search2_code.AppendText((dr["PartCode"].ToString()));
+	BomView.Search2_code.AppendText("\n");
+//	BomView.Search2_code.Text=(dr["PartCode"].ToString());
+}}}
+
+ 			if(Search3_textfilter!=""){
+	if (dr["PartName"].ToString().Contains(Search3_textfilter))
+{	
+		BomView.Search3_text.AppendText(dr["PartName"].ToString());
+BomView.Search3_text.AppendText("\n");
+//		BomView.Search3_text.Text=dr["PartName"].ToString();
+if (dr["PartCode"].ToString()!="NULL"){
+	BomView.Search3_code.AppendText((dr["PartCode"].ToString()));
+	BomView.Search3_code.AppendText("\n");
+//	BomView.Search3_code.Text=(dr["PartCode"].ToString());
+}}}
+
+if(Search4_textfilter!=""){
+	if (dr["PartName"].ToString().Contains(Search4_textfilter))
+{	
+		BomView.Search4_text.AppendText(dr["PartName"].ToString());
+BomView.Search4_text.AppendText("\n");
+//		BomView.Search4_text.Text=dr["PartName"].ToString();
+if (dr["PartCode"].ToString()!="NULL"){
+			BomView.Search4_code.AppendText((dr["PartCode"].ToString()));
+	BomView.Search4_code.AppendText("\n");
+//			BomView.Search4_code.Text=(dr["PartCode"].ToString());
+}}}
+ 			
+if(Search_codefilter1!=""){
+	if (dr["PartCode"].ToString().Contains(Search_codefilter1)) //
+{	
+		BomView.Text_Codefilter1.Text=(dr["PartName"].ToString());
+//BomView.Search4_text.AppendText("\n");
+//		BomView.Search4_text.Text=dr["PartName"].ToString();
+if (dr["PartCode"].ToString()!="NULL"){
+//			BomView.Search4_code.AppendText((dr["PartCode"].ToString()));
+			BomView.checkBox1.Checked=true;
+//	BomView.Search4_code.AppendText("\n");
+//			BomView.Search4_code.Text=(dr["PartCode"].ToString());
+}}} 			
+ 
+if(Search_codefilter2!=""){
+	if (dr["PartCode"].ToString().Contains(Search_codefilter2)) //
+{	
+		BomView.Text_Codefilter2.Text=(dr["PartName"].ToString());
+//BomView.Search4_text.AppendText("\n");
+//		BomView.Search4_text.Text=dr["PartName"].ToString();
+if (dr["PartCode"].ToString()!="NULL"){
+//			BomView.Search4_code.AppendText((dr["PartCode"].ToString()));
+			BomView.checkBox2.Checked=true;
+//	BomView.Search4_code.AppendText("\n");
+//			BomView.Search4_code.Text=(dr["PartCode"].ToString());
+}}}
+
+
+if(Search_codefilter3!=""){
+	if (dr["PartCode"].ToString().Contains(Search_codefilter3)) //
+{	
+		BomView.Text_Codefilter3.Text=(dr["PartName"].ToString());
+//BomView.Search4_text.AppendText("\n");
+//		BomView.Search4_text.Text=dr["PartName"].ToString();
+if (dr["PartCode"].ToString()!="NULL"){
+//			BomView.Search4_code.AppendText((dr["PartCode"].ToString()));
+			BomView.checkBox3.Checked=true;
+//	BomView.Search4_code.AppendText("\n");
+//			BomView.Search4_code.Text=(dr["PartCode"].ToString());
+}}}
+ 			
+ 			
+ 			if(Search_codefilter4!=""){
+	if (dr["PartCode"].ToString().Contains(Search_codefilter4)) //
+{	
+		BomView.Text_Codefilter4.Text=(dr["PartName"].ToString());
+//BomView.Search4_text.AppendText("\n");
+//		BomView.Search4_text.Text=dr["PartName"].ToString();
+if (dr["PartCode"].ToString()!="NULL"){
+//			BomView.Search4_code.AppendText((dr["PartCode"].ToString()));
+			BomView.checkBox4.Checked=true;
+//	BomView.Search4_code.AppendText("\n");
+//			BomView.Search4_code.Text=(dr["PartCode"].ToString());
+}}}
+ 			
+ 			if(Search_codefilter5!=""){
+	if (dr["PartCode"].ToString().Contains(Search_codefilter5)) //
+{	
+		BomView.Text_Codefilter5.Text=(dr["PartName"].ToString());
+//BomView.Search4_text.AppendText("\n");
+//		BomView.Search4_text.Text=dr["PartName"].ToString();
+if (dr["PartCode"].ToString()!="NULL"){
+//			BomView.Search4_code.AppendText((dr["PartCode"].ToString()));
+			BomView.checkBox5.Checked=true;
+//	BomView.Search4_code.AppendText("\n");
+//			BomView.Search4_code.Text=(dr["PartCode"].ToString());
+}}}
+
+ 			if(Search_codefilter6!=""){
+	if (dr["PartCode"].ToString().Contains(Search_codefilter6)) //
+{	
+		BomView.Text_Codefilter6.Text=(dr["PartName"].ToString());
+//BomView.Search4_text.AppendText("\n");
+//		BomView.Search4_text.Text=dr["PartName"].ToString();
+if (dr["PartCode"].ToString()!="NULL"){
+//			BomView.Search4_code.AppendText((dr["PartCode"].ToString()));
+			BomView.checkBox6.Checked=true;
+//	BomView.Search4_code.AppendText("\n");
+//			BomView.Search4_code.Text=(dr["PartCode"].ToString());
+}}}
+
+
+
+
+
+ 			
+ 			
+ 			
+ 			
+ 				    	}
+	}		
+ 			
+ 			
+ 			
+             }	    
+	}
+		    
+		    
+		    
+		    
+		    
+//		}
 			
 		}
-	
+		
+		void initialize_bomview()
+		{
+
+		
+		}
+		void Modify_BomClick(object sender, EventArgs e)
+		{
+			WouldBe_PDM_sharpdev.BomView BomView = new WouldBe_PDM_sharpdev.BomView();
+			BomView.Show();
+			BomView.comboBox1.Items.Clear();
+			RereadFilter();
+			
+				foreach(DataRow dr in Filtertable.Rows) // search whole table
+ 	{
+					BomView.comboBox1.Items.Add(dr["Project_Filter"].ToString());
+	}
+			BomView.AddButton.Visible=true;
+				BomView.comboBox1.Visible=true;
+			BomView.Search1_textfilter_2.Enabled=true;
+			BomView.Search1_textfilter_2.ReadOnly=false;
+			BomView.Search2_textfilter_2.Enabled=true;
+			BomView.Search2_textfilter_2.ReadOnly=false;
+			BomView.Search3_textfilter_2.Enabled=true;
+			BomView.Search3_textfilter_2.ReadOnly=false;
+			BomView.Search4_textfilter_2.Enabled=true;
+			BomView.Search4_textfilter_2.ReadOnly=false;
+			BomView.Search_codefilter1.Enabled=true;
+			BomView.Search_codefilter1.ReadOnly=false;
+			BomView.Search_codefilter2.Enabled=true;
+			BomView.Search_codefilter2.ReadOnly=false;
+			BomView.Search_codefilter3.Enabled=true;
+			BomView.Search_codefilter3.ReadOnly=false;
+			BomView.Search_codefilter4.Enabled=true;
+			BomView.Search_codefilter4.ReadOnly=false;
+			BomView.Search_codefilter5.Enabled=true;
+			BomView.Search_codefilter5.ReadOnly=false;
+			BomView.Search_codefilter6.Enabled=true;
+			BomView.Search_codefilter6.ReadOnly=false;
+//			BomView.Write_filterBOM.Enabled=true;
+			BomView.Write_filterBOM.Visible=true;
+
+
+			
+		foreach(DataRow dr in Prjtable.Rows) // search whole table
+ 	{int Present=0;
+			foreach(DataRow dr2 in Filtertable.Rows){
+ 	if(dr2["Project_Filter"].ToString()==dr["ID"].ToString()) // if id==2  FAM_Box.SelectedItem.ToString()
+ 	{Present=1;}
+ 		}
+			if (Present==0){int wroteline=0;
+				foreach(object comboline in BomView.comboBox2.Items){
+					if(dr["IDprjFam"].ToString()==comboline.ToString()){wroteline=1;}
+						}
+				if(wroteline==0){BomView.comboBox2.Items.Add(dr["ID"].ToString());}
+			}
+		
+//			BomView.comboBox1.Visible=false;
+			BomView.Write_filterBOM.Visible=true;
+			
+		}
+		}
+		
+		
+		public void RereadFilter()
+		{
+			Filtertable.Clear();
+				if (File.Exists(WouldBeFILTER)){             
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load(WouldBeFILTER);
+            XmlNodeList nodeList = xmlDoc.DocumentElement.SelectNodes("/WouldBeFILTER/FilterList/Filters");
+            foreach (XmlNode filetr_node in nodeList)
+            {
+//			FAM_Box.Items.Add(filetr_node.SelectSingleNode("FamilyName").InnerText);   //to improve
+			Filterrow = Filtertable.NewRow();
+			if (filetr_node.SelectSingleNode("Project_Filter").InnerText!="NULL"){Filterrow["Project_Filter"]=filetr_node.SelectSingleNode("Project_Filter").InnerText;}else{Filterrow["Project_Filter"]="";}
+			if (filetr_node.SelectSingleNode("FilterText1").InnerText!="NULL"){ Filterrow["FilterText1"] = filetr_node.SelectSingleNode("FilterText1").InnerText ;}else{Filterrow["FilterText1"] ="";}
+			if (filetr_node.SelectSingleNode("FilterText2").InnerText!="NULL"){Filterrow["FilterText2"] = filetr_node.SelectSingleNode("FilterText2").InnerText ;}else{Filterrow["FilterText2"] ="";}
+			if (filetr_node.SelectSingleNode("FilterText3").InnerText!="NULL"){Filterrow["FilterText3"] = filetr_node.SelectSingleNode("FilterText3").InnerText ;}else{Filterrow["FilterText3"] ="";}
+			if (filetr_node.SelectSingleNode("FilterText4").InnerText!="NULL"){Filterrow["FilterText4"] = filetr_node.SelectSingleNode("FilterText4").InnerText ;}else{Filterrow["FilterText4"] ="";}
+			if (filetr_node.SelectSingleNode("FilterCode1").InnerText!="NULL"){Filterrow["FilterCode1"] = filetr_node.SelectSingleNode("FilterCode1").InnerText ;}else{Filterrow["FilterCode1"] ="";}
+			if (filetr_node.SelectSingleNode("FilterCode2").InnerText!="NULL"){Filterrow["FilterCode2"] = filetr_node.SelectSingleNode("FilterCode2").InnerText ;}else{Filterrow["FilterCode2"] ="";}
+			if (filetr_node.SelectSingleNode("FilterCode3").InnerText!="NULL"){Filterrow["FilterCode3"] = filetr_node.SelectSingleNode("FilterCode3").InnerText ;}else{Filterrow["FilterCode3"] ="";}
+			if (filetr_node.SelectSingleNode("FilterCode4").InnerText!="NULL"){Filterrow["FilterCode4"] = filetr_node.SelectSingleNode("FilterCode4").InnerText ;}else{Filterrow["FilterCode4"] ="";}
+			if (filetr_node.SelectSingleNode("FilterCode5").InnerText!="NULL"){Filterrow["FilterCode5"] = filetr_node.SelectSingleNode("FilterCode5").InnerText ;}else{Filterrow["FilterCode5"] ="";}
+			if (filetr_node.SelectSingleNode("FilterCode6").InnerText!="NULL"){Filterrow["FilterCode6"] = filetr_node.SelectSingleNode("FilterCode6").InnerText ;}else{Filterrow["FilterCode6"] ="";}
+		
+			
+			
+			//            Filterrow["FilterText3"] = filetr_node.SelectSingleNode("FilterText3").InnerText ;
+//            Filterrow["FilterText4"] = filetr_node.SelectSingleNode("FilterText4").InnerText ;
+            Filtertable.Rows.Add(Filterrow);
+            }   
+		
+			}
+
+		}
+		
+	}
 	}////PUBLIC - Name space
 
 //}

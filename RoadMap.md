@@ -7,6 +7,7 @@
 - Checkout the JPGs                            -----  V0.0.1.0
 - Generate PDF                                 -----  V0.0.1.1
 - Generate STEP                                -----  V0.0.1.1
+- Generate Image (jpg)                         -----  V0.0.1.1
 - Add CAD macros (CATIA + UG)                  -----  V0.0.2.0
 - Add installer variables/cfg. Add to menu     -----  V0.0.2.1
 - Add time counter for prj/prod                -----  V0.0.2.2

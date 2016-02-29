@@ -17,6 +17,7 @@ namespace WouldBe_PDM_sharpdev
 		private System.Windows.Forms.ProgressBar progressBar1;
 		private System.Windows.Forms.Timer timer1;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label label2;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -44,6 +45,7 @@ namespace WouldBe_PDM_sharpdev
 			this.progressBar1 = new System.Windows.Forms.ProgressBar();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.label1 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// progressBar1
@@ -69,6 +71,17 @@ namespace WouldBe_PDM_sharpdev
 			this.label1.TabIndex = 2;
 			this.label1.Text = "https://github.com/robertobartola/WouldBePDM\r\nby Roberto Bartola";
 			// 
+			// label2
+			// 
+			this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.label2.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.ForeColor = System.Drawing.Color.Black;
+			this.label2.Location = new System.Drawing.Point(726, 199);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(218, 42);
+			this.label2.TabIndex = 3;
+			this.label2.Text = "V 0.0.1.0";
+			// 
 			// SplashScreen
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -76,13 +89,13 @@ namespace WouldBe_PDM_sharpdev
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.ClientSize = new System.Drawing.Size(956, 639);
 			this.ControlBox = false;
+			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.progressBar1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "SplashScreen";
 			this.Text = "SplashScreen";
-//			this.Load += new System.EventHandler(this.SplashScreenLoad);
 			this.Click += new System.EventHandler(this.SplashScreenClick);
 			this.ResumeLayout(false);
 

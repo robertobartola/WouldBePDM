@@ -19,3 +19,4 @@ C:\Users\rbartola\Documents\SharpDevelop Projects\WouldBe_PDM_sharpdev\WouldBe_P
 C:\Users\rbartola\Documents\SharpDevelop Projects\WouldBe_PDM_sharpdev\WouldBe_PDM_sharpdev\obj\Debug\WouldBe_PDM_sharpdev.Where_used.resources
 C:\Users\rbartola\Documents\SharpDevelop Projects\WouldBe_PDM_sharpdev\WouldBe_PDM_sharpdev\obj\Debug\WouldBe_PDM_sharpdev.retsegge.resources
 C:\Users\rbartola\Documents\SharpDevelop Projects\WouldBe_PDM_sharpdev\WouldBe_PDM_sharpdev\obj\Debug\WouldBe_PDM_sharpdev.ManyThanx.resources
+C:\Users\rbartola\Documents\SharpDevelop Projects\WouldBe_PDM_sharpdev\WouldBe_PDM_sharpdev\obj\Debug\WouldBe_PDM_sharpdev.BomView.resources
