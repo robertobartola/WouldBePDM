@@ -1412,6 +1412,7 @@ namespace wina
 			this.button51.TabIndex = 88;
 			this.button51.Text = "STEP (force all)";
 			this.button51.UseVisualStyleBackColor = true;
+			this.button51.Click += new System.EventHandler(this.Button51Click);
 			// 
 			// button49
 			// 
@@ -1451,6 +1452,7 @@ namespace wina
 			this.button42.TabIndex = 84;
 			this.button42.Text = "STEP";
 			this.button42.UseVisualStyleBackColor = true;
+			this.button42.Click += new System.EventHandler(this.Button42Click);
 			// 
 			// button41
 			// 

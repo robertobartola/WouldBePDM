@@ -35,7 +35,7 @@ namespace wina
 		const string WouldBeFILTER = ("WouldBeFILTER.xml");
 		const string CatiaMacroDir="Macros\\Catia", PdfExportDir="PdfExport", STEPExportDir="STEPExport", JPGExportDir="JPGExport";
 		const string temporarylistforpdf="zztmppdf.txt", temporarylistforjpg="zztmpjpg.txt", temporarylistforstp="zztmpstp.txt";
-		const string  macroexportPDF="ExportPDF.CATScript", macroexportJPG="ExportJPG.CATScript"; //todo
+		const string  macroexportPDF="ExportPDF.CATScript", macroexportJPG="ExportJPG.CATScript", macroexportSTEP="ExportSTEP.CATScript"; //todo
 		public string CAD_DIR_Location = ("WouldBePDMData");
 		public string StepFolder="OUT";
 		public string PdfFolder="OUT";
@@ -3483,6 +3483,178 @@ if (dr3["PartTWO_D"].ToString()!="NULL")
                 }
             }	
 		}
+		void Button42Click(object sender, EventArgs e)
+		{
+			
+	
+		string macrodir= ExeDirFull + CatiaMacroDir;
+	string macrotolaunch= macrodir + "\\" + macroexportSTEP ;
+	string fulltemporarylistforstep="\"" + macrodir + "\\" + temporarylistforstp + "\" ";
+	File.WriteAllText(macrodir + "\\" + temporarylistforstp, "");
+	
+			string prtcode ="";
+			string prtthreed ="";
+//			string prtstep ="";
+//			string prttwod ="";
+//			string prtpdf ="";
+			string stepimagefile="";
+//			string drawingfilename=drawingfilenameBox.Text.ToString();
+//			filetocheckout=CAD_DIR_Location + "\\" + ImageFolder + "\\" + drawingfilename;
+		
+			 XmlDocument xmlDoc2 = new XmlDocument();
+			xmlDoc2.Load(WouldBeXML);  
+			XmlNodeList nodeList = xmlDoc2.DocumentElement.SelectNodes("/WouldBePDM/PartList/Component");
+            foreach (XmlNode nodepart in nodeList) //            foreach (XmlNode nodepart in nodeList)
+            {
+
+                prtcode = nodepart.SelectSingleNode("PartCode").InnerText;
+            	prtthreed= nodepart.SelectSingleNode("PartTHREE_D").InnerText ;
+                stepimagefile= nodepart.SelectSingleNode("PartStep").InnerText ;
+//                prttwod= nodepart.SelectSingleNode("PartTWO_D").InnerText ;
+//                prtpdf= nodepart.SelectSingleNode("PartPdf").InnerText ;
+//                stepimagefile=nodepart.SelectSingleNode("PartImage").InnerText ;
+                			
+			foreach (string CODE in PART_Box.Items )
+			{
+//				textBox1.AppendText("- " + CODE);
+				
+				if (  CODE ==prtcode)
+                				{
+//					if (prtthreed!="NULL"){
+//					if (prtthreed!="")
+//					{ 
+//						if (filetocheckout=="") {
+//							filetocheckout= CAD_DIR_Location + "\\" + prtthreed;	}
+//						else{filetocheckout= filetocheckout + "*" + CAD_DIR_Location + "\\" + prtthreed;}
+//					}
+//					}
+					
+					if (prtthreed!="NULL"){
+					if (prtthreed!="")
+					{
+						
+						if(File.Exists(CAD_DIR_Location + "\\" + StepFolder + "\\" +  stepimagefile)){}else{
+						
+			string filetoopen= CAD_DIR_Location  + "\\" + prtthreed;
+			string fullfiletoopen= "\"" + ExeDirFull + filetoopen + "\" ";
+			File.AppendAllText(macrodir + "\\" + temporarylistforstp, ExeDirFull + filetoopen);
+			File.AppendAllText(macrodir + "\\" + temporarylistforstp, "\r\n");
+						   }
+					}
+					}
+				}
+			}
+			
+            }
+            GenerateSTEP_GO();	
+			
+			
+	
+		}
+		
+		void Button51Click(object sender, EventArgs e)
+		{
+	
+			string macrodir= ExeDirFull + CatiaMacroDir;
+	string macrotolaunch= macrodir + "\\" + macroexportSTEP ;
+	string fulltemporarylistforstep="\"" + macrodir + "\\" + temporarylistforstp + "\" ";
+	File.WriteAllText(macrodir + "\\" + temporarylistforstp, "");
+
+	
+			string prtcode ="";
+			string prtthreed ="";
+//			string prtstep ="";
+//			string prttwod ="";
+//			string prtpdf ="";
+//			string stepimagefile="";
+//			string drawingfilename=drawingfilenameBox.Text.ToString();
+//			filetocheckout=CAD_DIR_Location + "\\" + ImageFolder + "\\" + drawingfilename;
+		
+			 XmlDocument xmlDoc2 = new XmlDocument();
+			xmlDoc2.Load(WouldBeXML);  
+			XmlNodeList nodeList = xmlDoc2.DocumentElement.SelectNodes("/WouldBePDM/PartList/Component");
+            foreach (XmlNode nodepart in nodeList) //            foreach (XmlNode nodepart in nodeList)
+            {
+
+                prtcode = nodepart.SelectSingleNode("PartCode").InnerText;
+            	prtthreed= nodepart.SelectSingleNode("PartTHREE_D").InnerText ;
+//                prtstep= nodepart.SelectSingleNode("PartStep").InnerText ;
+//                prttwod= nodepart.SelectSingleNode("PartTWO_D").InnerText ;
+//                prtpdf= nodepart.SelectSingleNode("PartPdf").InnerText ;
+//                stepimagefile=nodepart.SelectSingleNode("PartImage").InnerText ;
+                			
+			foreach (string CODE in PART_Box.Items )
+			{
+//				textBox1.AppendText("- " + CODE);
+				
+				if (  CODE ==prtcode)
+                				{
+//					if (prtthreed!="NULL"){
+//					if (prtthreed!="")
+//					{ 
+//						if (filetocheckout=="") {
+//							filetocheckout= CAD_DIR_Location + "\\" + prtthreed;	}
+//						else{filetocheckout= filetocheckout + "*" + CAD_DIR_Location + "\\" + prtthreed;}
+//					}
+//					}
+					
+					if (prtthreed!="NULL"){
+					if (prtthreed!="")
+					{
+			string filetoopen= CAD_DIR_Location  + "\\" + prtthreed;
+			string fullfiletoopen= "\"" + ExeDirFull + filetoopen + "\" ";
+			File.AppendAllText(macrodir + "\\" + temporarylistforstp, ExeDirFull + filetoopen);
+			File.AppendAllText(macrodir + "\\" + temporarylistforstp, "\r\n");
+						}
+					}
+				}
+			}
+			
+            }
+            GenerateSTEP_GO();	
+		}
+		public void GenerateSTEP_GO()
+		{
+			string macrodir= ExeDirFull + CatiaMacroDir;
+			string macrotolaunch= macrodir + "\\" + macroexportSTEP ;
+		System.Diagnostics.Process[] processes = System.Diagnostics.Process.GetProcesses();
+{
+                bool AdminMode = false;
+                ProcessStartInfo psi = new ProcessStartInfo("\"" + CATDLLPath_LOW + "\\CATStart.exe" + "\"");
+                if (!AdminMode)
+                {
+                    psi.Arguments = " -run \"CNEXT.exe\" -env " + "\"" + EnvironmentName_Export + "\"" + " -direnv " + "\"" + EnvironmentDir_Export + "\"" + " -nowindow ";
+                    psi.Arguments = psi.Arguments + " -object " + "\"" + " -batch -macro " + macrotolaunch + "\""; 
+                }
+                else
+                {
+                    psi.Arguments = " -run \"CNEXT.exe -admin\" -env " + "\"" + EnvironmentName_Export + "\"" + " -direnv " + "\"" + EnvironmentDir_Export  + "\"" + " -nowindow ";
+                    psi.Arguments = psi.Arguments + " -object " + "\"" + "-batch -macro " + macrotolaunch + "\""; 
+                }
+                Debug.WriteLine(psi.FileName + " " + psi.Arguments);
+                IntPtr oCatiaHwnd= IntPtr.Zero;
+                psi.UseShellExecute = false;
+                psi.RedirectStandardOutput = false;
+                psi.RedirectStandardError = true;        
+                Process process = new Process();
+                {
+                    process.EnableRaisingEvents = true;
+                    process.StartInfo = psi;
+                    process.Start();
+                    Application.DoEvents();
+                    Process[] Ps = Process.GetProcesses();
+                    int L = Ps.Length;
+                    int timeout = 5000;
+                    process.WaitForExit(timeout);
+                }
+            }	
+			
+			
+//			MessageBox.Show("WorkInProgress");
+			
+		}
+		
+		
 		
 		
 		
