@@ -1,0 +1,50 @@
+Language="VBSCRIPT"
+
+
+Sub CATMain()
+
+dim fso
+dim curDir
+set fso = CreateObject("Scripting.FileSystemObject")
+curDir = fso.GetAbsolutePathName(".")
+set fso = nothing
+Dim EmptyPar()
+Dim MyArgs(0)
+Dim strProject, strModule As String
+
+strNomeFile = CurDir  & "\Macros\Catia\zztmppdf.txt"
+'msgbox (strNomeFile )
+Set Datos = CATIA.FileSystem.GetFile(strNomeFile)
+
+
+Set oreading = Datos.OpenAsTextStream("ForReading")
+		
+While Not oreading.AtEndOfStream
+DocToOpen = oreading.ReadLine
+If DocToOpen <>"" Then
+CATIA.Documents.Open (DocToOpen)
+'msgbox( "ciao" & DocToOpen)
+
+
+strProject = "WouldBePDM.catvba"
+strModule = "WW_EsportaTutti2DpdfDXF"
+strSub = "CATMain"
+strmacro=CurDir  & "\Macros\Catia\WouldBePDM.catvba"
+
+CATIA.SystemService.ExecuteScript strmacro, catScriptLibraryTypeVBAProject, strModule , strSub , EmptyPar
+
+
+End If
+Wend
+oreading.Close
+
+' CANCELLA IL FILE DI TESTO
+
+Set wshShell1 = CreateObject("WScript.Shell")
+'wshShell1.run "%comspec% /c del /F /Q " & strNomeFile,2,true
+wshShell1.run "%comspec% /c del /F /Q "&""""&strNomeFile&"""",2,true
+'msgbox("%comspec%  "&""""&strNomeFile&"""")
+
+
+
+End Sub

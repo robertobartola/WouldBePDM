@@ -80,7 +80,7 @@ namespace WouldBe_PDM_sharpdev
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(218, 42);
 			this.label2.TabIndex = 3;
-			this.label2.Text = "V 0.0.1.0";
+			this.label2.Text = "V 0.0.1.1";
 			// 
 			// SplashScreen
 			// 

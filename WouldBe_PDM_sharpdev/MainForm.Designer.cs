@@ -111,7 +111,6 @@ namespace wina
 		private System.Windows.Forms.Button button12;
 		private System.Windows.Forms.GroupBox groupBox10;
 		private System.Windows.Forms.Label label26;
-		private System.Windows.Forms.TextBox ProdDrawingDIR;
 		private System.Windows.Forms.Label label27;
 		private System.Windows.Forms.Button button13;
 		private System.Windows.Forms.GroupBox groupBox11;
@@ -195,6 +194,28 @@ namespace wina
 		private System.Windows.Forms.TextBox Filter_XML_filename;
 		private System.Windows.Forms.Label label43;
 		private System.Windows.Forms.Button button40;
+		private System.Windows.Forms.GroupBox groupBox20;
+		private System.Windows.Forms.Button button42;
+		private System.Windows.Forms.Button button41;
+		private System.Windows.Forms.Button button43;
+		private System.Windows.Forms.TextBox TempoJPGdir;
+		private System.Windows.Forms.Label label48;
+		private System.Windows.Forms.Button button48;
+		private System.Windows.Forms.TextBox TempoSTEPdir;
+		private System.Windows.Forms.Label label46;
+		private System.Windows.Forms.Button button46;
+		private System.Windows.Forms.TextBox TempoPDFdir;
+		private System.Windows.Forms.Label label47;
+		private System.Windows.Forms.Button button47;
+		private System.Windows.Forms.TextBox textBox7;
+		private System.Windows.Forms.Label label44;
+		private System.Windows.Forms.Button button44;
+		private System.Windows.Forms.TextBox CatiaMacro_Dir;
+		private System.Windows.Forms.Label label45;
+		private System.Windows.Forms.Button button45;
+		private System.Windows.Forms.Button button49;
+		private System.Windows.Forms.Button button50;
+		private System.Windows.Forms.Button button51;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -219,6 +240,21 @@ namespace wina
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.ConfigTab = new System.Windows.Forms.TabPage();
+			this.TempoJPGdir = new System.Windows.Forms.TextBox();
+			this.label48 = new System.Windows.Forms.Label();
+			this.button48 = new System.Windows.Forms.Button();
+			this.TempoSTEPdir = new System.Windows.Forms.TextBox();
+			this.label46 = new System.Windows.Forms.Label();
+			this.button46 = new System.Windows.Forms.Button();
+			this.TempoPDFdir = new System.Windows.Forms.TextBox();
+			this.label47 = new System.Windows.Forms.Label();
+			this.button47 = new System.Windows.Forms.Button();
+			this.textBox7 = new System.Windows.Forms.TextBox();
+			this.label44 = new System.Windows.Forms.Label();
+			this.button44 = new System.Windows.Forms.Button();
+			this.CatiaMacro_Dir = new System.Windows.Forms.TextBox();
+			this.label45 = new System.Windows.Forms.Label();
+			this.button45 = new System.Windows.Forms.Button();
 			this.Filter_XML_filename = new System.Windows.Forms.TextBox();
 			this.label43 = new System.Windows.Forms.Label();
 			this.button40 = new System.Windows.Forms.Button();
@@ -256,7 +292,6 @@ namespace wina
 			this.CATIA_TOP_ENV_Dir = new System.Windows.Forms.TextBox();
 			this.label32 = new System.Windows.Forms.Label();
 			this.groupBox10 = new System.Windows.Forms.GroupBox();
-			this.ProdDrawingDIR = new System.Windows.Forms.TextBox();
 			this.label27 = new System.Windows.Forms.Label();
 			this.button13 = new System.Windows.Forms.Button();
 			this.label26 = new System.Windows.Forms.Label();
@@ -274,6 +309,36 @@ namespace wina
 			this.button4 = new System.Windows.Forms.Button();
 			this.button12 = new System.Windows.Forms.Button();
 			this.FindFilesTab = new System.Windows.Forms.TabPage();
+			this.groupBox8 = new System.Windows.Forms.GroupBox();
+			this.CheckBOM = new System.Windows.Forms.Button();
+			this.carBOX = new System.Windows.Forms.TextBox();
+			this.label40 = new System.Windows.Forms.Label();
+			this.prodID = new System.Windows.Forms.TextBox();
+			this.label39 = new System.Windows.Forms.Label();
+			this.PROD_Box = new System.Windows.Forms.ComboBox();
+			this.button37 = new System.Windows.Forms.Button();
+			this.textBox6 = new System.Windows.Forms.TextBox();
+			this.button26 = new System.Windows.Forms.Button();
+			this.button27 = new System.Windows.Forms.Button();
+			this.button18 = new System.Windows.Forms.Button();
+			this.button6 = new System.Windows.Forms.Button();
+			this.drawingfilenameBox = new System.Windows.Forms.TextBox();
+			this.drawingdateBox = new System.Windows.Forms.TextBox();
+			this.label16 = new System.Windows.Forms.Label();
+			this.label15 = new System.Windows.Forms.Label();
+			this.drawingRevBox = new System.Windows.Forms.TextBox();
+			this.drawingBox = new System.Windows.Forms.TextBox();
+			this.label14 = new System.Windows.Forms.Label();
+			this.textBox3 = new System.Windows.Forms.TextBox();
+			this.label13 = new System.Windows.Forms.Label();
+			this.label12 = new System.Windows.Forms.Label();
+			this.groupBox20 = new System.Windows.Forms.GroupBox();
+			this.button51 = new System.Windows.Forms.Button();
+			this.button49 = new System.Windows.Forms.Button();
+			this.button50 = new System.Windows.Forms.Button();
+			this.button43 = new System.Windows.Forms.Button();
+			this.button42 = new System.Windows.Forms.Button();
+			this.button41 = new System.Windows.Forms.Button();
 			this.button38 = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
 			this.button33 = new System.Windows.Forms.Button();
@@ -373,29 +438,6 @@ namespace wina
 			this.ThreedBox = new System.Windows.Forms.TextBox();
 			this.OpenCADbutton = new System.Windows.Forms.Button();
 			this.whereUSEDbutton = new System.Windows.Forms.Button();
-			this.groupBox8 = new System.Windows.Forms.GroupBox();
-			this.CheckBOM = new System.Windows.Forms.Button();
-			this.carBOX = new System.Windows.Forms.TextBox();
-			this.label40 = new System.Windows.Forms.Label();
-			this.prodID = new System.Windows.Forms.TextBox();
-			this.label39 = new System.Windows.Forms.Label();
-			this.PROD_Box = new System.Windows.Forms.ComboBox();
-			this.button37 = new System.Windows.Forms.Button();
-			this.textBox6 = new System.Windows.Forms.TextBox();
-			this.button26 = new System.Windows.Forms.Button();
-			this.button27 = new System.Windows.Forms.Button();
-			this.button18 = new System.Windows.Forms.Button();
-			this.button6 = new System.Windows.Forms.Button();
-			this.drawingfilenameBox = new System.Windows.Forms.TextBox();
-			this.drawingdateBox = new System.Windows.Forms.TextBox();
-			this.label16 = new System.Windows.Forms.Label();
-			this.label15 = new System.Windows.Forms.Label();
-			this.drawingRevBox = new System.Windows.Forms.TextBox();
-			this.drawingBox = new System.Windows.Forms.TextBox();
-			this.label14 = new System.Windows.Forms.Label();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.label13 = new System.Windows.Forms.Label();
-			this.label12 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.groupBox19 = new System.Windows.Forms.GroupBox();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -408,6 +450,8 @@ namespace wina
 			this.groupBox12.SuspendLayout();
 			this.groupBox10.SuspendLayout();
 			this.FindFilesTab.SuspendLayout();
+			this.groupBox8.SuspendLayout();
+			this.groupBox20.SuspendLayout();
 			this.groupBox17.SuspendLayout();
 			this.groupBox6.SuspendLayout();
 			this.groupBox9.SuspendLayout();
@@ -418,13 +462,27 @@ namespace wina
 			this.groupBox4.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox1.SuspendLayout();
-			this.groupBox8.SuspendLayout();
 			this.tabControl1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// ConfigTab
 			// 
 			this.ConfigTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+			this.ConfigTab.Controls.Add(this.TempoJPGdir);
+			this.ConfigTab.Controls.Add(this.label48);
+			this.ConfigTab.Controls.Add(this.button48);
+			this.ConfigTab.Controls.Add(this.TempoSTEPdir);
+			this.ConfigTab.Controls.Add(this.label46);
+			this.ConfigTab.Controls.Add(this.button46);
+			this.ConfigTab.Controls.Add(this.TempoPDFdir);
+			this.ConfigTab.Controls.Add(this.label47);
+			this.ConfigTab.Controls.Add(this.button47);
+			this.ConfigTab.Controls.Add(this.textBox7);
+			this.ConfigTab.Controls.Add(this.label44);
+			this.ConfigTab.Controls.Add(this.button44);
+			this.ConfigTab.Controls.Add(this.CatiaMacro_Dir);
+			this.ConfigTab.Controls.Add(this.label45);
+			this.ConfigTab.Controls.Add(this.button45);
 			this.ConfigTab.Controls.Add(this.Filter_XML_filename);
 			this.ConfigTab.Controls.Add(this.label43);
 			this.ConfigTab.Controls.Add(this.button40);
@@ -445,11 +503,142 @@ namespace wina
 			this.ConfigTab.Text = "Config";
 			this.ConfigTab.UseVisualStyleBackColor = true;
 			// 
+			// TempoJPGdir
+			// 
+			this.TempoJPGdir.Location = new System.Drawing.Point(857, 493);
+			this.TempoJPGdir.Name = "TempoJPGdir";
+			this.TempoJPGdir.ReadOnly = true;
+			this.TempoJPGdir.Size = new System.Drawing.Size(165, 20);
+			this.TempoJPGdir.TabIndex = 51;
+			// 
+			// label48
+			// 
+			this.label48.Location = new System.Drawing.Point(857, 479);
+			this.label48.Name = "label48";
+			this.label48.Size = new System.Drawing.Size(100, 23);
+			this.label48.TabIndex = 50;
+			this.label48.Text = "Temporary JPG dir";
+			// 
+			// button48
+			// 
+			this.button48.Enabled = false;
+			this.button48.Location = new System.Drawing.Point(1032, 493);
+			this.button48.Name = "button48";
+			this.button48.Size = new System.Drawing.Size(75, 23);
+			this.button48.TabIndex = 52;
+			this.button48.Text = "Change";
+			this.button48.UseVisualStyleBackColor = true;
+			// 
+			// TempoSTEPdir
+			// 
+			this.TempoSTEPdir.Location = new System.Drawing.Point(586, 546);
+			this.TempoSTEPdir.Name = "TempoSTEPdir";
+			this.TempoSTEPdir.ReadOnly = true;
+			this.TempoSTEPdir.Size = new System.Drawing.Size(165, 20);
+			this.TempoSTEPdir.TabIndex = 48;
+			// 
+			// label46
+			// 
+			this.label46.Location = new System.Drawing.Point(586, 532);
+			this.label46.Name = "label46";
+			this.label46.Size = new System.Drawing.Size(100, 23);
+			this.label46.TabIndex = 47;
+			this.label46.Text = "Temporary STEP dir";
+			// 
+			// button46
+			// 
+			this.button46.Enabled = false;
+			this.button46.Location = new System.Drawing.Point(761, 546);
+			this.button46.Name = "button46";
+			this.button46.Size = new System.Drawing.Size(75, 23);
+			this.button46.TabIndex = 49;
+			this.button46.Text = "Change";
+			this.button46.UseVisualStyleBackColor = true;
+			// 
+			// TempoPDFdir
+			// 
+			this.TempoPDFdir.Location = new System.Drawing.Point(586, 497);
+			this.TempoPDFdir.Name = "TempoPDFdir";
+			this.TempoPDFdir.ReadOnly = true;
+			this.TempoPDFdir.Size = new System.Drawing.Size(165, 20);
+			this.TempoPDFdir.TabIndex = 45;
+			// 
+			// label47
+			// 
+			this.label47.Location = new System.Drawing.Point(586, 483);
+			this.label47.Name = "label47";
+			this.label47.Size = new System.Drawing.Size(100, 23);
+			this.label47.TabIndex = 44;
+			this.label47.Text = "Temporary PDF dir";
+			// 
+			// button47
+			// 
+			this.button47.Enabled = false;
+			this.button47.Location = new System.Drawing.Point(761, 497);
+			this.button47.Name = "button47";
+			this.button47.Size = new System.Drawing.Size(75, 23);
+			this.button47.TabIndex = 46;
+			this.button47.Text = "Change";
+			this.button47.UseVisualStyleBackColor = true;
+			// 
+			// textBox7
+			// 
+			this.textBox7.Location = new System.Drawing.Point(330, 542);
+			this.textBox7.Name = "textBox7";
+			this.textBox7.ReadOnly = true;
+			this.textBox7.Size = new System.Drawing.Size(165, 20);
+			this.textBox7.TabIndex = 42;
+			// 
+			// label44
+			// 
+			this.label44.Location = new System.Drawing.Point(330, 528);
+			this.label44.Name = "label44";
+			this.label44.Size = new System.Drawing.Size(100, 23);
+			this.label44.TabIndex = 41;
+			this.label44.Text = "UG macro dir";
+			// 
+			// button44
+			// 
+			this.button44.Enabled = false;
+			this.button44.Location = new System.Drawing.Point(505, 542);
+			this.button44.Name = "button44";
+			this.button44.Size = new System.Drawing.Size(75, 23);
+			this.button44.TabIndex = 43;
+			this.button44.Text = "Change";
+			this.button44.UseVisualStyleBackColor = true;
+			// 
+			// CatiaMacro_Dir
+			// 
+			this.CatiaMacro_Dir.Location = new System.Drawing.Point(330, 493);
+			this.CatiaMacro_Dir.Name = "CatiaMacro_Dir";
+			this.CatiaMacro_Dir.ReadOnly = true;
+			this.CatiaMacro_Dir.Size = new System.Drawing.Size(165, 20);
+			this.CatiaMacro_Dir.TabIndex = 39;
+			// 
+			// label45
+			// 
+			this.label45.Location = new System.Drawing.Point(330, 479);
+			this.label45.Name = "label45";
+			this.label45.Size = new System.Drawing.Size(100, 23);
+			this.label45.TabIndex = 38;
+			this.label45.Text = "Catia macro dir";
+			// 
+			// button45
+			// 
+			this.button45.Enabled = false;
+			this.button45.Location = new System.Drawing.Point(505, 493);
+			this.button45.Name = "button45";
+			this.button45.Size = new System.Drawing.Size(75, 23);
+			this.button45.TabIndex = 40;
+			this.button45.Text = "Change";
+			this.button45.UseVisualStyleBackColor = true;
+			// 
 			// Filter_XML_filename
 			// 
 			this.Filter_XML_filename.Location = new System.Drawing.Point(13, 542);
 			this.Filter_XML_filename.Name = "Filter_XML_filename";
-			this.Filter_XML_filename.Size = new System.Drawing.Size(255, 20);
+			this.Filter_XML_filename.ReadOnly = true;
+			this.Filter_XML_filename.Size = new System.Drawing.Size(216, 20);
 			this.Filter_XML_filename.TabIndex = 36;
 			// 
 			// label43
@@ -463,7 +652,7 @@ namespace wina
 			// button40
 			// 
 			this.button40.Enabled = false;
-			this.button40.Location = new System.Drawing.Point(274, 542);
+			this.button40.Location = new System.Drawing.Point(235, 542);
 			this.button40.Name = "button40";
 			this.button40.Size = new System.Drawing.Size(75, 23);
 			this.button40.TabIndex = 37;
@@ -474,7 +663,8 @@ namespace wina
 			// 
 			this.Config_XML_filename.Location = new System.Drawing.Point(13, 493);
 			this.Config_XML_filename.Name = "Config_XML_filename";
-			this.Config_XML_filename.Size = new System.Drawing.Size(255, 20);
+			this.Config_XML_filename.ReadOnly = true;
+			this.Config_XML_filename.Size = new System.Drawing.Size(216, 20);
 			this.Config_XML_filename.TabIndex = 33;
 			// 
 			// label42
@@ -488,7 +678,7 @@ namespace wina
 			// button39
 			// 
 			this.button39.Enabled = false;
-			this.button39.Location = new System.Drawing.Point(274, 493);
+			this.button39.Location = new System.Drawing.Point(235, 493);
 			this.button39.Name = "button39";
 			this.button39.Size = new System.Drawing.Size(75, 23);
 			this.button39.TabIndex = 34;
@@ -497,29 +687,29 @@ namespace wina
 			// 
 			// Modify_Bom
 			// 
-			this.Modify_Bom.Location = new System.Drawing.Point(711, 497);
+			this.Modify_Bom.Location = new System.Drawing.Point(849, 22);
 			this.Modify_Bom.Name = "Modify_Bom";
 			this.Modify_Bom.Size = new System.Drawing.Size(75, 23);
 			this.Modify_Bom.TabIndex = 30;
-			this.Modify_Bom.Text = "BOM filter";
+			this.Modify_Bom.Text = "BOM filters";
 			this.Modify_Bom.UseVisualStyleBackColor = true;
 			this.Modify_Bom.Click += new System.EventHandler(this.Modify_BomClick);
 			// 
 			// label41
 			// 
-			this.label41.Location = new System.Drawing.Point(700, 480);
+			this.label41.Location = new System.Drawing.Point(831, 6);
 			this.label41.Name = "label41";
 			this.label41.Size = new System.Drawing.Size(116, 23);
 			this.label41.TabIndex = 31;
-			this.label41.Text = "Modify the BOM filter";
+			this.label41.Text = "Modify the BOM filters";
 			// 
 			// groupBox13
 			// 
 			this.groupBox13.Controls.Add(this.groupBox15);
 			this.groupBox13.Controls.Add(this.groupBox14);
-			this.groupBox13.Location = new System.Drawing.Point(482, 6);
+			this.groupBox13.Location = new System.Drawing.Point(482, 58);
 			this.groupBox13.Name = "groupBox13";
-			this.groupBox13.Size = new System.Drawing.Size(619, 237);
+			this.groupBox13.Size = new System.Drawing.Size(619, 185);
 			this.groupBox13.TabIndex = 29;
 			this.groupBox13.TabStop = false;
 			this.groupBox13.Text = "UG NX";
@@ -527,7 +717,7 @@ namespace wina
 			// groupBox15
 			// 
 			this.groupBox15.Controls.Add(this.UG_LOW_exe);
-			this.groupBox15.Location = new System.Drawing.Point(6, 145);
+			this.groupBox15.Location = new System.Drawing.Point(6, 102);
 			this.groupBox15.Name = "groupBox15";
 			this.groupBox15.Size = new System.Drawing.Size(599, 77);
 			this.groupBox15.TabIndex = 1;
@@ -546,9 +736,9 @@ namespace wina
 			this.groupBox14.Controls.Add(this.UG_TOP_EXE);
 			this.groupBox14.Controls.Add(this.label30);
 			this.groupBox14.Controls.Add(this.button16);
-			this.groupBox14.Location = new System.Drawing.Point(6, 19);
+			this.groupBox14.Location = new System.Drawing.Point(6, 17);
 			this.groupBox14.Name = "groupBox14";
-			this.groupBox14.Size = new System.Drawing.Size(599, 120);
+			this.groupBox14.Size = new System.Drawing.Size(599, 87);
 			this.groupBox14.TabIndex = 0;
 			this.groupBox14.TabStop = false;
 			this.groupBox14.Text = "UG NX TOP (i.e. V8)";
@@ -776,7 +966,6 @@ namespace wina
 			// 
 			// groupBox10
 			// 
-			this.groupBox10.Controls.Add(this.ProdDrawingDIR);
 			this.groupBox10.Controls.Add(this.label27);
 			this.groupBox10.Controls.Add(this.button13);
 			this.groupBox10.Controls.Add(this.label26);
@@ -798,13 +987,6 @@ namespace wina
 			this.groupBox10.TabIndex = 27;
 			this.groupBox10.TabStop = false;
 			this.groupBox10.Text = "Drectories";
-			// 
-			// ProdDrawingDIR
-			// 
-			this.ProdDrawingDIR.Location = new System.Drawing.Point(6, 199);
-			this.ProdDrawingDIR.Name = "ProdDrawingDIR";
-			this.ProdDrawingDIR.Size = new System.Drawing.Size(255, 20);
-			this.ProdDrawingDIR.TabIndex = 29;
 			// 
 			// label27
 			// 
@@ -934,7 +1116,7 @@ namespace wina
 			// 
 			// button12
 			// 
-			this.button12.Location = new System.Drawing.Point(459, 487);
+			this.button12.Location = new System.Drawing.Point(1012, 6);
 			this.button12.Name = "button12";
 			this.button12.Size = new System.Drawing.Size(89, 42);
 			this.button12.TabIndex = 26;
@@ -944,6 +1126,9 @@ namespace wina
 			// 
 			// FindFilesTab
 			// 
+			this.FindFilesTab.BackColor = System.Drawing.SystemColors.Control;
+			this.FindFilesTab.Controls.Add(this.groupBox8);
+			this.FindFilesTab.Controls.Add(this.groupBox20);
 			this.FindFilesTab.Controls.Add(this.button38);
 			this.FindFilesTab.Controls.Add(this.button1);
 			this.FindFilesTab.Controls.Add(this.button33);
@@ -967,7 +1152,6 @@ namespace wina
 			this.FindFilesTab.Controls.Add(this.groupBox9);
 			this.FindFilesTab.Controls.Add(this.groupBox7);
 			this.FindFilesTab.Controls.Add(this.groupBox5);
-			this.FindFilesTab.Controls.Add(this.groupBox8);
 			this.FindFilesTab.Controls.Add(this.label4);
 			this.FindFilesTab.Controls.Add(this.groupBox19);
 			this.FindFilesTab.Location = new System.Drawing.Point(4, 22);
@@ -976,7 +1160,307 @@ namespace wina
 			this.FindFilesTab.Size = new System.Drawing.Size(1107, 583);
 			this.FindFilesTab.TabIndex = 0;
 			this.FindFilesTab.Text = "PDM";
-			this.FindFilesTab.UseVisualStyleBackColor = true;
+			// 
+			// groupBox8
+			// 
+			this.groupBox8.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.groupBox8.Controls.Add(this.CheckBOM);
+			this.groupBox8.Controls.Add(this.carBOX);
+			this.groupBox8.Controls.Add(this.label40);
+			this.groupBox8.Controls.Add(this.prodID);
+			this.groupBox8.Controls.Add(this.label39);
+			this.groupBox8.Controls.Add(this.PROD_Box);
+			this.groupBox8.Controls.Add(this.button37);
+			this.groupBox8.Controls.Add(this.textBox6);
+			this.groupBox8.Controls.Add(this.button26);
+			this.groupBox8.Controls.Add(this.button27);
+			this.groupBox8.Controls.Add(this.button18);
+			this.groupBox8.Controls.Add(this.button6);
+			this.groupBox8.Controls.Add(this.drawingfilenameBox);
+			this.groupBox8.Controls.Add(this.drawingdateBox);
+			this.groupBox8.Controls.Add(this.label16);
+			this.groupBox8.Controls.Add(this.label15);
+			this.groupBox8.Controls.Add(this.drawingRevBox);
+			this.groupBox8.Controls.Add(this.drawingBox);
+			this.groupBox8.Controls.Add(this.label14);
+			this.groupBox8.Controls.Add(this.textBox3);
+			this.groupBox8.Controls.Add(this.label13);
+			this.groupBox8.Controls.Add(this.label12);
+			this.groupBox8.Enabled = false;
+			this.groupBox8.Location = new System.Drawing.Point(576, 35);
+			this.groupBox8.Name = "groupBox8";
+			this.groupBox8.Size = new System.Drawing.Size(310, 233);
+			this.groupBox8.TabIndex = 87;
+			this.groupBox8.TabStop = false;
+			this.groupBox8.Text = "Product";
+			// 
+			// CheckBOM
+			// 
+			this.CheckBOM.Location = new System.Drawing.Point(229, 200);
+			this.CheckBOM.Name = "CheckBOM";
+			this.CheckBOM.Size = new System.Drawing.Size(75, 23);
+			this.CheckBOM.TabIndex = 118;
+			this.CheckBOM.Text = "Check BOM";
+			this.CheckBOM.UseVisualStyleBackColor = true;
+			this.CheckBOM.Click += new System.EventHandler(this.CheckBOMClick);
+			// 
+			// carBOX
+			// 
+			this.carBOX.Location = new System.Drawing.Point(147, 96);
+			this.carBOX.Name = "carBOX";
+			this.carBOX.ReadOnly = true;
+			this.carBOX.Size = new System.Drawing.Size(129, 20);
+			this.carBOX.TabIndex = 116;
+			// 
+			// label40
+			// 
+			this.label40.Location = new System.Drawing.Point(143, 80);
+			this.label40.Name = "label40";
+			this.label40.Size = new System.Drawing.Size(100, 23);
+			this.label40.TabIndex = 117;
+			this.label40.Text = "Car-platform";
+			// 
+			// prodID
+			// 
+			this.prodID.Enabled = false;
+			this.prodID.Location = new System.Drawing.Point(196, 54);
+			this.prodID.Name = "prodID";
+			this.prodID.ReadOnly = true;
+			this.prodID.Size = new System.Drawing.Size(100, 20);
+			this.prodID.TabIndex = 114;
+			// 
+			// label39
+			// 
+			this.label39.Location = new System.Drawing.Point(177, 55);
+			this.label39.Name = "label39";
+			this.label39.Size = new System.Drawing.Size(38, 19);
+			this.label39.TabIndex = 115;
+			this.label39.Text = "ID";
+			// 
+			// PROD_Box
+			// 
+			this.PROD_Box.FormattingEnabled = true;
+			this.PROD_Box.Location = new System.Drawing.Point(6, 15);
+			this.PROD_Box.Name = "PROD_Box";
+			this.PROD_Box.Size = new System.Drawing.Size(214, 21);
+			this.PROD_Box.TabIndex = 9;
+			this.PROD_Box.Text = "Select a Product";
+			this.PROD_Box.SelectedIndexChanged += new System.EventHandler(this.PROD_BoxSelectedIndexChanged);
+			// 
+			// button37
+			// 
+			this.button37.Location = new System.Drawing.Point(61, 201);
+			this.button37.Name = "button37";
+			this.button37.Size = new System.Drawing.Size(48, 23);
+			this.button37.TabIndex = 98;
+			this.button37.Text = "Add";
+			this.button37.UseVisualStyleBackColor = true;
+			this.button37.Click += new System.EventHandler(this.Button37Click);
+			// 
+			// textBox6
+			// 
+			this.textBox6.Location = new System.Drawing.Point(8, 15);
+			this.textBox6.Name = "textBox6";
+			this.textBox6.Size = new System.Drawing.Size(197, 20);
+			this.textBox6.TabIndex = 111;
+			// 
+			// button26
+			// 
+			this.button26.Location = new System.Drawing.Point(114, 201);
+			this.button26.Name = "button26";
+			this.button26.Size = new System.Drawing.Size(56, 23);
+			this.button26.TabIndex = 97;
+			this.button26.Text = "Write";
+			this.button26.UseVisualStyleBackColor = true;
+			this.button26.Visible = false;
+			this.button26.Click += new System.EventHandler(this.Button26Click);
+			// 
+			// button27
+			// 
+			this.button27.Location = new System.Drawing.Point(8, 201);
+			this.button27.Name = "button27";
+			this.button27.Size = new System.Drawing.Size(48, 23);
+			this.button27.TabIndex = 96;
+			this.button27.Text = "Modify";
+			this.button27.UseVisualStyleBackColor = true;
+			this.button27.Click += new System.EventHandler(this.Button27Click);
+			// 
+			// button18
+			// 
+			this.button18.Enabled = false;
+			this.button18.Location = new System.Drawing.Point(226, 11);
+			this.button18.Name = "button18";
+			this.button18.Size = new System.Drawing.Size(70, 37);
+			this.button18.TabIndex = 95;
+			this.button18.Text = "CheckOut\r\nPRJ";
+			this.button18.UseVisualStyleBackColor = true;
+			this.button18.Click += new System.EventHandler(this.Button18Click);
+			// 
+			// button6
+			// 
+			this.button6.Enabled = false;
+			this.button6.Location = new System.Drawing.Point(185, 132);
+			this.button6.Name = "button6";
+			this.button6.Size = new System.Drawing.Size(58, 23);
+			this.button6.TabIndex = 94;
+			this.button6.Text = "Open 2D";
+			this.button6.UseVisualStyleBackColor = true;
+			this.button6.Click += new System.EventHandler(this.Button6Click);
+			// 
+			// drawingfilenameBox
+			// 
+			this.drawingfilenameBox.Location = new System.Drawing.Point(8, 174);
+			this.drawingfilenameBox.Name = "drawingfilenameBox";
+			this.drawingfilenameBox.ReadOnly = true;
+			this.drawingfilenameBox.Size = new System.Drawing.Size(270, 20);
+			this.drawingfilenameBox.TabIndex = 90;
+			// 
+			// drawingdateBox
+			// 
+			this.drawingdateBox.Location = new System.Drawing.Point(93, 135);
+			this.drawingdateBox.Name = "drawingdateBox";
+			this.drawingdateBox.ReadOnly = true;
+			this.drawingdateBox.Size = new System.Drawing.Size(88, 20);
+			this.drawingdateBox.TabIndex = 92;
+			// 
+			// label16
+			// 
+			this.label16.Location = new System.Drawing.Point(4, 158);
+			this.label16.Name = "label16";
+			this.label16.Size = new System.Drawing.Size(100, 23);
+			this.label16.TabIndex = 91;
+			this.label16.Text = "Drawing filename";
+			// 
+			// label15
+			// 
+			this.label15.Location = new System.Drawing.Point(93, 119);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(100, 23);
+			this.label15.TabIndex = 93;
+			this.label15.Text = "Drawing Date";
+			// 
+			// drawingRevBox
+			// 
+			this.drawingRevBox.Location = new System.Drawing.Point(8, 135);
+			this.drawingRevBox.Name = "drawingRevBox";
+			this.drawingRevBox.ReadOnly = true;
+			this.drawingRevBox.Size = new System.Drawing.Size(79, 20);
+			this.drawingRevBox.TabIndex = 90;
+			// 
+			// drawingBox
+			// 
+			this.drawingBox.Location = new System.Drawing.Point(8, 96);
+			this.drawingBox.Name = "drawingBox";
+			this.drawingBox.ReadOnly = true;
+			this.drawingBox.Size = new System.Drawing.Size(129, 20);
+			this.drawingBox.TabIndex = 88;
+			// 
+			// label14
+			// 
+			this.label14.Location = new System.Drawing.Point(8, 119);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(100, 23);
+			this.label14.TabIndex = 91;
+			this.label14.Text = "Drawing Rev";
+			// 
+			// textBox3
+			// 
+			this.textBox3.Location = new System.Drawing.Point(6, 55);
+			this.textBox3.Name = "textBox3";
+			this.textBox3.ReadOnly = true;
+			this.textBox3.Size = new System.Drawing.Size(165, 20);
+			this.textBox3.TabIndex = 88;
+			// 
+			// label13
+			// 
+			this.label13.Location = new System.Drawing.Point(4, 80);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(100, 23);
+			this.label13.TabIndex = 89;
+			this.label13.Text = "Drawing";
+			// 
+			// label12
+			// 
+			this.label12.Location = new System.Drawing.Point(6, 39);
+			this.label12.Name = "label12";
+			this.label12.Size = new System.Drawing.Size(100, 23);
+			this.label12.TabIndex = 89;
+			this.label12.Text = "Status";
+			// 
+			// groupBox20
+			// 
+			this.groupBox20.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.groupBox20.Controls.Add(this.button51);
+			this.groupBox20.Controls.Add(this.button49);
+			this.groupBox20.Controls.Add(this.button50);
+			this.groupBox20.Controls.Add(this.button43);
+			this.groupBox20.Controls.Add(this.button42);
+			this.groupBox20.Controls.Add(this.button41);
+			this.groupBox20.Enabled = false;
+			this.groupBox20.Location = new System.Drawing.Point(881, 77);
+			this.groupBox20.Name = "groupBox20";
+			this.groupBox20.Size = new System.Drawing.Size(220, 106);
+			this.groupBox20.TabIndex = 114;
+			this.groupBox20.TabStop = false;
+			this.groupBox20.Text = "Generate product missing files";
+			// 
+			// button51
+			// 
+			this.button51.Location = new System.Drawing.Point(85, 74);
+			this.button51.Name = "button51";
+			this.button51.Size = new System.Drawing.Size(108, 23);
+			this.button51.TabIndex = 88;
+			this.button51.Text = "STEP (force all)";
+			this.button51.UseVisualStyleBackColor = true;
+			// 
+			// button49
+			// 
+			this.button49.Location = new System.Drawing.Point(85, 21);
+			this.button49.Name = "button49";
+			this.button49.Size = new System.Drawing.Size(108, 23);
+			this.button49.TabIndex = 87;
+			this.button49.Text = "JPG (force all)";
+			this.button49.UseVisualStyleBackColor = true;
+			this.button49.Click += new System.EventHandler(this.Button49Click);
+			// 
+			// button50
+			// 
+			this.button50.Location = new System.Drawing.Point(6, 21);
+			this.button50.Name = "button50";
+			this.button50.Size = new System.Drawing.Size(75, 23);
+			this.button50.TabIndex = 86;
+			this.button50.Text = "JPG";
+			this.button50.UseVisualStyleBackColor = true;
+			this.button50.Click += new System.EventHandler(this.Button50Click);
+			// 
+			// button43
+			// 
+			this.button43.Location = new System.Drawing.Point(85, 48);
+			this.button43.Name = "button43";
+			this.button43.Size = new System.Drawing.Size(108, 23);
+			this.button43.TabIndex = 85;
+			this.button43.Text = "PDF (force all)";
+			this.button43.UseVisualStyleBackColor = true;
+			this.button43.Click += new System.EventHandler(this.Button43Click);
+			// 
+			// button42
+			// 
+			this.button42.Location = new System.Drawing.Point(6, 74);
+			this.button42.Name = "button42";
+			this.button42.Size = new System.Drawing.Size(75, 23);
+			this.button42.TabIndex = 84;
+			this.button42.Text = "STEP";
+			this.button42.UseVisualStyleBackColor = true;
+			// 
+			// button41
+			// 
+			this.button41.Location = new System.Drawing.Point(6, 48);
+			this.button41.Name = "button41";
+			this.button41.Size = new System.Drawing.Size(75, 23);
+			this.button41.TabIndex = 83;
+			this.button41.Text = "PDF";
+			this.button41.UseVisualStyleBackColor = true;
+			this.button41.Click += new System.EventHandler(this.Button41Click);
 			// 
 			// button38
 			// 
@@ -1026,7 +1510,7 @@ namespace wina
 			this.groupBox18.Size = new System.Drawing.Size(276, 53);
 			this.groupBox18.TabIndex = 109;
 			this.groupBox18.TabStop = false;
-			this.groupBox18.Text = "Would-Be PDM Info V 0.0.1.0";
+			this.groupBox18.Text = "Would-Be PDM Info V 0.0.1.1";
 			// 
 			// button34
 			// 
@@ -1134,9 +1618,9 @@ namespace wina
 			this.groupBox17.Controls.Add(this.button32);
 			this.groupBox17.Controls.Add(this.button23);
 			this.groupBox17.Controls.Add(this.button3);
-			this.groupBox17.Location = new System.Drawing.Point(892, 170);
+			this.groupBox17.Location = new System.Drawing.Point(892, 186);
 			this.groupBox17.Name = "groupBox17";
-			this.groupBox17.Size = new System.Drawing.Size(194, 98);
+			this.groupBox17.Size = new System.Drawing.Size(194, 82);
 			this.groupBox17.TabIndex = 98;
 			this.groupBox17.TabStop = false;
 			this.groupBox17.Text = "Launch CAD";
@@ -1214,6 +1698,7 @@ namespace wina
 			// 
 			// groupBox6
 			// 
+			this.groupBox6.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.groupBox6.Controls.Add(this.FAM_Box);
 			this.groupBox6.Controls.Add(this.textBox4);
 			this.groupBox6.Controls.Add(this.famID);
@@ -1333,6 +1818,7 @@ namespace wina
 			// 
 			// groupBox7
 			// 
+			this.groupBox7.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.groupBox7.Controls.Add(this.prjID);
 			this.groupBox7.Controls.Add(this.label38);
 			this.groupBox7.Controls.Add(this.PRJ_Box);
@@ -1505,7 +1991,7 @@ namespace wina
 			// 
 			// groupBox5
 			// 
-			this.groupBox5.BackColor = System.Drawing.SystemColors.ButtonFace;
+			this.groupBox5.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.groupBox5.Controls.Add(this.button29);
 			this.groupBox5.Controls.Add(this.button28);
 			this.groupBox5.Controls.Add(this.DesignerBox);
@@ -1652,13 +2138,13 @@ namespace wina
 			// 
 			// generatePDFbutton
 			// 
-			this.generatePDFbutton.Enabled = false;
 			this.generatePDFbutton.Location = new System.Drawing.Point(172, 44);
 			this.generatePDFbutton.Name = "generatePDFbutton";
 			this.generatePDFbutton.Size = new System.Drawing.Size(75, 23);
 			this.generatePDFbutton.TabIndex = 82;
 			this.generatePDFbutton.Text = "Generate";
 			this.generatePDFbutton.UseVisualStyleBackColor = true;
+			this.generatePDFbutton.Click += new System.EventHandler(this.GeneratePDFbuttonClick);
 			// 
 			// label9
 			// 
@@ -1966,231 +2452,6 @@ namespace wina
 			this.whereUSEDbutton.Text = "Where Used";
 			this.whereUSEDbutton.UseVisualStyleBackColor = true;
 			// 
-			// groupBox8
-			// 
-			this.groupBox8.Controls.Add(this.CheckBOM);
-			this.groupBox8.Controls.Add(this.carBOX);
-			this.groupBox8.Controls.Add(this.label40);
-			this.groupBox8.Controls.Add(this.prodID);
-			this.groupBox8.Controls.Add(this.label39);
-			this.groupBox8.Controls.Add(this.PROD_Box);
-			this.groupBox8.Controls.Add(this.button37);
-			this.groupBox8.Controls.Add(this.textBox6);
-			this.groupBox8.Controls.Add(this.button26);
-			this.groupBox8.Controls.Add(this.button27);
-			this.groupBox8.Controls.Add(this.button18);
-			this.groupBox8.Controls.Add(this.button6);
-			this.groupBox8.Controls.Add(this.drawingfilenameBox);
-			this.groupBox8.Controls.Add(this.drawingdateBox);
-			this.groupBox8.Controls.Add(this.label16);
-			this.groupBox8.Controls.Add(this.label15);
-			this.groupBox8.Controls.Add(this.drawingRevBox);
-			this.groupBox8.Controls.Add(this.drawingBox);
-			this.groupBox8.Controls.Add(this.label14);
-			this.groupBox8.Controls.Add(this.textBox3);
-			this.groupBox8.Controls.Add(this.label13);
-			this.groupBox8.Controls.Add(this.label12);
-			this.groupBox8.Enabled = false;
-			this.groupBox8.Location = new System.Drawing.Point(576, 35);
-			this.groupBox8.Name = "groupBox8";
-			this.groupBox8.Size = new System.Drawing.Size(310, 233);
-			this.groupBox8.TabIndex = 87;
-			this.groupBox8.TabStop = false;
-			this.groupBox8.Text = "Product";
-			// 
-			// CheckBOM
-			// 
-			this.CheckBOM.Location = new System.Drawing.Point(229, 200);
-			this.CheckBOM.Name = "CheckBOM";
-			this.CheckBOM.Size = new System.Drawing.Size(75, 23);
-			this.CheckBOM.TabIndex = 118;
-			this.CheckBOM.Text = "Check BOM";
-			this.CheckBOM.UseVisualStyleBackColor = true;
-			this.CheckBOM.Click += new System.EventHandler(this.CheckBOMClick);
-			// 
-			// carBOX
-			// 
-			this.carBOX.Location = new System.Drawing.Point(147, 96);
-			this.carBOX.Name = "carBOX";
-			this.carBOX.ReadOnly = true;
-			this.carBOX.Size = new System.Drawing.Size(129, 20);
-			this.carBOX.TabIndex = 116;
-			// 
-			// label40
-			// 
-			this.label40.Location = new System.Drawing.Point(143, 80);
-			this.label40.Name = "label40";
-			this.label40.Size = new System.Drawing.Size(100, 23);
-			this.label40.TabIndex = 117;
-			this.label40.Text = "Car-platform";
-			// 
-			// prodID
-			// 
-			this.prodID.Enabled = false;
-			this.prodID.Location = new System.Drawing.Point(196, 54);
-			this.prodID.Name = "prodID";
-			this.prodID.ReadOnly = true;
-			this.prodID.Size = new System.Drawing.Size(100, 20);
-			this.prodID.TabIndex = 114;
-			// 
-			// label39
-			// 
-			this.label39.Location = new System.Drawing.Point(177, 55);
-			this.label39.Name = "label39";
-			this.label39.Size = new System.Drawing.Size(38, 19);
-			this.label39.TabIndex = 115;
-			this.label39.Text = "ID";
-			// 
-			// PROD_Box
-			// 
-			this.PROD_Box.FormattingEnabled = true;
-			this.PROD_Box.Location = new System.Drawing.Point(6, 15);
-			this.PROD_Box.Name = "PROD_Box";
-			this.PROD_Box.Size = new System.Drawing.Size(214, 21);
-			this.PROD_Box.TabIndex = 9;
-			this.PROD_Box.Text = "Select a Product";
-			this.PROD_Box.SelectedIndexChanged += new System.EventHandler(this.PROD_BoxSelectedIndexChanged);
-			// 
-			// button37
-			// 
-			this.button37.Location = new System.Drawing.Point(61, 201);
-			this.button37.Name = "button37";
-			this.button37.Size = new System.Drawing.Size(48, 23);
-			this.button37.TabIndex = 98;
-			this.button37.Text = "Add";
-			this.button37.UseVisualStyleBackColor = true;
-			this.button37.Click += new System.EventHandler(this.Button37Click);
-			// 
-			// textBox6
-			// 
-			this.textBox6.Location = new System.Drawing.Point(8, 15);
-			this.textBox6.Name = "textBox6";
-			this.textBox6.Size = new System.Drawing.Size(197, 20);
-			this.textBox6.TabIndex = 111;
-			// 
-			// button26
-			// 
-			this.button26.Location = new System.Drawing.Point(114, 201);
-			this.button26.Name = "button26";
-			this.button26.Size = new System.Drawing.Size(56, 23);
-			this.button26.TabIndex = 97;
-			this.button26.Text = "Write";
-			this.button26.UseVisualStyleBackColor = true;
-			this.button26.Visible = false;
-			this.button26.Click += new System.EventHandler(this.Button26Click);
-			// 
-			// button27
-			// 
-			this.button27.Location = new System.Drawing.Point(8, 201);
-			this.button27.Name = "button27";
-			this.button27.Size = new System.Drawing.Size(48, 23);
-			this.button27.TabIndex = 96;
-			this.button27.Text = "Modify";
-			this.button27.UseVisualStyleBackColor = true;
-			this.button27.Click += new System.EventHandler(this.Button27Click);
-			// 
-			// button18
-			// 
-			this.button18.Enabled = false;
-			this.button18.Location = new System.Drawing.Point(226, 11);
-			this.button18.Name = "button18";
-			this.button18.Size = new System.Drawing.Size(70, 37);
-			this.button18.TabIndex = 95;
-			this.button18.Text = "CheckOut\r\nPRJ";
-			this.button18.UseVisualStyleBackColor = true;
-			this.button18.Click += new System.EventHandler(this.Button18Click);
-			// 
-			// button6
-			// 
-			this.button6.Enabled = false;
-			this.button6.Location = new System.Drawing.Point(185, 132);
-			this.button6.Name = "button6";
-			this.button6.Size = new System.Drawing.Size(58, 23);
-			this.button6.TabIndex = 94;
-			this.button6.Text = "Open 2D";
-			this.button6.UseVisualStyleBackColor = true;
-			this.button6.Click += new System.EventHandler(this.Button6Click);
-			// 
-			// drawingfilenameBox
-			// 
-			this.drawingfilenameBox.Location = new System.Drawing.Point(8, 174);
-			this.drawingfilenameBox.Name = "drawingfilenameBox";
-			this.drawingfilenameBox.ReadOnly = true;
-			this.drawingfilenameBox.Size = new System.Drawing.Size(270, 20);
-			this.drawingfilenameBox.TabIndex = 90;
-			// 
-			// drawingdateBox
-			// 
-			this.drawingdateBox.Location = new System.Drawing.Point(93, 135);
-			this.drawingdateBox.Name = "drawingdateBox";
-			this.drawingdateBox.ReadOnly = true;
-			this.drawingdateBox.Size = new System.Drawing.Size(88, 20);
-			this.drawingdateBox.TabIndex = 92;
-			// 
-			// label16
-			// 
-			this.label16.Location = new System.Drawing.Point(4, 158);
-			this.label16.Name = "label16";
-			this.label16.Size = new System.Drawing.Size(100, 23);
-			this.label16.TabIndex = 91;
-			this.label16.Text = "Drawing filename";
-			// 
-			// label15
-			// 
-			this.label15.Location = new System.Drawing.Point(93, 119);
-			this.label15.Name = "label15";
-			this.label15.Size = new System.Drawing.Size(100, 23);
-			this.label15.TabIndex = 93;
-			this.label15.Text = "Drawing Date";
-			// 
-			// drawingRevBox
-			// 
-			this.drawingRevBox.Location = new System.Drawing.Point(8, 135);
-			this.drawingRevBox.Name = "drawingRevBox";
-			this.drawingRevBox.ReadOnly = true;
-			this.drawingRevBox.Size = new System.Drawing.Size(79, 20);
-			this.drawingRevBox.TabIndex = 90;
-			// 
-			// drawingBox
-			// 
-			this.drawingBox.Location = new System.Drawing.Point(8, 96);
-			this.drawingBox.Name = "drawingBox";
-			this.drawingBox.ReadOnly = true;
-			this.drawingBox.Size = new System.Drawing.Size(129, 20);
-			this.drawingBox.TabIndex = 88;
-			// 
-			// label14
-			// 
-			this.label14.Location = new System.Drawing.Point(8, 119);
-			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(100, 23);
-			this.label14.TabIndex = 91;
-			this.label14.Text = "Drawing Rev";
-			// 
-			// textBox3
-			// 
-			this.textBox3.Location = new System.Drawing.Point(6, 55);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.ReadOnly = true;
-			this.textBox3.Size = new System.Drawing.Size(165, 20);
-			this.textBox3.TabIndex = 88;
-			// 
-			// label13
-			// 
-			this.label13.Location = new System.Drawing.Point(4, 80);
-			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(100, 23);
-			this.label13.TabIndex = 89;
-			this.label13.Text = "Drawing";
-			// 
-			// label12
-			// 
-			this.label12.Location = new System.Drawing.Point(6, 39);
-			this.label12.Name = "label12";
-			this.label12.Size = new System.Drawing.Size(100, 23);
-			this.label12.TabIndex = 89;
-			this.label12.Text = "Status";
-			// 
 			// label4
 			// 
 			this.label4.Location = new System.Drawing.Point(892, 35);
@@ -2222,6 +2483,7 @@ namespace wina
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.SystemColors.Control;
 			this.ClientSize = new System.Drawing.Size(1120, 620);
 			this.Controls.Add(this.tabControl1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -2244,6 +2506,9 @@ namespace wina
 			this.groupBox10.PerformLayout();
 			this.FindFilesTab.ResumeLayout(false);
 			this.FindFilesTab.PerformLayout();
+			this.groupBox8.ResumeLayout(false);
+			this.groupBox8.PerformLayout();
+			this.groupBox20.ResumeLayout(false);
 			this.groupBox17.ResumeLayout(false);
 			this.groupBox6.ResumeLayout(false);
 			this.groupBox6.PerformLayout();
@@ -2261,8 +2526,6 @@ namespace wina
 			this.groupBox2.PerformLayout();
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
-			this.groupBox8.ResumeLayout(false);
-			this.groupBox8.PerformLayout();
 			this.tabControl1.ResumeLayout(false);
 			this.ResumeLayout(false);
 
